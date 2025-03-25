@@ -224,6 +224,12 @@ h6,
     }
 }
 
+@media (max-width: 991.98px) {
+    .topbar {
+       display: none;  
+    }
+   
+}
 
 /*** Facts & Quote ***/
 .facts,
