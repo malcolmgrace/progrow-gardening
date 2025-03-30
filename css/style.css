@@ -228,7 +228,6 @@ h6,
     .topbar {
        display: none;  
     }
-   
 }
 
 /*** Facts & Quote ***/
@@ -284,11 +283,11 @@ h6,
     transition: .3;
 }
 
-.service-item:hover .service-text h4 {
+.service-item:hover .service-text h2 {
     color: #FFFFFF;
 }
 
-.service-item:hover .service-text p {
+.service-item:hover .service-text {
     color: var(--light);
 }
 
@@ -318,7 +317,6 @@ h6,
 .service-item:hover .service-text .btn {
     width: 112px;
 }
-
 
 /*** Project Portfolio ***/
 #portfolio-flters {
