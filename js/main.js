@@ -57,8 +57,20 @@
         $(this).addClass('active');
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
+       });
 
+    // Customer Review Arrow Navigation
+    $(document).ready(function() {
+        var owl = $('.testimonial-carousel');
+        
+        $('.testimonial-prev').click(function() {
+            owl.trigger('prev.owl.carousel');
+        });
+        
+        $('.testimonial-next').click(function() {
+            owl.trigger('next.owl.carousel');
+        });
+    });
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
