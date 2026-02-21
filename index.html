@@ -77,9 +77,10 @@
 
     <!-- Hero Start -->
     <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel" role="region" aria-label="ProGrow Gardening featured services">
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <!-- Slide 1 -->
+                <div class="carousel-item active" role="group" aria-label="Slide 1 of 3">
                     <picture>
                         <source srcset="img/gallery-pic-4-800w.webp 800w, img/gallery-pic-4-1400w.webp 1400w, img/gallery-pic-4.webp 4032w" sizes="100vw" type="image/webp">
                         <img class="w-100" src="img/gallery-pic-4.jpeg" alt="Garden Transformation" style="max-height: 800px; object-fit: cover;" loading="eager" width="4032" height="3024">
@@ -97,25 +98,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <!-- Slide 2 -->
+                <div class="carousel-item" role="group" aria-label="Slide 2 of 3">
                     <picture>
                         <source srcset="img/gallery-pic-7-800w.webp 800w, img/gallery-pic-7-1400w.webp 1400w, img/gallery-pic-7.webp 4032w" sizes="100vw" type="image/webp">
                         <img class="w-100" src="img/gallery-pic-7.jpeg" alt="Beautiful Landscaping" style="max-height: 800px; object-fit: cover;" loading="eager" width="4032" height="3024">
                     </picture>
-                </div>
-                <div class="carousel-caption">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h5 class="text-white mb-4 animated slideInDown" style="opacity: 0.85;">Nepean | Barrhaven | Riverside South | Manotick | Kanata</h5>
-                                <h1 class="display-1 text-white mb-5 animated slideInDown">Expert Landscaping Solutions</h1>
-                                <h2 class="text-white mb-4 animated slideInDown" style="opacity: 0.99;">Creating Beautiful Gardens Since 2020</h2>
-                                <a href="services.html" class="btn btn-primary py-3 px-5 animated slideInDown">Explore Our Services</a>
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h5 class="text-white mb-4 animated slideInDown" style="opacity: 0.85;">Nepean | Barrhaven | Riverside South | Manotick | Kanata</h5>
+                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Expert Landscaping Solutions</h1>
+                                    <h2 class="text-white mb-4 animated slideInDown" style="opacity: 0.99;">Creating Beautiful Gardens Since 2020</h2>
+                                    <a href="services.html" class="btn btn-primary py-3 px-5 animated slideInDown">Explore Our Services</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <!-- Slide 3 -->
+                <div class="carousel-item" role="group" aria-label="Slide 3 of 3">
                     <picture>
                         <source srcset="img/gallery-pic-6-800w.webp 800w, img/gallery-pic-6-1400w.webp 1400w, img/gallery-pic-6.webp 4032w" sizes="100vw" type="image/webp">
                         <img class="w-100" src="img/gallery-pic-6.jpeg" alt="Seasonal Garden Maintenance" style="max-height: 800px; object-fit: cover;" loading="eager" width="4032" height="3024">
@@ -133,15 +136,16 @@
                         </div>
                     </div>
                 </div>
+                <!--  Previous & Next Button -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev" aria-label="Previous slide">                
+                    <span class="carousel-control-prev-icon" aria-hidden="true"><span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next" aria-label="Next slide">
+                    <span class="carousel-control-next-icon" aria-hidden="true"><span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </div>
     <!-- Hero End -->
@@ -307,7 +311,7 @@
                         </div>
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-1.png" alt="">
                             </div>
                             <h2 class="mb-3">Garden Maintenance</h2>
                             <p class="mb-4">Each visit includes weeding, pruning, and cultivating to keep your garden thriving.</p>
@@ -325,7 +329,7 @@
                         </div>
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-8.png" alt="">
                             </div>
                             <h2 class="mb-3">Weed Control</h2>
                             <p class="mb-4">Prevent the spread of dandelions and other common weeds from taking over.</p>
@@ -343,7 +347,7 @@
                         </div>
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-5.png" alt="">
                             </div>
                             <h2 class="mb-3">Lawn Restoration</h2>
                             <p class="mb-4">Bring your lawn back to life with a variety of methods such as nutrition-rich soil & overseeding applications, sod installation, etc.</p>
@@ -361,7 +365,7 @@
                         </div>
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-7.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-7.png" alt="">
                             </div>
                             <h2 class="mb-3">Garden Design</h2>
                             <p class="mb-4">Give your outdoor space a polished, professional touch with our custom garden design services tailored to your style and needs.</p>
@@ -379,7 +383,7 @@
                         </div>
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-4.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-4.png" alt="">
                             </div>
                             <h2 class="mb-3">Planting</h2>
                             <p class="mb-4">Precision planting for thriving, well-established, and healthy plants.</p>
@@ -397,7 +401,7 @@
                         </div>
                         <div class="service-text rounded p-5">
                             <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                                <img class="img-fluid" src="img/icon/icon-6.png" alt="">
                             </div>
                             <h2 class="mb-3">Shrub & Tree Trimming</h2>
                             <p class="mb-4">Expert shrub and tree trimming to promote strong, healthy growth.</p>
@@ -469,7 +473,7 @@
                         <h1 class="text-center mb-4"><strong>Ready to Transform Your Outdoor Space?</strong></h1>
                         <hr>
                         <h3 class="text-center mb-4">Fill out the form below to receive a free quote for our services.</h3>
-                        <form name="gardening-quote" method="POST" netlify netlify-honeypot="bot-field">
+                        <form name="gardening-quote" method="POST" action="/thank-you" netlify netlify-honeypot="bot-field">
                             <input type="hidden" name="bot-field">
                             <input type="hidden" name="form-name" value="gardening-quote">
                             <div class="row g-3">
