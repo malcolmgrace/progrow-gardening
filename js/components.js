@@ -7,7 +7,7 @@
 const siteData = {
     // Contact Information
     phone: '(249) 878 9140',
-    email: 'progrowgardening@gmail.com',
+    email: 'admin@progrowgardening.ca',
     address: '367 Bankside Way, Nepean, ON K2J 6K4',
     
     // Social Media Links
