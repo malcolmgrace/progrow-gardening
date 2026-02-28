@@ -60,9 +60,9 @@ function renderNavbar(currentPage) {
     
     return `
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand"></a>
+        <a href="index.html" class="navbar-brand" aria-label="ProGrow Gardening home"></a>
         <a href="index.html">
-            <img src="img/ProGrow_Logo_White.png" alt="ProGrow Gardening Co." class="img-fluid" style="width: 270px; object-fit: cover; object-position: center; height: auto; max-height: 150px;">
+            <img src="img/ProGrow_Logo_White.png" alt="ProGrow Gardening Co." class="img-fluid" <img src="img/ProGrow_Logo_White.png" alt="ProGrow Gardening Co." class="img-fluid" width="270" height="150" style="object-fit: cover; object-position: center; max-height: 150px;">>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">>
             <span class="navbar-toggler-icon"></span>
