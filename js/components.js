@@ -45,8 +45,8 @@ function renderTopbar() {
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
-                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-white" href="${siteData.facebook}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-white" href="${siteData.instagram}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-white" href="${siteData.facebook}" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-white" href="${siteData.instagram}" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@ function renderNavbar(currentPage) {
         <a href="index.html">
             <img src="img/ProGrow_Logo_White.png" alt="ProGrow Gardening Co." class="img-fluid" style="width: 270px; object-fit: cover; object-position: center; height: auto; max-height: 150px;">
         </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">>
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -99,8 +99,8 @@ function renderFooter() {
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>${siteData.phone}</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>${siteData.email}</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="${siteData.facebook}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="${siteData.instagram}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="${siteData.facebook}" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="${siteData.instagram}" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -131,7 +131,7 @@ function renderFooter() {
         </div>
     </div>
 
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
     `;
 }
 
