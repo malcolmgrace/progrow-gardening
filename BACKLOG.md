@@ -11,16 +11,18 @@
 
 ---
 
-## PageSpeed Baseline (Feb 27, 2026)
+## PageSpeed Baseline (Mar 1, 2026 — end of session)
 
 | Metric | Desktop | Mobile |
 |---|---|---|
-| Performance | 88 | 62 |
-| LCP | 1.2s | 7.9s |
-| CLS | 0.155 | 0 |
-| Accessibility | 92 | 92 |
+| Performance | 69 | 61 |
+| LCP | 5.3s | 11.2s |
+| CLS | 0.141 | 0 |
+| Accessibility | 94 | 94 |
 | Best Practices | 100 | 100 |
 | SEO | 100 | 100 |
+
+> Previous desktop baseline was 88 / CLS 0.155. CLS improved 0.155 → 0.141. Performance drop from 88 → 69 is likely due to the carousel height CSS added this session — needs investigation and possible revert next session.
 
 ---
 
@@ -49,45 +51,55 @@
 - Add fetchpriority="high" to hero carousel LCP image — perf
 - Convert gallery-pic-8 and gardeningcarousel to WebP — perf
 - Fix decorative heading tags in about section (h1/h2 → p) — a11y + heading order
+- Fix malformed logo img tag in components.js — hygiene
+- Fix carousel h5 → p on all 3 slides in index.html — a11y
+- Add `<main>` landmark to all 14 HTML files — a11y
 
 ---
 
 ## Active Backlog (priority order)
 
-### 1. Fix remaining a11y issues — a11y
+### 1. Investigate desktop performance drop 88 → 69 — perf
+- Carousel height CSS (`min-height: 600px` on `.carousel-inner`, `height: 600px` on `.carousel-item img`) was added and reportedly reverted this session
+- If still live, revert immediately and confirm desktop score recovers to ~88
+- CLS improved 0.155 → 0.141 so something is working — isolate what helped vs what hurt
+
+### 2. Fix desktop CLS (0.141) — Core Web Vitals
+- **Attempted and reverted:** `min-height` on `.carousel-inner` — made perf score worse
+- Root cause is Bootstrap JS carousel initialising and shifting layout, not image load
+- Next approach: investigate `aspect-ratio` CSS on `#header-carousel` to reserve space before JS runs
+- Alternative: investigate `data-bs-ride="false"` and manual carousel init after DOM ready
+- CSS-only fix strongly preferred — do not restructure carousel markup
+
+### 3. Compress oversized images — perf
+**Highest leverage item — 1,364KB savings on desktop, 348KB on mobile**
+- `gallery-pic-4-1400w.webp` — 602KB, target under 150KB, re-export via Squoosh
+- `gallery-pic-4-800w.webp` — 184KB, target under 50KB
+- `service-1.webp` — 121KB, target under 40KB
+- `service-2.webp` — 118KB, target under 40KB
+- `service-3.webp` — 112KB, target under 40KB
+- `service-4.webp` — 357KB, target under 80KB
+- `service-5.webp` — 179KB, target under 50KB
+- `service-6.webp` — 96KB, target under 30KB
+- `gallery-pic-1.webp` — 187KB, target under 50KB
+- `gardeningcarousel.webp` — 1.28MB, target under 300KB
+- `ProGrow_Logo_White.png` — 43KB, convert to WebP, resize to 270px wide
+
+### 4. Fix button contrast — a11y
 **Target: 95+**
-- Button contrast still failing — `#276B2B` insufficient, try `#1F5C23` in `style.css`
-- Carousel subheading uses `<h5>` before `<h1>` — change to `<p>` with same classes on all 3 slides in `index.html`
-- Missing `<main>` landmark — wrap page content between navbar and footer placeholders in `<main>` tag on all 14 HTML files
+- `.btn-primary` still failing contrast — change `--primary: #276B2B` to `--primary: #1F5C23` in `css/style.css`
+- Failing elements: "Request a Free Estimate" and "View Full Gallery" buttons on index.html
 
-### 2. Fix desktop CLS (0.155) — Core Web Vitals
-- Carousel inner div is culprit (shift score 0.153)
-- Likely caused by carousel height shifting during JS initialisation
-- Investigate explicit `min-height` on `.carousel-item` or fixed height on `.carousel-inner`
-- Do not change carousel markup — CSS-only fix preferred
+### 5. Fix heading order — a11y
+- `<h4>No Hidden Cost</h4>` appearing out of sequence on index.html
+- Investigate heading structure in that section and correct the order
 
-### 3. Fix malformed logo img tag in components.js — hygiene
-- Tag rendering as `<img="" width="270"` in Lighthouse due to botched attribute edit
-- Clean rewrite of the img tag in `renderNavbar()` in `components.js`
-- Correct tag:
-```html
-<img src="img/ProGrow_Logo_White.png" alt="ProGrow Gardening Co." class="img-fluid" width="270" height="150" style="object-fit: cover; object-position: center; max-height: 150px;">
-```
+### 6. Defer non-critical CSS — mobile perf
+- **On hold** — tested across 4 files, negligible score impact, caused LCP regression when owl.carousel.min.css was deferred
+- Revisit only after image compression gains are captured
+- If revisited: defer Font Awesome, Bootstrap Icons, animate.min.css only — never owl.carousel.min.css
 
-### 4. Compress oversized WebP images — perf
-- `gardeningcarousel.webp` — 1.28MB, target under 300KB, re-export via squoosh at lower quality
-- `gallery-pic-8.webp` — 295KB, acceptable but worth recompressing
-- Carousel 1400w images (`gallery-pic-4-1400w.webp` etc.) — 600KB+, consider quality reduction
-
-### 5. Defer non-critical CSS — mobile perf
-- Est. savings ~2,300ms on mobile FCP
-- Apply `media="print" onload="this.media='all'"` to these on all 14 HTML files:
-  - `lib/animate/animate.min.css`
-  - Font Awesome (`cdnjs.cloudflare.com/…/all.min.css`)
-  - Bootstrap Icons (`cdn.jsdelivr.net/…/bootstrap-icons.css`)
-- Risk: icons briefly invisible on load — acceptable tradeoff
-
-### 6. Standardize service page schema to shrub-tree-trimming.html quality — SEO
+### 7. Standardize service page schema — SEO
 - Pages to update: `garden-design.html`, `garden-maintenance.html`, `lawn-restoration.html`, `planting.html`, `weed-control.html`
 - Changes per page:
   - Add `streetAddress`, `postalCode` to PostalAddress object
