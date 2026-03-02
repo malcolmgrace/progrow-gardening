@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #276B2B;
+    --primary: #1F5C23;;
     --secondary: #525368;
     --light: #E8F5E9;
     --dark: #0F4229;
@@ -98,7 +98,10 @@ h6,
     transition: .5s;
 }
 
-.navbar .navbar-brand,
+.navbar .navbar-brand {
+    height: 130px;
+}
+
 .navbar a.btn {
     height: 80px;
 }
