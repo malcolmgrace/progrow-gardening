@@ -69,6 +69,7 @@ function renderNavbar(currentPage) {
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link ${isActive('index.html')}">Home</a>
+                <a href="garden-care-packages.html" class="nav-item nav-link ${isActive('garden-care-packages.html')}">Garden Care Packages</a>
                 <a href="about.html" class="nav-item nav-link ${isActive('about.html')}">About Us</a>
                 <a href="gallery.html" class="nav-item nav-link ${isActive('gallery.html')}">Gallery</a>
                 <a href="services.html" class="nav-item nav-link ${isActive('services.html')}">Our Services</a>
