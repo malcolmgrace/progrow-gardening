@@ -436,63 +436,68 @@
                   <a href="tel:+12498789140" class="text-white text-decoration-underline">(249) 878-9140</a>
                 </p>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <form name="partner-application" method="POST" data-netlify="true" action="/thank-you.html">
+                  <input type="hidden" name="form-name" value="partner-application" />
 
-                  <div style="display: flex; flex-direction: column; gap: 0.3rem;">
-                    <label style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Business Name</label>
-                    <input type="text" placeholder="Registered Business Name" style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+
+                    <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                      <label for="business-name" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Business Name</label>
+                      <input type="text" id="business-name" name="business-name" placeholder="Registered Business Name" required style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                      <label for="trade-category" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Trade Category</label>
+                      <select id="trade-category" name="trade-category" required style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;">
+                        <option value="" disabled selected>Select your trade</option>
+                        <option>Lawn Maintenance</option>
+                        <option>Tree Services</option>
+                        <option>Hedge &amp; Shrub Care</option>
+                        <option>Sod Installation</option>
+                        <option>Hardscaping</option>
+                        <option>Commercial &amp; Residential Garden Maintenance</option>
+                        <option>Irrigation Services</option>
+                        <option>Water Features</option>
+                        <option>Landscape Design &amp; Consultation</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                      <label for="contact-name" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Your Name</label>
+                      <input type="text" id="contact-name" name="contact-name" placeholder="First & Last name" required style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                      <label for="email" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Business Email" required style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                      <label for="phone" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Phone</label>
+                      <input type="tel" id="phone" name="phone" placeholder="(613) 000-0000" style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                      <label for="service-area" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Service Area</label>
+                      <input type="text" id="service-area" name="service-area" placeholder="e.g. Barrhaven, Kanata, Ottawa South" style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.3rem; grid-column: span 2;">
+                      <label for="notes" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Brief Note About Your Operation</label>
+                      <textarea id="notes" name="notes" rows="3" placeholder="How long you've been operating, typical job size, anything relevant..." style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%; resize: vertical;"></textarea>
+                    </div>
+
                   </div>
 
-                  <div style="display: flex; flex-direction: column; gap: 0.3rem;">
-                    <label style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Trade Category</label>
-                    <select style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;">
-                      <option value="" disabled selected>Select your trade</option>
-                      <option>Lawn Maintenance</option>
-                      <option>Tree Services</option>
-                      <option>Hedge &amp; Shrub Care</option>
-                      <option>Sod Installation</option>
-                      <option>Hardscaping</option>
-                      <option>Commercial &amp; Residential Garden Maintenance</option>
-                      <option>Irrigation Services</option>
-                      <option>Water Features</option>
-                      <option>Landscape Design &amp; Consultation</option>
-                      <option>Other</option>
-                    </select>
+                  <div style="margin-top: 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.65); margin: 0;">We'll respond within 1–2 business days with the agreement.</p>
+                    <button type="submit" style="background: #fff; color: var(--primary, #4a7c3f); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.7rem 1.75rem; border: none; cursor: pointer;">
+                      Send Application →
+                    </button>
                   </div>
 
-                  <div style="display: flex; flex-direction: column; gap: 0.3rem;">
-                    <label style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Your Name</label>
-                    <input type="text" placeholder="First & Last name" style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
-                  </div>
-
-                  <div style="display: flex; flex-direction: column; gap: 0.3rem;">
-                    <label style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Email</label>
-                    <input type="email" placeholder="Business Email" style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
-                  </div>
-
-                  <div style="display: flex; flex-direction: column; gap: 0.3rem;">
-                    <label style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Phone</label>
-                    <input type="tel" placeholder="(613) 000-0000" style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
-                  </div>
-
-                  <div style="display: flex; flex-direction: column; gap: 0.3rem;">
-                    <label style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Service Area</label>
-                    <input type="text" placeholder="e.g. Barrhaven, Kanata, Ottawa South" style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
-                  </div>
-
-                  <div style="display: flex; flex-direction: column; gap: 0.3rem; grid-column: span 2;">
-                    <label style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Brief Note About Your Operation</label>
-                    <textarea rows="3" placeholder="How long you've been operating, typical job size, anything relevant..." style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%; resize: vertical;"></textarea>
-                  </div>
-
-                </div>
-
-                <div style="margin-top: 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-                  <p style="font-size: 0.8rem; color: rgba(255,255,255,0.65); margin: 0;">We'll respond within 1–2 business days with the agreement.</p>
-                  <button type="button" style="background: #fff; color: var(--primary, #4a7c3f); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.7rem 1.75rem; border: none; cursor: pointer;">
-                    Send Application →
-                  </button>
-                </div>
+                </form>
 
               </div>
         </div>
