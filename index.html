@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+   
 <head>
     <meta charset="utf-8">
-    <title>ProGrow Gardening – Lawn & Landscaping Services in Ottawa</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="lawn care, landscaping, gardening, Ottawa, ProGrow" name="keywords">
-    <meta content="Professional lawn care, garden maintenance, and landscaping services in Ottawa. Request a free quote today from ProGrow Gardening." name="description">
-    <meta name="google-site-verification" content="PVM8H_rEfe9Op8ubEvAD1ZmrywK_bF3h298YLEd1QLY" />
+    <title>ProGrow Gardening – Lawn &amp; Landscaping Services in Ottawa</title>
+    <meta name="description" content="Professional lawn care, garden maintenance, and landscaping services in Ottawa. Request a free quote today from ProGrow Gardening.">
+    <meta name="keywords" content="lawn care, landscaping, gardening, Ottawa, ProGrow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="PVM8H_rEfe9Op8ubEvAD1ZmrywK_bF3h298YLEd1QLY">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PK4GRCXLHE"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
 
-    gtag('config', 'G-PK4GRCXLHE');
-    </script>
-
+    <!-- Structured Data — first so Google indexes it immediately -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -55,28 +49,102 @@
     }
     </script>
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PK4GRCXLHE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PK4GRCXLHE');
+    </script>
 
-    <!-- Google Web Fonts -->
+    <!-- CRITICAL CSS — inlined to prevent blank page during load -->
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Open Sans', sans-serif; background: #fff; color: #212529; }
+        img { max-width: 100%; height: auto; }
+
+        /* Spinner */
+        #spinner {
+            position: fixed; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw; height: 100vh;
+            background: #fff;
+            display: flex; align-items: center; justify-content: center;
+            z-index: 9999;
+        }
+        .spinner-border {
+            width: 3rem; height: 3rem;
+            border: 0.25em solid #5cb85c;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: _spin 0.75s linear infinite;
+        }
+        @keyframes _spin { to { transform: rotate(360deg); } }
+
+        /* Navbar/topbar shell — prevents layout shift before JS loads */
+        #topbar-placeholder { min-height: 40px; background: #5cb85c; }
+        #navbar-placeholder  { min-height: 75px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,.08); }
+
+        /* Hero — reserve space so LCP image renders immediately */
+        #header-carousel .carousel-item img { max-height: 800px; object-fit: cover; width: 100%; }
+
+        /* Above-fold Bootstrap utilities (subset) */
+        .show     { display: flex !important; }
+        .w-100    { width: 100% !important; }
+        .h-100    { height: 100% !important; }
+        .d-flex   { display: flex !important; }
+        .align-items-center     { align-items: center !important; }
+        .justify-content-center { justify-content: center !important; }
+        .position-fixed   { position: fixed !important; }
+        .translate-middle { transform: translate(-50%,-50%) !important; }
+        .vh-100   { height: 100vh !important; }
+        .top-50   { top: 50% !important; }
+        .start-50 { left: 50% !important; }
+        .bg-white { background-color: #fff !important; }
+        .text-primary { color: #5cb85c !important; }
+    </style>
+
+    <!-- Bootstrap — preloaded, non-blocking -->
+    <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/bootstrap.min.css"></noscript>
+
+    <!-- Site styles — non-blocking -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+
+    <!-- Google Fonts — non-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+        onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"></noscript>
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome — non-blocking -->
+    <link rel="preload" as="style"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"></noscript>
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="lib/animate/animate.min.css" rel="stylesheet"></noscript>
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons — non-blocking -->
+    <link rel="preload" as="style"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+        onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"></noscript>
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css — non-blocking -->
+    <link rel="preload" as="style"
+        href="lib/animate/animate.min.css"
+        onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="lib/animate/animate.min.css"></noscript>
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Owl Carousel CSS — non-blocking -->
+    <link rel="preload" as="style"
+        href="lib/owlcarousel/assets/owl.carousel.min.css"
+        onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css"></noscript>
+
 </head>
 
 <body>
