@@ -30,6 +30,10 @@
     <loc>https://progrowgardening.ca/gallery</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://progrowgardening.ca/partnership</loc>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Service Pages -->
   <url>
