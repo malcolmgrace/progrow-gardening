@@ -1,4 +1,6 @@
-﻿- `img\carousel-quote-page.jpg` — 103 KB KB
+﻿# File Manifest
+
+- `img\carousel-quote-page.jpg` — 103 KB KB
 - `img\carousel-quote-page.webp` — 166 KB KB
 - `img\customer-review-pic-1.png` — 18 KB KB
 - `img\customer-review-pic-1.webp` — 4 KB KB
