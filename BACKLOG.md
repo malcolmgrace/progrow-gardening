@@ -59,10 +59,49 @@
 
 ## Active Backlog (priority order)
 
-### 1. Investigate desktop performance drop 88 → 69 — perf
-- Carousel height CSS (`min-height: 600px` on `.carousel-inner`, `height: 600px` on `.carousel-item img`) was added and reportedly reverted this session
-- If still live, revert immediately and confirm desktop score recovers to ~88
-- CLS improved 0.155 → 0.141 so something is working — isolate what helped vs what hurt
+### 1. Compress oversized images — perf
+**Highest leverage item — use Squoosh (squoosh.app), re-export as WebP**
+
+**Service / content images (used in page layouts):**
+- `gardeningcarousel.webp` — 1,279KB, target < 300KB
+- `treetrimming.webp` — 475KB, target < 100KB
+- `sod.webp` — 470KB, target < 100KB
+- `woodyweed.webp` — 380KB, target < 80KB
+- `seeding.webp` — 376KB, target < 80KB
+- `service-4.webp` — 358KB, target < 80KB
+- `service-5.webp` — 180KB, target < 50KB
+- `service-1.webp` — 122KB, target < 40KB
+- `service-2.webp` — 119KB, target < 40KB
+- `service-3.webp` — 113KB, target < 40KB
+- `hedgecutting.webp` — 241KB, target < 60KB (currently larger than source JPG — bad re-export)
+- `mulching.webp` — 191KB, target < 50KB (currently larger than source JPG — bad re-export)
+- `carousel-quote-page.webp` — 166KB, target < 50KB (currently larger than source JPG — bad re-export)
+- `service-6.webp` — 97KB, target < 30KB
+- `garden_maintenance.webp` — 96KB, target < 30KB
+
+**Gallery images (lazy-loaded, lower urgency but large):**
+- `gallery-pic-5.webp` — 4,220KB, no sized variants — needs srcset (1400w/800w) same as pic-4
+- `gallery-pic-6.webp` — 1,609KB (sized variants exist — raw file can be deleted)
+- `gallery-pic-7.webp` — 1,010KB (sized variants exist — raw file can be deleted)
+- `gallery-pic-4.webp` — 3,440KB (sized variants exist — raw file can be deleted)
+- `gallery-pic-4-1400w.webp` — 602KB, target < 150KB
+- `gallery-pic-4-800w.webp` — 185KB, target < 50KB
+- `gallery-pic-6-1400w.webp` — 391KB, target < 100KB
+- `gallery-pic-8.webp` — 295KB, target < 70KB
+- `gallery-pic-12.webp` — 286KB, target < 70KB
+- `gallery-pic-11.webp` — 254KB, target < 60KB
+- `gallery-pic-13.webp` — 251KB, target < 60KB
+- `gallery-pic-9.webp` — 272KB, target < 70KB
+- `gallery-pic-10.webp` — 226KB, target < 60KB
+- `gallery-pic-3.webp` — 207KB, target < 50KB
+- `gallery-pic-2.webp` — 204KB, target < 50KB
+- `gallery-pic-1.webp` — 188KB, target < 50KB
+- `gallery-pic-7-1400w.webp` — 266KB, target < 70KB
+- `gallery-pic-6-800w.webp` — 136KB, target < 35KB
+
+**Logo:**
+- `ProGrow_Logo_White.webp` already exists at 22KB — confirm HTML references `.webp` not `.png`
+- `ProGrow_Logo_Green.webp` already exists at 21KB — same check
 
 ### 2. Fix desktop CLS (0.141) — Core Web Vitals
 - **Attempted and reverted:** `min-height` on `.carousel-inner` — made perf score worse
