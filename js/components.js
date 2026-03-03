@@ -72,8 +72,9 @@ function renderNavbar(currentPage) {
                 <a href="about.html" class="nav-item nav-link ${isActive('about.html')}">About Us</a>
                 <a href="garden-care-packages.html" class="nav-item nav-link ${isActive('garden-care-packages.html')}">Garden Care Packages</a>
                 <a href="gallery.html" class="nav-item nav-link ${isActive('gallery.html')}">Gallery</a>
-                <a href="partnership.html" class="nav-item nav-link ${isActive('partnership.html')}">Contractor Partnership</a>
                 <a href="contact.html" class="nav-item nav-link ${isActive('contact.html')}">Contact Us</a>
+                <a href="partnership.html" class="nav-item nav-link ${isActive('partnership.html')}">Contractor Partnership</a>
+
             </div>
             <a href="quote.html" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -112,6 +113,8 @@ function renderFooter() {
                     <a class="btn btn-link" href="services.html">Our Services</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="quote.html">Request Quote</a>
+                    <a class="btn btn-link" href="partnership.html">Contractor Partnership</a>
+
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-4">Service Areas</h4>
