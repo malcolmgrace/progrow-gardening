@@ -108,7 +108,7 @@ function renderFooter() {
                     <h4 class="text-white mb-4">Quick Links</h4>
                     <a class="btn btn-link" href="index.html">Home</a>
                     <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="garden-care-packes.html">Garden Care Packages</a>
+                    <a class="btn btn-link" href="garden-care-packages.html">Garden Care Packages</a>
                     <a class="btn btn-link" href="services.html">Our Services</a>
                     <a class="btn btn-link" href="gallery.html">Gallery</a>
                     <a class="btn btn-link" href="partnership.html">Contractor Partnership</a>
