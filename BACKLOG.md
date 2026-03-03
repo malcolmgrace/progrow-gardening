@@ -141,4 +141,4 @@ Rules: imperative tense, under 72 chars, bullets specific enough to understand 6
 ---
 
 ## Opening a New Session
-Send: "ProGrow project. Load backlog and let's get started."
+Send: "start"
