@@ -4,15 +4,9 @@
     <meta charset="utf-8" />
     <title>Contractor Referral Partnership – ProGrow Gardening Ottawa</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta
-      content="contractor partnership, trade referral network, Ottawa landscaping, ProGrow, tree services, hedge shrub care"
-      name="keywords"
-    />
-    <meta
-      content="ProGrow Gardening is building a two-way referral network with licensed landscape contractors across Ottawa. Clear no-cut-out terms, and it goes both ways."
-      name="description"
-    />
-    <link rel="canonical" href="https://progrowgardening.ca/partnership.html" />
+    <meta content="contractor partnership, trade referral network, Ottawa landscaping, ProGrow, tree services, hedge shrub care" name="keywords" />
+    <meta content="ProGrow Gardening is building a two-way referral network with licensed landscape contractors across Ottawa. Clear no-cut-out terms, and it goes both ways." name="description" />
+    <link rel="canonical" href="https://progrowgardening.ca/partnership" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PK4GRCXLHE"></script>
@@ -29,10 +23,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet" />
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
@@ -48,211 +39,233 @@
     <link href="css/style.css" rel="stylesheet" />
 
     <style>
-      /* Page-specific overrides */
-
-      .partner-section {
-        padding: 5rem 0;
+      .partnership-page-header {
+        background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+        padding: 3.5rem 0 3rem;
       }
-
-      .partner-intro {
-        max-width: 720px;
-        margin: 0 auto 3rem;
-        text-align: center;
-      }
-
-      /* Terms grid */
-      .terms-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1px;
-        background-color: #dee2e6;
-        border: 1px solid #dee2e6;
-        margin: 1.5rem 0;
-      }
-
-      .term-cell {
-        background: #fff;
-        padding: 1.1rem 1.25rem;
-      }
-
-      .term-label {
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--primary, #4a7c3f);
-        margin-bottom: 0.25rem;
-      }
-
-      .term-value {
-        font-size: 0.95rem;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin: 0;
-      }
-
-      .term-note {
-        font-size: 0.8rem;
-        color: #6c757d;
-        margin: 0.2rem 0 0;
-        font-weight: 400;
-      }
-
-      /* Engagement type tabs */
-      .engagement-tabs {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1rem;
-        margin: 1.5rem 0;
-      }
-
-      .engagement-card {
-        border: 1px solid #dee2e6;
-        padding: 1.5rem;
-        background: #fff;
-      }
-
-      .engagement-card .card-type {
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--primary, #4a7c3f);
-        margin-bottom: 0.75rem;
-        display: block;
-      }
-
-      .engagement-card .fee-rate {
-        font-size: 1.5rem;
-        font-weight: 700;
-        font-family: 'Jost', sans-serif;
-        color: #1a1a1a;
-        margin-bottom: 0.25rem;
-      }
-
-      .engagement-card ul {
-        list-style: none;
-        padding: 0;
-        margin: 0.75rem 0 0;
-      }
-
-      .engagement-card ul li {
-        font-size: 0.88rem;
-        color: #444;
-        padding: 0.3rem 0;
-        border-top: 1px solid #f0f0f0;
-      }
-
-      .engagement-card ul li strong {
-        color: #1a1a1a;
-        font-weight: 600;
-      }
-
-      /* Category tags */
-      .trade-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin: 1rem 0;
-      }
-
-      .trade-tag {
-        background: #1a1a1a;
+      .partnership-page-header h1 {
         color: #fff;
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-        padding: 0.35rem 0.85rem;
-        text-transform: uppercase;
-        line-height: 1.4;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+      }
+      .partnership-page-header .breadcrumb-item,
+      .partnership-page-header .breadcrumb-item a,
+      .partnership-page-header .breadcrumb-item.active {
+        color: rgba(255,255,255,0.75);
+        text-decoration: none;
+      }
+      .partnership-page-header .breadcrumb-item + .breadcrumb-item::before {
+        color: rgba(255,255,255,0.4);
       }
 
-      /* CTA box */
-      .partner-cta {
-        background: var(--primary, #4a7c3f);
-        color: #fff;
-        padding: 2rem 2.25rem;
-        margin-top: 2.5rem;
-      }
+      .partner-section { padding: 5rem 0; }
+      .partner-intro { max-width: 720px; margin: 0 auto 3rem; text-align: center; }
 
-      .partner-cta p {
-        color: #fff;
-        margin-bottom: 0;
-      }
+      .terms-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background-color: #dee2e6; border: 1px solid #dee2e6; margin: 1.5rem 0; }
+      .term-cell { background: #fff; padding: 1.1rem 1.25rem; }
+      .term-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--primary, #4a7c3f); margin-bottom: 0.25rem; }
+      .term-value { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin: 0; }
 
-      .partner-cta .cta-heading {
-        font-family: 'Jost', sans-serif;
-        font-size: 1.2rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 0.5rem;
-        display: block;
-      }
+      .engagement-tabs { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+      .engagement-card { border: 1px solid #dee2e6; padding: 1.5rem; background: #fff; }
+      .engagement-card .card-type { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--primary, #4a7c3f); margin-bottom: 0.75rem; display: block; }
+      .engagement-card .fee-rate { font-size: 1.5rem; font-weight: 700; font-family: 'Jost', sans-serif; color: #1a1a1a; margin-bottom: 0.25rem; }
+      .engagement-card ul { list-style: none; padding: 0; margin: 0.75rem 0 0; }
+      .engagement-card ul li { font-size: 0.88rem; color: #444; padding: 0.3rem 0; border-top: 1px solid #f0f0f0; }
+      .engagement-card ul li strong { color: #1a1a1a; font-weight: 600; }
 
-      /* Info callout */
-      .info-callout {
-        background: #f8f9fa;
-        border-left: 4px solid var(--primary, #4a7c3f);
-        padding: 1rem 1.25rem;
-        margin: 1.5rem 0;
-        font-size: 0.9rem;
-      }
+      .trade-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+      .trade-tag { background: #1a1a1a; color: #fff; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; padding: 0.35rem 0.85rem; text-transform: uppercase; line-height: 1.4; }
 
-      .info-callout p {
-        margin: 0;
-        color: #444;
-      }
+      .partner-cta { background: var(--primary, #4a7c3f); color: #fff; padding: 2rem 2.25rem; margin-top: 2.5rem; }
+      .partner-cta p { color: #fff; margin-bottom: 0; }
+      .partner-cta .cta-heading { font-family: 'Jost', sans-serif; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; display: block; }
 
-      /* Footer note */
-      .partner-footnote {
-        font-size: 0.8rem;
-        color: #6c757d;
-        margin-top: 1.5rem;
-        padding-top: 1rem;
-        border-top: 1px solid #dee2e6;
-      }
+      .info-callout { background: #f8f9fa; border-left: 4px solid var(--primary, #4a7c3f); padding: 1rem 1.25rem; margin: 1.5rem 0; font-size: 0.9rem; }
+      .info-callout p { margin: 0; color: #444; }
 
       @media (max-width: 768px) {
-        .terms-grid,
-        .engagement-tabs {
-          grid-template-columns: 1fr;
-        }
-        .terms-grid .term-cell[style*="span 3"] {
-          grid-column: span 1;
-        }
+        .terms-grid, .engagement-tabs { grid-template-columns: 1fr; }
+        .terms-grid .term-cell[style*="span 3"] { grid-column: span 1; }
       }
     </style>
+
+    <!-- Schema: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ProGrow Gardening",
+      "url": "https://progrowgardening.ca",
+      "telephone": "+1-249-878-9140",
+      "email": "admin@progrowgardening.ca",
+      "image": "https://progrowgardening.ca/img/favicon.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nepean",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Nepean" },
+        { "@type": "City", "name": "Barrhaven" },
+        { "@type": "City", "name": "Riverside South" },
+        { "@type": "City", "name": "Manotick" },
+        { "@type": "City", "name": "Kanata" },
+        { "@type": "City", "name": "Ottawa" }
+      ],
+      "knowsAbout": [
+        "Lawn Maintenance",
+        "Garden Maintenance",
+        "Landscaping",
+        "Contractor Referral Network",
+        "Horticulture"
+      ]
+    }
+    </script>
+
+    <!-- Schema: Service (Referral Partnership) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Landscape Contractor Referral Partnership",
+      "serviceType": "Business Referral Network",
+      "description": "A two-way referral partnership for licensed landscape contractors in Ottawa. ProGrow Gardening refers out-of-scope clients to vetted contractors and receives referrals in return. Clear fee structure, defined no-cut-out periods, and a signed referral agreement before any introductions.",
+      "url": "https://progrowgardening.ca/partnership",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "ProGrow Gardening",
+        "url": "https://progrowgardening.ca",
+        "telephone": "+1-249-878-9140",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nepean",
+          "addressRegion": "ON",
+          "addressCountry": "CA"
+        }
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Nepean" },
+        { "@type": "City", "name": "Barrhaven" },
+        { "@type": "City", "name": "Riverside South" },
+        { "@type": "City", "name": "Manotick" },
+        { "@type": "City", "name": "Kanata" },
+        { "@type": "City", "name": "Ottawa" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Referral Fee Structure",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Capital Project Referral",
+            "description": "10% of total invoice excluding taxes. No-cut-out period of 18 months from written introduction. After 18 months the client is fully the contractor's with no fee or obligation."
+          },
+          {
+            "@type": "Offer",
+            "name": "Seasonal Contract Referral",
+            "description": "8% of total seasonal contract value. No-cut-out through end of the first contracted season. From season two onward the client is fully the contractor's."
+          },
+          {
+            "@type": "Offer",
+            "name": "One-Off Job Referral",
+            "description": "6% of total invoice including 7-day touch-up work. No-cut-out period of 7 days after job completion."
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the ProGrow contractor referral network work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When ProGrow receives a client request outside their scope, they refer it to a vetted contractor in their network. The contractor gets a warm introduction to a qualified client and pays a referral fee after completing the work. After the no-cut-out period ends, the client is fully the contractor's. It also works in reverse: contractors who find garden maintenance, planting, or yard cleanup work can refer clients to ProGrow at the same rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the referral fee rates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Capital projects: 10% of the total invoice excluding taxes. Seasonal contracts: 8% of the total contract value. One-off jobs: 6% of the total invoice including any 7-day touch-up work. All fees are paid within 14 days of receiving client payment. HST is not charged on referral fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the no-cut-out period?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The no-cut-out clock starts on the written introduction, not the quote date or first invoice. For capital projects it is 18 months. For seasonal contracts it runs through the end of the first contracted season. For one-off jobs it is 7 days after job completion. After the period ends, the client is fully the contractor's with no fee, no notice, and no restriction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the minimum requirements to join the referral network?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contractors must carry $2M CGL insurance, hold WSIB clearance in good standing, and have all applicable licences and certifications valid and current. A signed referral agreement must be in place before any introductions are made."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which trade categories is ProGrow looking for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ProGrow is looking for licensed, insured contractors in: lawn maintenance, tree services, hedge and shrub care, sod installation, hardscaping, commercial and residential garden maintenance, irrigation services, water features, and landscape design and consultation."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>
     <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
       <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem"></div>
     </div>
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
     <div id="topbar-placeholder"></div>
-    <!-- Topbar End -->
 
     <!-- Navbar Start -->
     <div id="navbar-placeholder"></div>
-    <!-- Navbar End -->
 
     <main>
+
+      <!-- Page Header Start -->
+      <div class="partnership-page-header">
+        <div class="container">
+          <div class="wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="mb-2">Contractor Referral Partnership</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Partnership</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!-- Page Header End -->
+
       <div class="container-xxl partner-section">
         <div class="container">
 
-          <!-- Page Intro -->
           <div class="partner-intro wow fadeInUp" data-wow-delay="0.1s">
             <p class="fs-5 fw-bold text-primary">Ottawa - Referral Partnership for Landscape Contractors</p>
-            <h1 class="display-5 mb-3">We Send You Clients.<br>You Send Us Clients.</h1>
+            <h2 class="display-5 mb-3">We Send You Clients.<br>You Send Us Clients.</h2>
             <p class="text-muted">
-              ProGrow Gardening is building a network of trusted landscape  service providers across Ottawa.
+              ProGrow Gardening is building a network of trusted landscape service providers across Ottawa.
               Clear referral agreement, low fee, and a defined window after which the client is fully yours.
               It goes both ways.
             </p>
@@ -261,30 +274,25 @@
           <div class="row g-5">
             <div class="col-lg-8 offset-lg-2 wow fadeInUp" data-wow-delay="0.2s">
 
-              <!-- How It Works -->
               <h2 class="mb-3">How It Works</h2>
               <p>
-                We often recive client request's for services out of our scope or area. Instead of turning them away, we refer them to vetted contractors in our network. You get a warm introduction to a qualified client, and we take a referral fee after you complete the work, based on the engagement type.
+                We often receive client requests for services outside our scope or area. Instead of turning them away, we refer them to vetted contractors in our network. You get a warm introduction to a qualified client, and we take a referral fee after you complete the work, based on the engagement type.
                 After the no-cut-out period ends, the client is fully yours with no fee or obligation.
               </p>
               <p>
-                If you find work that's in our scope such as garden maintenance, planting, or yard cleanup - send
-                them our way. We pay the same rate back to you.
+                If you find work that is in our scope such as garden maintenance, planting, or yard cleanup, send them our way. We pay the same rate back to you.
               </p>
 
-              <!-- Highlight box -->
               <div class="info-callout">
-                <p>This is a two-way referral network. You're not just paying us, as you can earn too. Same rate, same rules on both sides.</p>
+                <p>This is a two-way referral network. You are not just paying us, you can earn too. Same rate, same rules on both sides.</p>
               </div>
 
-              <!-- Engagement Types -->
               <h2 class="mb-3">Three Engagement Types</h2>
               <p>The fee rate and no-cut-out period depend on how the job is structured. Both are confirmed in the written introduction.</p>
 
               <div class="engagement-tabs" aria-label="Engagement type comparison">
-
-                <div class="engagement-card">
-                  <span class="card-type">Capital Project</span>
+                <div class="engagement-card" style="background:#eff6ff; border-left: 4px solid #3b82f6;">
+                  <span class="card-type" style="color:#3b82f6;">Capital Project</span>
                   <div class="fee-rate">10%</div>
                   <div style="font-size:0.8rem;color:#6c757d;">of total invoice, excluding taxes</div>
                   <ul>
@@ -294,9 +302,8 @@
                     <li><strong>Staged invoicing:</strong> Fee applies to each payment received</li>
                   </ul>
                 </div>
-
-                <div class="engagement-card">
-                  <span class="card-type">Seasonal Contract</span>
+                <div class="engagement-card" style="background:#fffbeb; border-left: 4px solid #f59e0b;">
+                  <span class="card-type" style="color:#d97706;">Seasonal Contract</span>
                   <div class="fee-rate">8%</div>
                   <div style="font-size:0.8rem;color:#6c757d;">of total seasonal contract value</div>
                   <ul>
@@ -305,9 +312,8 @@
                     <li><strong>Season 2 onward:</strong> Client is fully yours. No fee, no notice, no restriction on renewals.</li>
                   </ul>
                 </div>
-
-                <div class="engagement-card">
-                  <span class="card-type">One-Off Job</span>
+                <div class="engagement-card" style="background:#f0fdf4; border-left: 4px solid #22c55e;">
+                  <span class="card-type" style="color:#16a34a;">One-Off Job</span>
                   <div class="fee-rate">6%</div>
                   <div style="font-size:0.8rem;color:#6c757d;">of total invoice, including 7-day touch-up work</div>
                   <ul>
@@ -316,136 +322,101 @@
                     <li><strong>On Day 8:</strong> Fully clear. No fee, no notice, no restriction.</li>
                   </ul>
                 </div>
-
               </div>
 
-              <!-- Clock note -->
               <div class="info-callout">
                 <p><strong>No-cut-out clock starts on written introduction</strong> - not the quote date, the first invoice, or the first payment. This is stated on our Referral Notification Form.</p>
               </div>
 
-              <!-- Direct client contact -->
               <h3 class="mt-4 mb-2" style="font-size:1.1rem;">If a Referred Client Contacts You Directly</h3>
               <p>
                 If a referred client reaches out to you directly during the no-cut-out period for new work, additional improvements, or anything else, notify us in writing within 5 business days. This applies whether or not you take the work.
               </p>
 
-              <!-- Reciprocal Terms -->
-              <h2 class="mt-5 mb-3">Reciprocal Terms</h2>
-              <div class="terms-grid" aria-label="Referral agreement terms">
+              <h2 class="mt-5 mb-2">Reciprocal Terms</h2>
+              <p class="text-muted mb-3">The same rules apply in both directions. Whatever we charge you, we pay you at the same rate when you send work our way.</p>
 
-                <!-- FEES — blue -->
-                <div class="term-cell" style="background:#eff6ff; border-left: 4px solid #3b82f6;">
-                  <div class="term-label">Capital Project Fee</div>
-                  <p class="term-value">10% of invoice (excl. taxes)</p>
-                </div>
-                <div class="term-cell" style="background:#eff6ff; border-left: 4px solid #3b82f6;">
-                  <div class="term-label">Seasonal Contract Fee</div>
-                  <p class="term-value">8% of contract value</p>
-                </div>
-                <div class="term-cell" style="background:#eff6ff; border-left: 4px solid #3b82f6;">
-                  <div class="term-label">One-Off Job Fee</div>
-                  <p class="term-value">6% of invoice (incl. touch-ups)</p>
-                </div>
-
-                <!-- NO-CUT-OUT PERIODS — amber -->
-                <div class="term-cell" style="background:#fffbeb; border-left: 4px solid #f59e0b;">
-                  <div class="term-label">Capital Project No-Cut-Out</div>
-                  <p class="term-value">18 months from introduction</p>
-                </div>
-                <div class="term-cell" style="background:#fffbeb; border-left: 4px solid #f59e0b;">
-                  <div class="term-label">Seasonal No-Cut-Out</div>
-                  <p class="term-value">Through end of first season</p>
-                </div>
-                <div class="term-cell" style="background:#fffbeb; border-left: 4px solid #f59e0b;">
-                  <div class="term-label">One-Off No-Cut-Out</div>
-                  <p class="term-value">7 days after job completion</p>
-                </div>
-
-                <!-- PAYMENT & RECIPROCAL — green -->
-                <div class="term-cell" style="background:#f0fdf4; border-left: 4px solid #22c55e;">
-                  <div class="term-label">When You Pay</div>
-                  <p class="term-value">Within 14 days of client payment</p>
-                </div>
-                <div class="term-cell" style="background:#f0fdf4; border-left: 4px solid #22c55e;">
-                  <div class="term-label">Reciprocal Rate</div>
-                  <p class="term-value">Same rate in return to you, according to the scope of work.</p>
-                </div>
-                <div class="term-cell" style="background:#f0fdf4; border-left: 4px solid #22c55e;">
-                  <div class="term-label">HST on Referral Fees</div>
-                  <p class="term-value">Not charged (small supplier)</p>
-                </div>
-
-                <!-- RATE LOCK — purple -->
-                <div class="term-cell" style="grid-column: span 3; background:#faf5ff; border-left: 4px solid #a855f7;">
-                  <div class="term-label">Rate Lock</div>
-                  <p class="term-value">All rates fixed for 12 months — renegotiable by mutual written consent after</p>
-                </div>
-
-              </div>
-
-              <!-- Optional legend -->
-              <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:12px; font-size:0.8rem; color:#555;">
-                <span><span style="display:inline-block;width:12px;height:12px;background:#eff6ff;border:2px solid #3b82f6;border-radius:2px;margin-right:5px;"></span>Fees</span>
-                <span><span style="display:inline-block;width:12px;height:12px;background:#fffbeb;border:2px solid #f59e0b;border-radius:2px;margin-right:5px;"></span>No-Cut-Out Periods</span>
-                <span><span style="display:inline-block;width:12px;height:12px;background:#f0fdf4;border:2px solid #22c55e;border-radius:2px;margin-right:5px;"></span>Payment & Reciprocal</span>
-                <span><span style="display:inline-block;width:12px;height:12px;background:#faf5ff;border:2px solid #a855f7;border-radius:2px;margin-right:5px;"></span>Rate Lock</span>
+              <div class="table-responsive">
+                <table class="table align-middle mb-0" style="font-size:0.92rem; border: 1px solid #dee2e6;">
+                  <thead style="background:#f8f9fa;">
+                    <tr>
+                      <th style="width:30%; padding:0.85rem 1rem; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#6c757d; font-weight:700; border-bottom: 2px solid #dee2e6;">Engagement Type</th>
+                      <th style="padding:0.85rem 1rem; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#6c757d; font-weight:700; border-bottom: 2px solid #dee2e6;">Fee</th>
+                      <th style="padding:0.85rem 1rem; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#6c757d; font-weight:700; border-bottom: 2px solid #dee2e6;">No-Cut-Out Period</th>
+                      <th style="padding:0.85rem 1rem; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#6c757d; font-weight:700; border-bottom: 2px solid #dee2e6;">After That</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="background:#eff6ff;">
+                      <td style="padding:0.85rem 1rem; border-left: 4px solid #3b82f6; font-weight:600;">Capital Project</td>
+                      <td style="padding:0.85rem 1rem;">10% of invoice (excl. taxes)</td>
+                      <td style="padding:0.85rem 1rem;">18 months from introduction</td>
+                      <td style="padding:0.85rem 1rem; color:#555;">Client is yours. No fee, no notice.</td>
+                    </tr>
+                    <tr style="background:#fffbeb;">
+                      <td style="padding:0.85rem 1rem; border-left: 4px solid #f59e0b; font-weight:600;">Seasonal Contract</td>
+                      <td style="padding:0.85rem 1rem;">8% of contract value</td>
+                      <td style="padding:0.85rem 1rem;">Through end of first season</td>
+                      <td style="padding:0.85rem 1rem; color:#555;">Client is yours. No restriction on renewals.</td>
+                    </tr>
+                    <tr style="background:#f0fdf4;">
+                      <td style="padding:0.85rem 1rem; border-left: 4px solid #22c55e; font-weight:600;">One-Off Job</td>
+                      <td style="padding:0.85rem 1rem;">6% of invoice (incl. touch-ups)</td>
+                      <td style="padding:0.85rem 1rem;">7 days after job completion</td>
+                      <td style="padding:0.85rem 1rem; color:#555;">Fully clear on Day 8.</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr style="background:#f8f9fa;">
+                      <td colspan="4" style="padding:0.75rem 1rem; font-size:0.82rem; color:#555; border-top: 1px solid #dee2e6;">
+                        Payment due within 14 days of receiving client payment. HST not charged on referral fees (small supplier). All rates fixed for 12 months, renegotiable by mutual written consent after.
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
               </div>
 
               <p style="margin-top: 1.5rem;">
-                Before any introductions are made, a signed referral agreement must be in place. You'll receive it for review with no obligation.
+                Before any introductions are made, a signed referral agreement must be in place. You will receive it for review with no obligation.
               </p>
 
-              <!-- Who We're Looking For -->
               <h2 class="mt-5 mb-3">Who We're Looking For</h2>
               <p>Licensed, insured contractors in any of these categories:</p>
-
               <div class="trade-tags" aria-label="Trade categories">
                 <span class="trade-tag">Lawn Maintenance</span>
                 <span class="trade-tag">Tree Services</span>
                 <span class="trade-tag">Hedge &amp; Shrub Care</span>
-                <span class="trade-tag">Tree Services</span>
                 <span class="trade-tag">Sod Installation</span>
                 <span class="trade-tag">Hardscaping</span>
                 <span class="trade-tag">Commercial &amp; Residential Garden Maintenance</span>
                 <span class="trade-tag">Irrigation Services</span>
                 <span class="trade-tag">Water Features</span>
                 <span class="trade-tag">Landscape Design &amp; Consultation</span>
-
               </div>
-
               <p class="mt-3">
                 Minimum requirements: $2M CGL insurance, WSIB clearance in good standing, all applicable licences and certifications valid and current.
               </p>
 
-              <!-- Service Area -->
               <h2 class="mt-5 mb-3">Service Area</h2>
               <p>
                 Serving residential and commercial clients across Ottawa and surrounding areas, with a core focus on Nepean, Barrhaven, Riverside South, Manotick, and Kanata.
               </p>
 
-              <!-- CTA + Contact Form -->
-              <div class="partner-cta" style="margin-top: 2.5rem;">
+              <div class="partner-cta">
                 <strong class="cta-heading">Apply for Partnership</strong>
-                <p style="margin-bottom: 0.5rem;">
-                  Fill out the form below and we'll send the agreement for review. No obligation to sign until you've read it.
-                </p>
+                <p style="margin-bottom: 0.5rem;">Fill out the form below and we'll send the agreement for review. No obligation to sign until you've read it.</p>
                 <p class="fw-semibold" style="margin-bottom: 1.5rem;">
                   <a href="mailto:admin@progrowgardening.ca" class="text-white text-decoration-underline">admin@progrowgardening.ca</a>
                   &nbsp;|&nbsp;
                   <a href="tel:+12498789140" class="text-white text-decoration-underline">(249) 878-9140</a>
                 </p>
-
                 <form name="partner-application" method="POST" data-netlify="true" action="/thank-you.html">
                   <input type="hidden" name="form-name" value="partner-application" />
-
                   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-
                     <div style="display: flex; flex-direction: column; gap: 0.3rem;">
                       <label for="business-name" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Business Name</label>
                       <input type="text" id="business-name" name="business-name" placeholder="Registered Business Name" required style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
                     </div>
-
                     <div style="display: flex; flex-direction: column; gap: 0.3rem;">
                       <label for="trade-category" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Trade Category</label>
                       <select id="trade-category" name="trade-category" required style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;">
@@ -462,60 +433,65 @@
                         <option>Other</option>
                       </select>
                     </div>
-
                     <div style="display: flex; flex-direction: column; gap: 0.3rem;">
                       <label for="contact-name" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Your Name</label>
-                      <input type="text" id="contact-name" name="contact-name" placeholder="First & Last name" required style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
+                      <input type="text" id="contact-name" name="contact-name" placeholder="First and Last name" required style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
                     </div>
-
                     <div style="display: flex; flex-direction: column; gap: 0.3rem;">
                       <label for="email" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Email</label>
                       <input type="email" id="email" name="email" placeholder="Business Email" required style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
                     </div>
-
                     <div style="display: flex; flex-direction: column; gap: 0.3rem;">
                       <label for="phone" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Phone</label>
                       <input type="tel" id="phone" name="phone" placeholder="(613) 000-0000" style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
                     </div>
-
                     <div style="display: flex; flex-direction: column; gap: 0.3rem;">
                       <label for="service-area" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Service Area</label>
                       <input type="text" id="service-area" name="service-area" placeholder="e.g. Barrhaven, Kanata, Ottawa South" style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%;" />
                     </div>
-
                     <div style="display: flex; flex-direction: column; gap: 0.3rem; grid-column: span 2;">
                       <label for="notes" style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8);">Brief Note About Your Operation</label>
                       <textarea id="notes" name="notes" rows="3" placeholder="How long you've been operating, typical job size, anything relevant..." style="background: #fff; border: none; color: #1a1a1a; padding: 0.6rem 0.85rem; font-size: 0.9rem; outline: none; width: 100%; resize: vertical;"></textarea>
                     </div>
-
                   </div>
-
                   <div style="margin-top: 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.65); margin: 0;">We'll respond within 1–2 business days with the agreement.</p>
-                    <button type="submit" style="background: #fff; color: var(--primary, #4a7c3f); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.7rem 1.75rem; border: none; cursor: pointer;">
-                      Send Application →
-                    </button>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.65); margin: 0;">We'll respond within 1 to 2 business days with the agreement.</p>
+                    <button type="submit" style="background: #fff; color: var(--primary, #4a7c3f); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.7rem 1.75rem; border: none; cursor: pointer;">Send Application</button>
                   </div>
-
                 </form>
-
               </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom CTA Strip -->
+          <div class="row mt-5">
+            <div class="col-lg-8 offset-lg-2">
+              <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <p class="fs-5 fw-bold text-primary mb-1">Not a Contractor?</p>
+                <h2 class="display-6 mb-3">Looking for Lawn and Garden Services?</h2>
+                <p class="text-muted mb-4" style="max-width:500px; margin:0 auto 1.5rem;">
+                  If you're a homeowner looking for reliable garden maintenance, seasonal cleanups, or landscaping in Ottawa, we'd love to help.
+                </p>
+                <a href="quote.html" class="btn btn-primary py-3 px-5 me-3">Request a Free Quote</a>
+                <a href="services.html" class="btn btn-outline-primary py-3 px-5">View Our Services</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+
     </main>
 
     <!-- Footer Start -->
     <div id="footer-placeholder"></div>
-    <!-- Footer End -->
 
-<!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js" defer></script>
     <script src="lib/easing/easing.min.js" defer></script>
     <script src="lib/waypoints/waypoints.min.js" defer></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js" defer></script>
     <script src="js/components.js" defer></script>
   </body>

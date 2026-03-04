@@ -4,15 +4,9 @@
     <meta charset="utf-8" />
     <title>Garden Care Packages – ProGrow Gardening Ottawa</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta
-      content="garden care packages Ottawa, garden maintenance plan, bi-weekly garden service, Ottawa gardening"
-      name="keywords"
-    />
-    <meta
-      content="ProGrow Gardening offers three garden care packages for Ottawa homeowners — from essential tidy-up to fully managed programs. Bi-weekly service, Nepean, Barrhaven, Riverside South, Manotick, Kanata."
-      name="description"
-    />
-    <link rel="canonical" href="https://progrowgardening.ca/garden-care-packages.html" />
+    <meta content="garden care packages Ottawa, garden maintenance plan, bi-weekly garden service, Ottawa gardening" name="keywords" />
+    <meta content="ProGrow Gardening offers three garden care packages for Ottawa homeowners — from essential tidy-up to fully managed programs. Bi-weekly service, Nepean, Barrhaven, Riverside South, Manotick, Kanata." name="description" />
+    <link rel="canonical" href="https://progrowgardening.ca/garden-care-packages" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PK4GRCXLHE"></script>
@@ -29,10 +23,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet" />
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
@@ -48,236 +39,82 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Page-specific styles -->
     <style>
-      /* Package card layout */
-      .pkg-card {
-        border: 1px solid #dee2e6;
-        border-radius: 0.5rem;
-        overflow: hidden;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
+      .packages-page-header {
+        background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+        padding: 3.5rem 0 3rem;
       }
-
-      .pkg-card-header {
-        padding: 1.75rem 1.75rem 1.25rem;
-        background: #f8f9fa;
-        border-bottom: 1px solid #dee2e6;
-      }
-
-      .pkg-card-header.featured {
-        background: var(--primary);
-        border-bottom-color: transparent;
+      .packages-page-header h1 {
         color: #fff;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+      }
+      .packages-page-header .breadcrumb-item,
+      .packages-page-header .breadcrumb-item a,
+      .packages-page-header .breadcrumb-item.active {
+        color: rgba(255,255,255,0.75);
+        text-decoration: none;
+      }
+      .packages-page-header .breadcrumb-item + .breadcrumb-item::before {
+        color: rgba(255,255,255,0.4);
       }
 
-      .pkg-card-header.featured .text-muted {
-        color: rgba(255,255,255,0.8) !important;
-      }
+      .pkg-card { border: 1px solid #dee2e6; border-radius: 0.5rem; overflow: hidden; height: 100%; display: flex; flex-direction: column; }
+      .pkg-card-header { padding: 1.75rem 1.75rem 1.25rem; background: #f8f9fa; border-bottom: 1px solid #dee2e6; }
+      .pkg-card-header.featured { background: var(--primary); border-bottom-color: transparent; color: #fff; }
+      .pkg-card-header.featured .text-muted { color: rgba(255,255,255,0.8) !important; }
+      .pkg-card-header.featured .pkg-badge { background: rgba(255,255,255,0.2); color: #fff; }
+      .pkg-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; background: #e9f5e9; color: var(--primary); border-radius: 2rem; margin-bottom: 0.75rem; }
+      .pkg-title { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.35rem; line-height: 1.2; }
+      .pkg-target { font-size: 0.875rem; }
+      .pkg-body { padding: 1.75rem; flex: 1; display: flex; flex-direction: column; }
+      .pkg-section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 0.6rem; margin-top: 1.25rem; }
+      .pkg-section-label:first-child { margin-top: 0; }
+      .pkg-list { list-style: none; padding: 0; margin: 0 0 0.25rem; }
+      .pkg-list li { font-size: 0.925rem; line-height: 1.5; padding: 0.25rem 0; display: flex; align-items: flex-start; gap: 0.6rem; }
+      .pkg-list li i { margin-top: 3px; flex-shrink: 0; font-size: 0.8rem; }
+      .pkg-list.exclusions li i { color: #adb5bd; }
+      .pkg-list.inclusions li i { color: var(--primary); }
+      .pkg-cta { margin-top: auto; padding-top: 1.5rem; }
+      .pkg-card.featured-card { border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary); }
 
-      .pkg-card-header.featured .pkg-badge {
-        background: rgba(255,255,255,0.2);
-        color: #fff;
-      }
+      .pkg-inline-form { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; padding: 0 1.75rem; background: #f8faf8; border-top: 0px solid #dee2e6; }
+      .pkg-inline-form.is-open { max-height: 700px; padding: 1.5rem 1.75rem; border-top-width: 1px; }
+      .pkg-inline-form .form-control { font-size: 0.9rem; }
+      .pkg-inline-form .form-floating label { font-size: 0.875rem; }
+      .pkg-form-success { display: none; text-align: center; padding: 1.5rem 1.75rem; background: #f8faf8; border-top: 1px solid #dee2e6; }
+      .pkg-form-success i { font-size: 2rem; color: var(--primary); display: block; margin-bottom: 0.5rem; }
+      .pkg-form-success p { font-size: 0.9rem; color: #333; margin: 0; }
+      .btn-pkg-quote .bi-chevron-down { transition: transform 0.25s ease; margin-left: 0.4rem; }
+      .btn-pkg-quote.is-open .bi-chevron-down { transform: rotate(180deg); }
 
-      .pkg-badge {
-        display: inline-block;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        padding: 3px 10px;
-        background: #e9f5e9;
-        color: var(--primary);
-        border-radius: 2rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .pkg-title {
-        font-size: 1.35rem;
-        font-weight: 700;
-        margin-bottom: 0.35rem;
-        line-height: 1.2;
-      }
-
-      .pkg-target {
-        font-size: 0.875rem;
-      }
-
-      .pkg-body {
-        padding: 1.75rem;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .pkg-section-label {
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: var(--primary);
-        margin-bottom: 0.6rem;
-        margin-top: 1.25rem;
-      }
-
-      .pkg-section-label:first-child {
-        margin-top: 0;
-      }
-
-      .pkg-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 0.25rem;
-      }
-
-      .pkg-list li {
-        font-size: 0.925rem;
-        line-height: 1.5;
-        padding: 0.25rem 0;
-        display: flex;
-        align-items: flex-start;
-        gap: 0.6rem;
-      }
-
-      .pkg-list li i {
-        margin-top: 3px;
-        flex-shrink: 0;
-        font-size: 0.8rem;
-      }
-
-      .pkg-list.exclusions li i {
-        color: #adb5bd;
-      }
-
-      .pkg-list.inclusions li i {
-        color: var(--primary);
-      }
-
-      .pkg-cta {
-        margin-top: auto;
-        padding-top: 1.5rem;
-      }
-
-      /* Featured ring */
-      .pkg-card.featured-card {
-        border-color: var(--primary);
-        box-shadow: 0 0 0 2px var(--primary);
-      }
-
-      /* Inline quote form — hidden by default, slides open */
-      .pkg-inline-form {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease, padding 0.35s ease;
-        padding: 0 1.75rem;
-        background: #f8faf8;
-        border-top: 0px solid #dee2e6;
-      }
-
-      .pkg-inline-form.is-open {
-        max-height: 700px;
-        padding: 1.5rem 1.75rem;
-        border-top-width: 1px;
-      }
-
-      .pkg-inline-form .form-control {
-        font-size: 0.9rem;
-      }
-
-      .pkg-inline-form .form-floating label {
-        font-size: 0.875rem;
-      }
-
-      /* Success state inside inline form */
-      .pkg-form-success {
-        display: none;
-        text-align: center;
-        padding: 1.5rem 1.75rem;
-        background: #f8faf8;
-        border-top: 1px solid #dee2e6;
-      }
-
-      .pkg-form-success i {
-        font-size: 2rem;
-        color: var(--primary);
-        display: block;
-        margin-bottom: 0.5rem;
-      }
-
-      .pkg-form-success p {
-        font-size: 0.9rem;
-        color: #333;
-        margin: 0;
-      }
-
-      /* Toggle button arrow indicator */
-      .btn-pkg-quote .bi-chevron-down {
-        transition: transform 0.25s ease;
-        margin-left: 0.4rem;
-      }
-
-      .btn-pkg-quote.is-open .bi-chevron-down {
-        transform: rotate(180deg);
-      }
-
-      /* Comparison table */
-      .compare-table th {
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        color: #6c757d;
-        vertical-align: bottom;
-      }
-
-      .compare-table td {
-        font-size: 0.9rem;
-        vertical-align: middle;
-      }
-
+      .compare-table th { font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6c757d; vertical-align: bottom; }
+      .compare-table td { font-size: 0.9rem; vertical-align: middle; }
       .compare-table .check-yes { color: var(--primary); }
       .compare-table .check-no  { color: #dee2e6; }
 
-      /* Intro strip */
-      .pkg-intro-strip {
-        background: #f8f9fa;
-        border-top: 3px solid var(--primary);
-        padding: 2rem;
-        margin-bottom: 3rem;
-      }
-
-      .pkg-intro-strip p {
-        max-width: 620px;
-        margin: 0 auto;
-        font-size: 1rem;
-        color: #555;
-        text-align: center;
-        line-height: 1.7;
-      }
+      .pkg-intro-strip { background: #f8f9fa; border-top: 3px solid var(--primary); padding: 2rem; margin-bottom: 3rem; }
+      .pkg-intro-strip p { max-width: 620px; margin: 0 auto; font-size: 1rem; color: #555; text-align: center; line-height: 1.7; }
     </style>
 
-    <!-- Service Schema: Garden Care Packages -->
+    <!-- Schema: Service + OfferCatalog -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
       "serviceType": "Garden Maintenance",
       "name": "Garden Care Packages",
-      "description": "Garden maintenance packages for Ottawa homeowners. Garden care including weeding, edging, shrub pruning, perennial care, and seasonal resets.",
+      "description": "Garden maintenance packages for Ottawa homeowners. Bi-weekly garden care including weeding, edging, shrub pruning, perennial care, and seasonal resets. Serving Nepean, Barrhaven, Riverside South, Manotick, and Kanata.",
       "url": "https://progrowgardening.ca/garden-care-packages",
       "provider": {
         "@type": "LocalBusiness",
         "name": "ProGrow Gardening",
         "url": "https://progrowgardening.ca",
         "telephone": "+1-249-878-9140",
+        "image": "https://progrowgardening.ca/img/favicon.png",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Nepean",
           "addressLocality": "Nepean",
           "addressRegion": "ON",
-          "postalCode": "K2J",
           "addressCountry": "CA"
         }
       },
@@ -287,26 +124,29 @@
         "itemListElement": [
           {
             "@type": "Offer",
+            "name": "Essential Garden Care - Package 1",
             "itemOffered": {
               "@type": "Service",
               "name": "Essential Garden Care",
-              "description": "Garden tidy service: bed weeding, edge touch-up, deadheading, debris removal, and plant health monitoring."
+              "description": "Bi-weekly or monthly garden tidy service: bed weeding, edge touch-up, deadheading, light debris removal, and visual plant health monitoring. Ideal for small residential gardens."
             }
           },
           {
             "@type": "Offer",
+            "name": "Professional Garden Maintenance - Package 2",
             "itemOffered": {
               "@type": "Service",
               "name": "Professional Garden Maintenance",
-              "description": "Full-service maintenance including shrub pruning, perennial cutbacks, staking, and garden condition reporting."
+              "description": "Bi-weekly full-service maintenance including shrub pruning, perennial cutbacks, minor staking, weed suppression, and garden condition reporting by email. Most popular package."
             }
           },
           {
             "@type": "Offer",
+            "name": "Managed Garden Program - Package 3",
             "itemOffered": {
               "@type": "Service",
               "name": "Managed Garden Program",
-              "description": "Premium garden management with seasonal cutbacks, priority scheduling, and end-of-season reset."
+              "description": "Premium garden management with priority scheduling, seasonal spring and fall cutbacks, plant health intervention recommendations, and end-of-season garden reset."
             }
           }
         ]
@@ -321,14 +161,53 @@
       ]
     }
     </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is included in ProGrow's garden care packages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All packages include bed weeding, edge touch-up, deadheading, and plant health monitoring. The Professional package adds shrub pruning, perennial cutbacks, and garden condition reporting. The Managed program adds seasonal cutbacks, end-of-season reset, and priority scheduling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often does ProGrow visit for garden maintenance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Essential and Professional packages are offered bi-weekly or monthly from May through October. The Managed Garden Program frequency is site-dependent, with priority scheduling included."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Ottawa neighbourhoods does ProGrow serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ProGrow Gardening serves Nepean, Barrhaven, Riverside South, Manotick, and Kanata. If you are unsure whether your address is in the service area, ask when requesting a quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a quote for a garden care package?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Click Request a Quote on any package card, or use the quote form at the bottom of the page. ProGrow typically responds within one business day."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>
     <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
       <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem"></div>
     </div>
     <!-- Spinner End -->
@@ -339,28 +218,38 @@
 
     <!-- Navbar Start -->
     <div id="navbar-placeholder"></div>
-    <!-- Navbar End -->
 
     <main>
 
       <!-- Page Header Start -->
+      <div class="packages-page-header">
+        <div class="container">
+          <div class="wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="mb-2">Garden Care Packages</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="services.html">Services</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Garden Care Packages</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!-- Page Header End -->
+
+      <!-- Intro -->
       <div class="container-xxl py-5">
         <div class="container">
-          <div class="text-center mb-2">
-            <a href="services.html" class="btn btn-primary py-2 px-4 mb-4" aria-label="Back to services">
-              <i class="bi bi-arrow-left" aria-hidden="true"></i>&nbsp; Back to Services
-            </a>
-          </div>
           <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 560px">
-            <p class="fs-5 fw-bold text-primary">May – October</p>
-            <h1 class="display-5 mb-4">Garden Care Packages</h1>
+            <p class="fs-5 fw-bold text-primary">May to October</p>
+            <h2 class="display-5 mb-4">Garden Care Packages</h2>
           </div>
           <div class="pkg-intro-strip wow fadeInUp" data-wow-delay="0.2s">
             <p>Three packages, one straightforward goal: your garden stays tidy, healthy, and under control. Choose the level that fits your garden.</p>
           </div>
         </div>
       </div>
-      <!-- Page Header End -->
 
       <!-- Package Cards Start -->
       <div class="container pb-5">
@@ -375,22 +264,19 @@
                 <div class="pkg-target text-muted">Small residential gardens, low complexity</div>
               </div>
               <div class="pkg-body">
-
                 <div class="pkg-section-label">Frequency</div>
                 <ul class="pkg-list inclusions">
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Bi-weekly/Monthly (May – October)</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> 45–60 min per visit</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Bi-weekly or monthly (May to October)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> 45 to 60 min per visit</li>
                 </ul>
-
                 <div class="pkg-section-label">What's Included</div>
                 <ul class="pkg-list inclusions">
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Bed weeding (surface + visible roots)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Bed weeding (surface and visible roots)</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Edge touch-up (beds only)</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Deadheading annuals &amp; perennials</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Deadheading annuals and perennials</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Light debris removal</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Visual plant health monitoring (report only)</li>
                 </ul>
-
                 <div class="pkg-section-label">Not Included</div>
                 <ul class="pkg-list exclusions">
                   <li><i class="fa fa-minus" aria-hidden="true"></i> Shrub pruning</li>
@@ -398,99 +284,54 @@
                   <li><i class="fa fa-minus" aria-hidden="true"></i> Soil amendments or mulch</li>
                   <li><i class="fa fa-minus" aria-hidden="true"></i> Pest or disease treatment</li>
                 </ul>
-
                 <div class="pkg-cta">
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary w-100 py-3 btn-pkg-quote"
-                    aria-expanded="false"
-                    aria-controls="form-pkg1"
-                    data-pkg-target="form-pkg1"
-                  >
+                  <button type="button" class="btn btn-outline-primary w-100 py-3 btn-pkg-quote" aria-expanded="false" aria-controls="form-pkg1" data-pkg-target="form-pkg1">
                     Request a Quote <i class="bi bi-chevron-down" aria-hidden="true"></i>
                   </button>
                 </div>
-
               </div>
-
-              <!-- Inline quote form: Package 1 -->
               <div class="pkg-inline-form" id="form-pkg1" aria-hidden="true">
                 <p class="pkg-section-label mb-3">Essential Garden Care - Inquiry</p>
-                <form
-                  name="gardening-quote"
-                  method="POST"
-                  netlify
-                  netlify-honeypot="bot-field"
-                  class="pkg-ajax-form"
-                >
+                <form name="gardening-quote" method="POST" netlify netlify-honeypot="bot-field" class="pkg-ajax-form">
                   <input type="hidden" name="bot-field" />
                   <input type="hidden" name="form-name" value="gardening-quote" />
                   <input type="hidden" name="service-type" value="essential-garden-care" />
                   <div class="row g-2">
-                    <div class="col-12">
-                      <div class="form-floating">
-                        <input type="text" class="form-control bg-white border-0" id="p1-name" name="name" placeholder="Name" required />
-                        <label for="p1-name">Name</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="email" class="form-control bg-white border-0" id="p1-email" name="email" placeholder="Email" required />
-                        <label for="p1-email">Email</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="tel" class="form-control bg-white border-0" id="p1-phone" name="phone" placeholder="Phone" required />
-                        <label for="p1-phone">Phone</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-floating">
-                        <textarea class="form-control bg-white border-0" placeholder="Message" id="p1-msg" name="message" style="height:80px" required></textarea>
-                        <label for="p1-msg">Message (address, garden size, etc.)</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn btn-outline-primary w-100 py-2">Send Request</button>
-                    </div>
+                    <div class="col-12"><div class="form-floating"><input type="text" class="form-control bg-white border-0" id="p1-name" name="name" placeholder="Name" required /><label for="p1-name">Name</label></div></div>
+                    <div class="col-sm-6"><div class="form-floating"><input type="email" class="form-control bg-white border-0" id="p1-email" name="email" placeholder="Email" required /><label for="p1-email">Email</label></div></div>
+                    <div class="col-sm-6"><div class="form-floating"><input type="tel" class="form-control bg-white border-0" id="p1-phone" name="phone" placeholder="Phone" required /><label for="p1-phone">Phone</label></div></div>
+                    <div class="col-12"><div class="form-floating"><textarea class="form-control bg-white border-0" placeholder="Message" id="p1-msg" name="message" style="height:80px" required></textarea><label for="p1-msg">Message (address, garden size, etc.)</label></div></div>
+                    <div class="col-12"><button type="submit" class="btn btn-outline-primary w-100 py-2">Send Request</button></div>
                   </div>
                 </form>
-                <div class="pkg-form-success">
-                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
-                  <p><strong>Thanks for inquiring, we'll be in touch soon.</strong><br>We typically respond within one business day.</p>
-                </div>
+                <div class="pkg-form-success"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><p><strong>Thanks for your inquiry. We'll be in touch soon.</strong><br>We typically respond within one business day.</p></div>
               </div>
-
             </div>
           </div>
 
-          <!-- Package 2 — Featured -->
+          <!-- Package 2 - Featured -->
           <div class="col-lg-4 col-md-6">
             <div class="pkg-card featured-card">
               <div class="pkg-card-header featured">
-                <div class="pkg-badge">Package 2 — Most Popular</div>
+                <div class="pkg-badge">Package 2 - Most Popular</div>
                 <div class="pkg-title">Professional Garden Maintenance</div>
                 <div class="pkg-target text-muted">Most homeowners, townhomes, small commercial properties</div>
               </div>
               <div class="pkg-body">
-
                 <div class="pkg-section-label">Frequency</div>
                 <ul class="pkg-list inclusions">
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Bi-weekly (May – October)</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> 60–90 min per visit</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Bi-weekly (May to October)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> 60 to 90 min per visit</li>
                 </ul>
-
                 <div class="pkg-section-label">What's Included</div>
                 <ul class="pkg-list inclusions">
                   <li><i class="fa fa-check" aria-hidden="true"></i> Everything in Essential, plus:</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Shrub pruning (seasonal, size-controlled)</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Perennial cutbacks (as seasonally appropriate)</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Minor staking &amp; plant support</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Minor staking and plant support</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Weed suppression touch-ups</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Garden condition reporting (email)</li>
                 </ul>
-
                 <div class="pkg-section-label">Not Included</div>
                 <ul class="pkg-list exclusions">
                   <li><i class="fa fa-minus" aria-hidden="true"></i> Major rejuvenation pruning</li>
@@ -498,69 +339,28 @@
                   <li><i class="fa fa-minus" aria-hidden="true"></i> New bed creation</li>
                   <li><i class="fa fa-minus" aria-hidden="true"></i> Mulch or topsoil supply</li>
                 </ul>
-
                 <div class="pkg-cta">
-                  <button
-                    type="button"
-                    class="btn btn-primary w-100 py-3 btn-pkg-quote"
-                    aria-expanded="false"
-                    aria-controls="form-pkg2"
-                    data-pkg-target="form-pkg2"
-                  >
+                  <button type="button" class="btn btn-primary w-100 py-3 btn-pkg-quote" aria-expanded="false" aria-controls="form-pkg2" data-pkg-target="form-pkg2">
                     Request a Quote <i class="bi bi-chevron-down" aria-hidden="true"></i>
                   </button>
                 </div>
-
               </div>
-
-              <!-- Inline quote form: Package 2 -->
               <div class="pkg-inline-form" id="form-pkg2" aria-hidden="true">
                 <p class="pkg-section-label mb-3">Professional Garden Maintenance - Inquiry</p>
-                <form
-                  name="gardening-quote"
-                  method="POST"
-                  netlify                  netlify-honeypot="bot-field"
-                  class="pkg-ajax-form"
-                >
+                <form name="gardening-quote" method="POST" netlify netlify-honeypot="bot-field" class="pkg-ajax-form">
                   <input type="hidden" name="bot-field" />
                   <input type="hidden" name="form-name" value="gardening-quote" />
                   <input type="hidden" name="service-type" value="professional-garden-maintenance" />
                   <div class="row g-2">
-                    <div class="col-12">
-                      <div class="form-floating">
-                        <input type="text" class="form-control bg-white border-0" id="p2-name" name="name" placeholder="Name" required />
-                        <label for="p2-name">Name</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="email" class="form-control bg-white border-0" id="p2-email" name="email" placeholder="Email" required />
-                        <label for="p2-email">Email</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="tel" class="form-control bg-white border-0" id="p2-phone" name="phone" placeholder="Phone" required />
-                        <label for="p2-phone">Phone</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-floating">
-                        <textarea class="form-control bg-white border-0" placeholder="Message" id="p2-msg" name="message" style="height:80px" required></textarea>
-                        <label for="p2-msg">Message (address, garden size, etc.)</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn btn-primary w-100 py-2">Send Request</button>
-                    </div>
+                    <div class="col-12"><div class="form-floating"><input type="text" class="form-control bg-white border-0" id="p2-name" name="name" placeholder="Name" required /><label for="p2-name">Name</label></div></div>
+                    <div class="col-sm-6"><div class="form-floating"><input type="email" class="form-control bg-white border-0" id="p2-email" name="email" placeholder="Email" required /><label for="p2-email">Email</label></div></div>
+                    <div class="col-sm-6"><div class="form-floating"><input type="tel" class="form-control bg-white border-0" id="p2-phone" name="phone" placeholder="Phone" required /><label for="p2-phone">Phone</label></div></div>
+                    <div class="col-12"><div class="form-floating"><textarea class="form-control bg-white border-0" placeholder="Message" id="p2-msg" name="message" style="height:80px" required></textarea><label for="p2-msg">Message (address, garden size, etc.)</label></div></div>
+                    <div class="col-12"><button type="submit" class="btn btn-primary w-100 py-2">Send Request</button></div>
                   </div>
                 </form>
-                <div class="pkg-form-success">
-                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
-                  <p><strong>Thanks for inquiring, we'll be in touch soon.</strong><br>We typically respond within one business day.</p>
-                </div>
+                <div class="pkg-form-success"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><p><strong>Thanks for your inquiry. We'll be in touch soon.</strong><br>We typically respond within one business day.</p></div>
               </div>
-
             </div>
           </div>
 
@@ -573,91 +373,47 @@
                 <div class="pkg-target text-muted">High-expectation homeowners, large commercial properties</div>
               </div>
               <div class="pkg-body">
-
                 <div class="pkg-section-label">Frequency</div>
                 <ul class="pkg-list inclusions">
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Weekly/Bi-weekly/Monthly (site-dependent)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Weekly, bi-weekly, or monthly (site-dependent)</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> 90+ min per visit</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Priority scheduling</li>
                 </ul>
-
                 <div class="pkg-section-label">What's Included</div>
                 <ul class="pkg-list inclusions">
                   <li><i class="fa fa-check" aria-hidden="true"></i> Everything in Professional, plus:</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Seasonal spring &amp; fall cutbacks</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Seasonal spring and fall cutbacks</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Plant health intervention recommendations</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> End-of-season garden reset</li>
                 </ul>
-
                 <div class="pkg-section-label">Optional Add-Ons</div>
                 <ul class="pkg-list inclusions">
-                  <li><i class="fa fa-plus" aria-hidden="true"></i> Mulch supply &amp; install</li>
+                  <li><i class="fa fa-plus" aria-hidden="true"></i> Mulch supply and install</li>
                   <li><i class="fa fa-plus" aria-hidden="true"></i> Annual plant rotation</li>
-                  <li><i class="fa fa-plus" aria-hidden="true"></i> Spring &amp; fall clean-ups</li>
+                  <li><i class="fa fa-plus" aria-hidden="true"></i> Spring and fall clean-ups</li>
                 </ul>
-
                 <div class="pkg-cta">
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary w-100 py-3 btn-pkg-quote"
-                    aria-expanded="false"
-                    aria-controls="form-pkg3"
-                    data-pkg-target="form-pkg3"
-                  >
+                  <button type="button" class="btn btn-outline-primary w-100 py-3 btn-pkg-quote" aria-expanded="false" aria-controls="form-pkg3" data-pkg-target="form-pkg3">
                     Request a Quote <i class="bi bi-chevron-down" aria-hidden="true"></i>
                   </button>
                 </div>
-
               </div>
-
-              <!-- Inline quote form: Package 3 -->
               <div class="pkg-inline-form" id="form-pkg3" aria-hidden="true">
                 <p class="pkg-section-label mb-3">Managed Garden Program - Inquiry</p>
-                <form
-                  name="gardening-quote"
-                  method="POST"
-                  netlify                  netlify-honeypot="bot-field"
-                  class="pkg-ajax-form"
-                >
+                <form name="gardening-quote" method="POST" netlify netlify-honeypot="bot-field" class="pkg-ajax-form">
                   <input type="hidden" name="bot-field" />
                   <input type="hidden" name="form-name" value="gardening-quote" />
                   <input type="hidden" name="service-type" value="managed-garden-program" />
                   <div class="row g-2">
-                    <div class="col-12">
-                      <div class="form-floating">
-                        <input type="text" class="form-control bg-white border-0" id="p3-name" name="name" placeholder="Name" required />
-                        <label for="p3-name">Name</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="email" class="form-control bg-white border-0" id="p3-email" name="email" placeholder="Email" required />
-                        <label for="p3-email">Email</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="tel" class="form-control bg-white border-0" id="p3-phone" name="phone" placeholder="Phone" required />
-                        <label for="p3-phone">Phone</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-floating">
-                        <textarea class="form-control bg-white border-0" placeholder="Message" id="p3-msg" name="message" style="height:80px" required></textarea>
-                        <label for="p3-msg">Message (address, garden size, etc.)</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn btn-outline-primary w-100 py-2">Send Request</button>
-                    </div>
+                    <div class="col-12"><div class="form-floating"><input type="text" class="form-control bg-white border-0" id="p3-name" name="name" placeholder="Name" required /><label for="p3-name">Name</label></div></div>
+                    <div class="col-sm-6"><div class="form-floating"><input type="email" class="form-control bg-white border-0" id="p3-email" name="email" placeholder="Email" required /><label for="p3-email">Email</label></div></div>
+                    <div class="col-sm-6"><div class="form-floating"><input type="tel" class="form-control bg-white border-0" id="p3-phone" name="phone" placeholder="Phone" required /><label for="p3-phone">Phone</label></div></div>
+                    <div class="col-12"><div class="form-floating"><textarea class="form-control bg-white border-0" placeholder="Message" id="p3-msg" name="message" style="height:80px" required></textarea><label for="p3-msg">Message (address, garden size, etc.)</label></div></div>
+                    <div class="col-12"><button type="submit" class="btn btn-outline-primary w-100 py-2">Send Request</button></div>
                   </div>
                 </form>
-                <div class="pkg-form-success">
-                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
-                  <p><strong>Thanks for inquiring, we'll be in touch soon.</strong><br>We typically respond within one business day.</p>
-                </div>
+                <div class="pkg-form-success"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><p><strong>Thanks for your inquiry. We'll be in touch soon.</strong><br>We typically respond within one business day.</p></div>
               </div>
-
             </div>
           </div>
 
@@ -683,66 +439,16 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Bed weeding</td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                </tr>
-                <tr>
-                  <td>Edge touch-up (beds)</td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                </tr>
-                <tr>
-                  <td>Deadheading</td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                </tr>
-                <tr>
-                  <td>Plant health monitoring</td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                </tr>
-                <tr>
-                  <td>Shrub pruning</td>
-                  <td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                </tr>
-                <tr>
-                  <td>Perennial cutbacks</td>
-                  <td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                </tr>
-                <tr>
-                  <td>Garden condition reporting</td>
-                  <td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                </tr>
-                <tr>
-                  <td>Seasonal spring/fall cutbacks</td>
-                  <td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td>
-                  <td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                </tr>
-                <tr>
-                  <td>End-of-season garden reset</td>
-                  <td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td>
-                  <td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                </tr>
-                <tr>
-                  <td>Priority scheduling</td>
-                  <td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td>
-                  <td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td>
-                  <td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td>
-                </tr>
+                <tr><td>Bed weeding</td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td></tr>
+                <tr><td>Edge touch-up (beds)</td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td></tr>
+                <tr><td>Deadheading</td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td></tr>
+                <tr><td>Plant health monitoring</td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td></tr>
+                <tr><td>Shrub pruning</td><td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td></tr>
+                <tr><td>Perennial cutbacks</td><td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td></tr>
+                <tr><td>Garden condition reporting</td><td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td></tr>
+                <tr><td>Seasonal spring/fall cutbacks</td><td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td><td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td></tr>
+                <tr><td>End-of-season garden reset</td><td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td><td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td></tr>
+                <tr><td>Priority scheduling</td><td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td><td class="text-center"><i class="fa fa-minus check-no" aria-label="Not included"></i></td><td class="text-center"><i class="fa fa-check check-yes" aria-label="Included"></i></td></tr>
               </tbody>
             </table>
           </div>
@@ -750,7 +456,7 @@
       </div>
       <!-- Comparison Table End -->
 
-      <!-- Service Area Note Start -->
+      <!-- Service Area Note -->
       <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
@@ -760,51 +466,23 @@
           </div>
         </div>
       </div>
-      <!-- Service Area Note End -->
 
-      <!-- Free Quote Form Start -->
-      <div
-        class="container-fluid quote my-0 py-5"
-        data-parallax="scroll"
-        data-image-src="img/gardeningcarousel.jpg"
-      >
+      <!-- Quote Form Start -->
+      <div class="container-fluid quote my-0 py-5" data-parallax="scroll" data-image-src="img/gardeningcarousel.jpg">
         <div class="container py-5">
           <div class="row justify-content-center">
             <div class="col-lg-7">
               <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
-                <h2 class="text-center mb-4">
-                  <strong>Ready to Get Started?</strong>
-                </h2>
+                <h2 class="text-center mb-4"><strong>Ready to Get Started?</strong></h2>
                 <hr />
                 <p class="text-center mb-4">Tell us which package interests you and we'll follow up with a quote. No obligation.</p>
-                <form
-                  name="gardening-quote"
-                  method="POST"
-                  action="/thank-you"
-                  netlify
-                  netlify-honeypot="bot-field"
-                >
+                <form name="gardening-quote" method="POST" action="/thank-you" netlify netlify-honeypot="bot-field">
                   <input type="hidden" name="bot-field" />
                   <input type="hidden" name="form-name" value="gardening-quote" />
                   <div class="row g-3">
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="text" class="form-control bg-light border-0" id="gname" name="name" placeholder="Name" required />
-                        <label for="gname">Name</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="email" class="form-control bg-light border-0" id="gmail" name="email" placeholder="Email" required />
-                        <label for="gmail">Email</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="tel" class="form-control bg-light border-0" id="gphone" name="phone" placeholder="Phone Number" required />
-                        <label for="gphone">Phone Number</label>
-                      </div>
-                    </div>
+                    <div class="col-sm-6"><div class="form-floating"><input type="text" class="form-control bg-light border-0" id="gname" name="name" placeholder="Name" required /><label for="gname">Name</label></div></div>
+                    <div class="col-sm-6"><div class="form-floating"><input type="email" class="form-control bg-light border-0" id="gmail" name="email" placeholder="Email" required /><label for="gmail">Email</label></div></div>
+                    <div class="col-sm-6"><div class="form-floating"><input type="tel" class="form-control bg-light border-0" id="gphone" name="phone" placeholder="Phone Number" required /><label for="gphone">Phone Number</label></div></div>
                     <div class="col-sm-6">
                       <div class="form-floating">
                         <select class="form-control bg-light border-0" id="gpackage" name="service-type" required>
@@ -817,22 +495,8 @@
                         <label for="gpackage">Package Interest</label>
                       </div>
                     </div>
-                    <div class="col-12">
-                      <div class="form-floating">
-                        <textarea
-                          class="form-control bg-light border-0"
-                          placeholder="Leave a message here"
-                          id="message"
-                          name="message"
-                          style="height: 100px"
-                          required
-                        ></textarea>
-                        <label for="message">Message</label>
-                      </div>
-                    </div>
-                    <div class="col-12 text-center">
-                      <button class="btn btn-primary py-3 px-4" type="submit">Submit Now</button>
-                    </div>
+                    <div class="col-12"><div class="form-floating"><textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" name="message" style="height: 100px" required></textarea><label for="message">Message</label></div></div>
+                    <div class="col-12 text-center"><button class="btn btn-primary py-3 px-4" type="submit">Submit Now</button></div>
                   </div>
                 </form>
               </div>
@@ -840,7 +504,23 @@
           </div>
         </div>
       </div>
-      <!-- Free Quote Form End -->
+      <!-- Quote Form End -->
+
+      <!-- Bottom CTA Strip Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <p class="fs-5 fw-bold text-primary mb-1">Not Sure Which Package Fits?</p>
+            <h2 class="display-6 mb-3">We're Happy to Help You Choose</h2>
+            <p class="text-muted mb-4" style="max-width:500px; margin:0 auto 1.5rem;">
+              Get in touch and we'll talk through your garden and recommend the right level of service. No pressure, no obligation.
+            </p>
+            <a href="contact.html" class="btn btn-primary py-3 px-5 me-3">Contact Us</a>
+            <a href="services.html" class="btn btn-outline-primary py-3 px-5">View All Services</a>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom CTA Strip End -->
 
     </main>
 
@@ -856,24 +536,19 @@
     <script src="lib/waypoints/waypoints.min.js" defer></script>
     <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
     <script src="lib/counterup/counterup.min.js" defer></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js" defer></script>
     <script src="js/components.js" defer></script>
 
-    <!-- Package inline form: toggle + async submit -->
     <script>
       (function () {
         'use strict';
 
-        // Toggle open/close behaviour
         document.querySelectorAll('.btn-pkg-quote').forEach(function (btn) {
           btn.addEventListener('click', function () {
             var targetId = btn.getAttribute('data-pkg-target');
             var panel    = document.getElementById(targetId);
             var isOpen   = panel.classList.contains('is-open');
 
-            // Close any other open panels first
             document.querySelectorAll('.pkg-inline-form.is-open').forEach(function (p) {
               p.classList.remove('is-open');
               p.setAttribute('aria-hidden', 'true');
@@ -883,14 +558,11 @@
               b.setAttribute('aria-expanded', 'false');
             });
 
-            // Toggle this panel
             if (!isOpen) {
               panel.classList.add('is-open');
               panel.setAttribute('aria-hidden', 'false');
               btn.classList.add('is-open');
               btn.setAttribute('aria-expanded', 'true');
-
-              // Scroll the panel into view on mobile
               setTimeout(function () {
                 panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
               }, 50);
@@ -898,35 +570,30 @@
           });
         });
 
-        // Async form submission — stays on page, shows success state
         document.querySelectorAll('.pkg-ajax-form').forEach(function (form) {
           form.addEventListener('submit', function (e) {
             e.preventDefault();
-
             var submitBtn = form.querySelector('[type="submit"]');
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending…';
-
+            submitBtn.textContent = 'Sending...';
             var data = new FormData(form);
-
             fetch('/garden-care-packages', {
               method: 'POST',
               headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
               body: new URLSearchParams(data).toString()
             })
-              .then(function (res) {
-                if (!res.ok) { throw new Error('Network response was not ok'); }
-                // Hide form, show success message in the same panel
-                form.style.display = 'none';
-                var panel   = form.closest('.pkg-inline-form');
-                var success = panel.querySelector('.pkg-form-success');
-                success.style.display = 'block';
-              })
-              .catch(function () {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Request';
-                alert('Something went wrong. Please try again or call us directly.');
-              });
+            .then(function (res) {
+              if (!res.ok) { throw new Error('Network response was not ok'); }
+              form.style.display = 'none';
+              var panel   = form.closest('.pkg-inline-form');
+              var success = panel.querySelector('.pkg-form-success');
+              success.style.display = 'block';
+            })
+            .catch(function () {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Send Request';
+              alert('Something went wrong. Please try again or call us directly.');
+            });
           });
         });
       })();

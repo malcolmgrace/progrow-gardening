@@ -40,6 +40,33 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Page-scoped styles -->
+    <style>
+      .gallery-page-header {
+        background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+        padding: 3.5rem 0 3rem;
+      }
+      .gallery-page-header h1 {
+        color: #fff;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+      }
+      .gallery-page-header .breadcrumb-item,
+      .gallery-page-header .breadcrumb-item a,
+      .gallery-page-header .breadcrumb-item.active {
+        color: rgba(255,255,255,0.75);
+        text-decoration: none;
+      }
+      .gallery-page-header .breadcrumb-item + .breadcrumb-item::before {
+        color: rgba(255,255,255,0.4);
+      }
+      .about-cta {
+        background: #fff;
+        border: 2px solid var(--light);
+        border-radius: 8px;
+        padding: 2.5rem 2rem;
+      }
+    </style>
 </head>
 
 <body>
@@ -57,14 +84,28 @@
     <div id="navbar-placeholder"></div>
 
 <main>
-    <!-- Navbar End -->
+    <!-- Page Header Start -->
+    <div class="gallery-page-header">
+        <div class="container">
+            <div class="wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-2">Project Gallery</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
 
     <!-- Gallery Start -->
     <div class="container-fluid py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-                <h2 class="display-5 mb-4">Transforming Landscapes, One Garden at a Time</h2>
-                <p class="mb-0">Explore our collection of beautifully maintained gardens, landscaping projects, and outdoor transformations.</p>
+                <h2 class="display-5 mb-4">Our Work Across Ottawa</h2>
+                <p class="mb-0">Browse a selection of landscaping, garden maintenance, and lawn care projects completed across Nepean, Barrhaven, and surrounding Ottawa neighbourhoods.</p>
             </div>
             
             <div class="row g-4">
@@ -176,7 +217,7 @@
                     <div class="rounded overflow-hidden">
                         <picture>
                             <source srcset="img/gallery-pic-14.webp" type="image/webp">
-                            <img class="img-fluid" src="img/gallery-pic-14.png" alt="Garden Landscaping Project 13" loading="lazy" width="1000" height="1000">
+                            <img class="img-fluid" src="img/gallery-pic-14.png" alt="Garden Landscaping Project 14" loading="lazy" width="1000" height="1000">
                         </picture>                    
                     </div>
                 </div>
@@ -184,7 +225,7 @@
                     <div class="rounded overflow-hidden">
                         <picture>
                             <source srcset="img/gallery-pic-15.webp" type="image/webp">
-                            <img class="img-fluid" src="img/gallery-pic-15.png" alt="Garden Landscaping Project 13" loading="lazy" width="1000" height="1000">
+                            <img class="img-fluid" src="img/gallery-pic-15.png" alt="Garden Landscaping Project 15" loading="lazy" width="1000" height="1000">
                         </picture>                    
                     </div>
                 </div>
@@ -280,7 +321,23 @@
             </div>
         </div>
     </div>    
-    <!-- Gallery Start -->
+    <!-- Gallery End -->
+
+    <!-- Bottom CTA Strip Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <p class="fs-5 fw-bold text-primary mb-1">Like What You See?</p>
+                <h2 class="display-6 mb-3">Let's Do the Same for Your Property</h2>
+                <p class="text-muted mb-4" style="max-width:500px; margin:0 auto 1.5rem;">
+                    Whether you need regular garden maintenance, a seasonal cleanup, or a full landscape refresh - we're ready to help.
+                </p>
+                <a href="quote.html" class="btn btn-primary py-3 px-5 me-3">Request a Free Quote</a>
+                <a href="garden-care-packages.html" class="btn btn-outline-primary py-3 px-5">Garden Packages</a>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom CTA Strip End -->
 
     <!-- Footer Start -->
     </main>
