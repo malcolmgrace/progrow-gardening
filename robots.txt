@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Direct link to your sitemap to speed up discovery
 Sitemap: https://progrowgardening.ca/sitemap.xml
