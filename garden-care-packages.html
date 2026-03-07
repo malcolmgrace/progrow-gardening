@@ -606,16 +606,17 @@
               form.style.display = 'none';
               var panel   = form.closest('.pkg-inline-form');
               var success = panel.querySelector('.pkg-form-success');
-              success.style.display = 'block';
+              if (success) { success.style.display = 'flex'; }
             })
             .catch(function () {
               submitBtn.disabled = false;
               submitBtn.textContent = 'Send Request';
-              alert('Something went wrong. Please try again or call us directly.');
             });
           });
         });
-      })();
+
+      }());
     </script>
+
   </body>
 </html>
