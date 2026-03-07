@@ -17,37 +17,6 @@
     gtag('config', 'G-PK4GRCXLHE');
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LandscapingService",
-    "name": "ProGrow Gardening",
-    "image": "https://progrowgardening.ca/img/ProGrow_Logo_White.png",
-    "url": "https://progrowgardening.ca",
-    "telephone": "+12498789140",
-    "email": "admin@progrowgardening.ca",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "367 Bankside Way",
-      "addressLocality": "Nepean",
-      "addressRegion": "ON",
-      "postalCode": "K2J 6K4",
-      "addressCountry": "CA"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "45.25131387426371",
-      "longitude": "-75.73419302981107"
-    },
-    "areaServed": ["Nepean","Barrhaven","Riverside South","Manotick","Kanata","Ottawa"],
-    "openingHours": "Mo-Sa 08:00-18:00",
-    "sameAs": [
-      "https://www.facebook.com/progrowottawa/",
-      "https://www.instagram.com/progrowgardening/"
-    ]
-  }
-  </script>
-
   <link rel="icon" href="img/favicon.png" type="image/x-icon">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,6 +33,58 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <link href="css/style.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LandscapingService",
+          "@id": "https://progrowgardening.ca/#organization",
+          "name": "ProGrow Gardening",
+          "url": "https://progrowgardening.ca",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://progrowgardening.ca/img/ProGrow_Logo_White.png"
+          },
+          "telephone": "+12498789140",
+          "email": "admin@progrowgardening.ca",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "367 Bankside Way",
+            "addressLocality": "Nepean",
+            "addressRegion": "ON",
+            "postalCode": "K2J 6K4",
+            "addressCountry": "CA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "45.25131387426371",
+            "longitude": "-75.73419302981107"
+          },
+          "openingHours": "Mo-Sa 08:00-18:00",
+          "areaServed": [
+            { "@type": "City", "name": "Nepean" },
+            { "@type": "City", "name": "Barrhaven" },
+            { "@type": "City", "name": "Manotick" },
+            { "@type": "City", "name": "Kanata" },
+            { "@type": "City", "name": "Riverside South" }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=61574774193213",
+            "https://www.instagram.com/progrowgardening"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://progrowgardening.ca/#website",
+          "url": "https://progrowgardening.ca",
+          "name": "ProGrow Gardening",
+          "publisher": { "@id": "https://progrowgardening.ca/#organization" }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -73,13 +94,65 @@
   </div>
   <!-- Spinner End -->
 
-  <!-- Topbar Start -->
-  <div id="topbar-placeholder"></div>
-  <!-- Topbar End -->
+    <!-- Topbar Start -->
+    <div class="topbar container-fluid bg-dark text-light px-0 py-2">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <span class="fa fa-phone-alt me-2"></span>
+                    <span>(249) 878 9140</span>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <span class="far fa-envelope me-2"></span>
+                    <span>admin@progrowgardening.ca</span>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center mx-n2">
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-white"
+                       href="https://www.facebook.com/profile.php?id=61574774193213"
+                       target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-white"
+                       href="https://www.instagram.com/progrowgardening?igsh=cHZjYXo3bm1qeWFk&utm_source=qr"
+                       target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
 
-  <!-- Navbar Start -->
-  <div id="navbar-placeholder"></div>
-  <!-- Navbar End -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="/" class="navbar-brand d-flex align-items-center">
+            <img src="img/ProGrow_Logo_White.png" alt="ProGrow Gardening Co."
+                 class="img-fluid" width="270" height="150"
+                 style="object-fit: cover; object-position: center; max-height: 130px;">
+        </a>
+        <button type="button" class="navbar-toggler me-4"
+                data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="/" class="nav-item nav-link active">Home</a>
+                <a href="/about" class="nav-item nav-link">About Us</a>
+                <a href="/garden-care-packages" class="nav-item nav-link">Garden Care Packages</a>
+                <a href="/services" class="nav-item nav-link">Our Services</a>
+                <a href="/gallery" class="nav-item nav-link">Gallery</a>
+                <a href="/partnership" class="nav-item nav-link">Contractor Partnership</a>
+                <a href="/contact" class="nav-item nav-link">Contact Us</a>
+            </div>
+            <a href="/quote" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">
+                Get A Quote<i class="fa fa-arrow-right ms-3"></i>
+            </a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
 
   <main>
 
@@ -98,8 +171,8 @@
                     <p class="text-white mb-4 animated slideInDown" style="opacity: 0.85;">Nepean | Barrhaven | Riverside South | Manotick | Kanata</p>
                     <h1 class="display-1 text-white mb-5 animated slideInDown">Transform Your Outdoor Space</h1>
                     <p class="text-white mb-4 animated slideInDown" style="opacity: 0.99;">Professional Gardening Services in Ottawa South</p>
-                    <a href="quote.html" class="btn btn-primary py-3 px-5 animated slideInDown">Get a Free Estimate</a>
-                    <a href="garden-care-packages.html" class="btn btn-secondary py-3 px-5 animated slideInDown ms-2">View Care Packages</a>
+                    <a href="/quote" class="btn btn-primary py-3 px-5 animated slideInDown">Get a Free Estimate</a>
+                    <a href="/garden-care-packages" class="btn btn-secondary py-3 px-5 animated slideInDown ms-2">View Care Packages</a>
                   </div>
                 </div>
               </div>
@@ -116,8 +189,8 @@
                     <p class="text-white mb-4 animated slideInDown" style="opacity: 0.85;">Nepean | Barrhaven | Riverside South | Manotick | Kanata</p>
                     <h2 class="display-1 text-white mb-5 animated slideInDown">Expert Landscaping Solutions</h2>
                     <p class="text-white mb-4 animated slideInDown" style="opacity: 0.99;">Creating Beautiful Gardens Since 2017</p>
-                    <a href="services.html" class="btn btn-primary py-3 px-5 animated slideInDown">Explore Our Services</a>
-                    <a href="garden-care-packages.html" class="btn btn-secondary py-3 px-5 animated slideInDown ms-2">View Care Packages</a>
+                    <a href="/services" class="btn btn-primary py-3 px-5 animated slideInDown">Explore Our Services</a>
+                    <a href="/garden-care-packages" class="btn btn-secondary py-3 px-5 animated slideInDown ms-2">View Care Packages</a>
                   </div>
                 </div>
               </div>
@@ -134,8 +207,8 @@
                     <p class="text-white mb-4 animated slideInDown" style="opacity: 0.85;">Nepean | Barrhaven | Riverside South | Manotick | Kanata</p>
                     <h2 class="display-1 text-white mb-5 animated slideInDown">Complete Seasonal Care</h2>
                     <p class="text-white mb-4 animated slideInDown" style="opacity: 0.99;">Maintenance &amp; Custom Garden Design</p>
-                    <a href="quote.html" class="btn btn-primary py-3 px-5 animated slideInDown">Inquire Today</a>
-                    <a href="garden-care-packages.html" class="btn btn-secondary py-3 px-5 animated slideInDown ms-2">View Care Packages</a>
+                    <a href="/quote" class="btn btn-primary py-3 px-5 animated slideInDown">Inquire Today</a>
+                    <a href="/garden-care-packages" class="btn btn-secondary py-3 px-5 animated slideInDown ms-2">View Care Packages</a>
                   </div>
                 </div>
               </div>
@@ -285,7 +358,7 @@
             <div class="h-100">
               <h2 class="display-5 mb-4">Ottawa's Trusted Landscaping Professionals</h2>
               <p class="mb-4">With over eight years of experience serving Ottawa, we work on residential and commercial properties across Nepean, Barrhaven, and surrounding neighbourhoods. From routine garden maintenance to full landscape design, every job is done with care and a genuine understanding of what grows well here.</p>
-              <a class="btn btn-primary py-3 px-4" href="about.html">Learn More About Us</a>
+              <a class="btn btn-primary py-3 px-4" href="/about">Learn More About Us</a>
             </div>
           </div>
         </div>
@@ -308,7 +381,7 @@
             <h3 class="mb-2">Looking for a Simple, Scheduled Plan?</h3>
             <p class="mb-0 text-secondary">Our Garden Care Packages bundle regular maintenance visits into one easy plan.</p>
           </div>
-          <a href="garden-care-packages.html" class="btn btn-primary py-3 px-5 flex-shrink-0">View Care Packages</a>
+          <a href="/garden-care-packages" class="btn btn-primary py-3 px-5 flex-shrink-0">View Care Packages</a>
         </div>
         <!-- End CTA -->
 
@@ -324,7 +397,7 @@
                 </div>
                 <h3 class="mb-3">Garden Maintenance</h3>
                 <p class="mb-4">Each visit includes weeding, pruning, and cultivating to keep your garden thriving.</p>
-                <a class="btn btn-sm" href="garden-maintenance.html"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                <a class="btn btn-sm" href="/garden-maintenance"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
               </div>
             </div>
           </div>
@@ -339,7 +412,7 @@
                 </div>
                 <h3 class="mb-3">Weed Control</h3>
                 <p class="mb-4">Prevent the spread of dandelions and other common weeds from taking over.</p>
-                <a class="btn btn-sm" href="weed-control.html"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                <a class="btn btn-sm" href="/weed-control"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
               </div>
             </div>
           </div>
@@ -354,7 +427,7 @@
                 </div>
                 <h3 class="mb-3">Lawn Restoration</h3>
                 <p class="mb-4">Bring your lawn back with soil and overseeding treatments, or full sod installation.</p>
-                <a class="btn btn-sm" href="lawn-restoration.html"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                <a class="btn btn-sm" href="/lawn-restoration"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
               </div>
             </div>
           </div>
@@ -369,7 +442,7 @@
                 </div>
                 <h3 class="mb-3">Garden Design</h3>
                 <p class="mb-4">Custom garden design tailored to your property, style, and long-term goals.</p>
-                <a class="btn btn-sm" href="garden-design.html"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                <a class="btn btn-sm" href="/garden-design"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
               </div>
             </div>
           </div>
@@ -384,7 +457,7 @@
                 </div>
                 <h3 class="mb-3">Planting</h3>
                 <p class="mb-4">Precision planting for thriving, well-established, and healthy plants.</p>
-                <a class="btn btn-sm" href="planting.html"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                <a class="btn btn-sm" href="/planting"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
               </div>
             </div>
           </div>
@@ -399,7 +472,7 @@
                 </div>
                 <h3 class="mb-3">Shrub &amp; Tree Trimming</h3>
                 <p class="mb-4">Expert shrub and tree trimming to promote strong, healthy growth.</p>
-                <a class="btn btn-sm" href="shrub-tree-trimming.html"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                <a class="btn btn-sm" href="/shrub-tree-trimming"><i class="fa fa-plus text-primary me-2"></i>Read More</a>
               </div>
             </div>
           </div>
@@ -417,7 +490,7 @@
             <h3 class="mb-2">Are You a Landscape Service Provider in Ottawa?</h3>
             <p class="mb-0 text-secondary">We build two-way referral partnerships with insured contractors across Ottawa. See the terms and apply online.</p>
           </div>
-          <a href="partnership.html" class="btn btn-primary py-3 px-5 flex-shrink-0">View Partnership Terms</a>
+          <a href="/partnership" class="btn btn-primary py-3 px-5 flex-shrink-0">View Partnership Terms</a>
         </div>
       </div>
     </div>
@@ -456,7 +529,7 @@
           </div>
         </div>
         <div class="text-center mt-5">
-          <a href="gallery.html" class="btn btn-primary py-3 px-4">View Full Gallery <i class="fa fa-arrow-right ms-2"></i></a>
+          <a href="/gallery" class="btn btn-primary py-3 px-4">View Full Gallery <i class="fa fa-arrow-right ms-2"></i></a>
         </div>
       </div>
     </div>
@@ -528,9 +601,65 @@
 
   </main>
 
-  <!-- Footer Start -->
-  <div id="footer-placeholder"></div>
-  <!-- Footer End -->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-0 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4">Our Office</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>367 Bankside Way, Nepean, ON K2J 6K4</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(249) 878 9140</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>admin@progrowgardening.ca</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2"
+                           href="https://www.facebook.com/profile.php?id=61574774193213"
+                           target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2"
+                           href="https://www.instagram.com/progrowgardening?igsh=cHZjYXo3bm1qeWFk&utm_source=qr"
+                           target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="/">Home</a>
+                    <a class="btn btn-link" href="/about">About Us</a>
+                    <a class="btn btn-link" href="/garden-care-packages">Garden Care Packages</a>
+                    <a class="btn btn-link" href="/services">Our Services</a>
+                    <a class="btn btn-link" href="/gallery">Gallery</a>
+                    <a class="btn btn-link" href="/partnership">Contractor Partnership</a>
+                    <a class="btn btn-link" href="/contact">Contact Us</a>
+                    <a class="btn btn-link" href="/quote">Request Quote</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4">Service Areas</h4>
+                    <p>We proudly serve the following Ottawa neighborhoods:</p>
+                    <p class="mb-1">&#8226; Nepean</p>
+                    <p class="mb-1">&#8226; Barrhaven</p>
+                    <p class="mb-1">&#8226; Manotick</p>
+                    <p class="mb-1">&#8226; Kanata</p>
+                    <p class="mb-1">&#8226; Riverside South</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2026 ProGrow Gardening, All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+       aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
+    <!-- Footer End -->
 
   <!-- JavaScript Libraries -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -541,6 +670,6 @@
   <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
   <script src="lib/counterup/counterup.min.js" defer></script>
   <script src="js/main.js" defer></script>
-  <script src="js/components.js" defer></script>
+  
 </body>
 </html>

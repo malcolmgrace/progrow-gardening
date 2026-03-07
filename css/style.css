@@ -93,6 +93,12 @@ h6,
 
 /*** Navbar ***/
 
+/* CLS guard – prevents layout shift now that navbar is static */
+.navbar {
+  display: block;
+  min-height: 130px;
+}
+
 .navbar.sticky-top {
     top: var(--navbar-top, -100px);
     transition: .5s;
