@@ -84,6 +84,8 @@
   .pkg-list li i { margin-top: 3px; font-size: 0.8rem; color: var(--primary); }
   .pkg-inline-form { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; padding: 0 1.75rem; background: #f8faf8; }
   .pkg-inline-form.is-open { max-height: 700px; padding: 1.5rem 1.75rem; border-top: 1px solid #dee2e6; }
+  .pkg-form-success { display: none; text-align: center; padding: 1rem 0; }
+  .pkg-form-success.is-visible { display: block; }
 </style>
 
 <script type="application/ld+json">
@@ -137,7 +139,7 @@
             </div>
             <div class="h-100 d-inline-flex align-items-center">
                 <span class="far fa-envelope me-2"></span>
-                <span>admin@progrowgardening.ca</span>
+                <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a2c3c6cfcbcce2d2d0cdc5d0cdd5c5c3d0c6c7cccbccc58cc1c3">[email&#160;protected]</a></span>
             </div>
         </div>
         <div class="col-lg-5 px-5 text-end">
@@ -501,7 +503,7 @@
                 <h4 class="text-white mb-4">Our Office</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>367 Bankside Way, Nepean, ON K2J 6K4</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(249) 878 9140</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>admin@progrowgardening.ca</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0a6b6e6763644a7a78656d78657d6d6b786e6f6463646d24696b">[email&#160;protected]</a></p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-square btn-outline-light rounded-circle me-2"
                        href="https://www.facebook.com/profile.php?id=61574774193213"
@@ -554,7 +556,7 @@
 <!-- Footer End -->
 
 <!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="lib/wow/wow.min.js" defer></script>
 <script src="lib/easing/easing.min.js" defer></script>
@@ -562,6 +564,33 @@
 <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
 <script src="lib/counterup/counterup.min.js" defer></script>
 <script src="js/main.js" defer></script>
+
+<!-- Inline package form AJAX submission -->
+<script>
+  document.querySelectorAll('.pkg-ajax-form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = new URLSearchParams(new FormData(form)).toString();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data
+      })
+      .then(function (res) {
+        if (res.ok) {
+          form.style.display = 'none';
+          var success = form.closest('.pkg-inline-form').querySelector('.pkg-form-success');
+          if (success) success.classList.add('is-visible');
+        } else {
+          alert('Something went wrong. Please try again or call us directly.');
+        }
+      })
+      .catch(function () {
+        alert('Something went wrong. Please try again or call us directly.');
+      });
+    });
+  });
+</script>
 
 <!-- Package quote toggle -->
 <script>
@@ -584,19 +613,5 @@
           other.setAttribute('aria-hidden', 'true');
           var otherBtn = document.querySelector('[data-pkg-target="' + other.id + '"]');
           if (otherBtn) {
-            otherBtn.setAttribute('aria-expanded', 'false');
-            var otherIcon = otherBtn.querySelector('i');
-            if (otherIcon) {
-              otherIcon.classList.add('bi-chevron-down');
-              otherIcon.classList.remove('bi-chevron-up');
-            }
-          }
-        }
-      });
-    });
-  });
-</script>
+            otherBtn.setAttribute
 ```
-
-  </body>
-</html>
