@@ -612,6 +612,16 @@
           other.classList.remove('is-open');
           other.setAttribute('aria-hidden', 'true');
           var otherBtn = document.querySelector('[data-pkg-target="' + other.id + '"]');
-          if (otherBtn) {
-            otherBtn.setAttribute
-```
+                    if (otherBtn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            var otherIcon = otherBtn.querySelector('i');
+            if (otherIcon) {
+              otherIcon.classList.add('bi-chevron-down');
+              otherIcon.classList.remove('bi-chevron-up');
+            }
+          }
+        }
+      });
+    });
+  });
+</script>
