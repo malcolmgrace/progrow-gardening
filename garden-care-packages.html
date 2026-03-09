@@ -16,41 +16,6 @@
   gtag("config", "G-PK4GRCXLHE");
 </script>
 
-<script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Garden Maintenance",
-    "name": "Garden Care Packages",
-    "provider": { "@type": "LocalBusiness", "name": "ProGrow Gardening" },
-    "areaServed": ["Ottawa", "Nepean", "Barrhaven", "Kanata", "Manotick"]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is included in ProGrow's garden care packages?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "All packages include bed weeding, edge touch-up, deadheading, and plant health monitoring. Advanced plans include shrub pruning and seasonal resets."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which Ottawa neighbourhoods does ProGrow serve?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ProGrow Gardening serves Nepean, Barrhaven, Riverside South, Manotick, and Kanata."
-        }
-      }
-    ]
-  }
-]
-</script>
-
 <link rel="icon" href="img/favicon.png" type="image/x-icon" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -90,6 +55,21 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+            {
+          "@type": "WebPage",
+          "@id": "https://progrowgardening.ca/garden-care-packages",
+          "name": "Garden Care Packages in Ottawa | ProGrow Gardening",
+          "url": "https://progrowgardening.ca/garden-care-packages",
+          "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+          "about": { "@id": "https://progrowgardening.ca/#organization" },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+              { "@type": "ListItem", "position": 2, "name": "Garden Care Packages", "item": "https://progrowgardening.ca/garden-care-packages" }
+            ]
+          }
+        },
     {
       "@type": "Service",
       "@id": "https://progrowgardening.ca/garden-care-packages#service",
