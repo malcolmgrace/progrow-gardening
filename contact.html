@@ -35,7 +35,35 @@
       .contact-page-header h1 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.6rem); }
       .contact-page-header .breadcrumb-item, .contact-page-header .breadcrumb-item a, .contact-page-header .breadcrumb-item.active { color: rgba(255,255,255,0.75); text-decoration: none; }
       .contact-page-header .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.4); }
-    </style>
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://progrowgardening.ca/contact",
+        "name": "Contact ProGrow Gardening | Lawn & Garden Services in Ottawa",
+        "url": "https://progrowgardening.ca/contact",
+        "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+        "about": { "@id": "https://progrowgardening.ca/#organization" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+            { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://progrowgardening.ca/contact" }
+          ]
+        }
+      },
+      {
+        "@type": ["LandscapeService", "LocalBusiness"],
+        "@id": "https://progrowgardening.ca/#organization",
+        "name": "ProGrow Gardening"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
