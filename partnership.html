@@ -90,141 +90,73 @@
     </style>
 
     <!-- Schema: LocalBusiness -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": ["LandscapeService", "LocalBusiness"],
-      "name": "ProGrow Gardening",
-      "url": "https://progrowgardening.ca",
-      "telephone": "+1-249-878-9140",
-      "email": "admin@progrowgardening.ca",
-      "image": "https://progrowgardening.ca/img/favicon.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Nepean",
-        "addressRegion": "ON",
-        "addressCountry": "CA"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Nepean" },
-        { "@type": "City", "name": "Barrhaven" },
-        { "@type": "City", "name": "Riverside South" },
-        { "@type": "City", "name": "Manotick" },
-        { "@type": "City", "name": "Kanata" },
-        { "@type": "City", "name": "Ottawa" }
-      ],
-      "knowsAbout": [
-        "Lawn Maintenance",
-        "Garden Maintenance",
-        "Landscaping",
-        "Contractor Referral Network",
-        "Horticulture"
-      ]
-    }
-    </script>
-
-    <!-- Schema: Service (Referral Partnership) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Landscape Contractor Referral Partnership",
-      "serviceType": "Business Referral Network",
-      "description": "A two-way referral partnership for licensed landscape contractors in Ottawa. ProGrow Gardening refers out-of-scope clients to vetted contractors and receives referrals in return. Clear fee structure, defined no-cut-out periods, and a signed referral agreement before any introductions.",
-      "url": "https://progrowgardening.ca/partnership",
-      "provider": {
-        "@type": ["LandscapeService", "LocalBusiness"],
-        "name": "ProGrow Gardening",
-        "url": "https://progrowgardening.ca",
-        "telephone": "+1-249-878-9140",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Nepean",
-          "addressRegion": "ON",
-          "addressCountry": "CA"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://progrowgardening.ca/partnership",
+        "name": "Contractor Partnership Program | ProGrow Gardening Ottawa",
+        "url": "https://progrowgardening.ca/partnership",
+        "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+        "about": { "@id": "https://progrowgardening.ca/#organization" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+            { "@type": "ListItem", "position": 2, "name": "Contractor Partnership", "item": "https://progrowgardening.ca/partnership" }
+          ]
         }
       },
-      "areaServed": [
-        { "@type": "City", "name": "Nepean" },
-        { "@type": "City", "name": "Barrhaven" },
-        { "@type": "City", "name": "Riverside South" },
-        { "@type": "City", "name": "Manotick" },
-        { "@type": "City", "name": "Kanata" },
-        { "@type": "City", "name": "Ottawa" }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Referral Fee Structure",
-        "itemListElement": [
+      {
+        "@type": "Service",
+        "@id": "https://progrowgardening.ca/partnership#service",
+        "name": "Landscape Contractor Referral Partnership",
+        "serviceType": "Business Referral Network",
+        "description": "A two-way referral partnership for licensed landscape contractors in Ottawa. ProGrow Gardening refers out-of-scope clients to vetted contractors and receives referrals in return. Clear fee structure, defined no-cut-out periods, and a signed referral agreement before any introductions.",
+        "url": "https://progrowgardening.ca/partnership",
+        "provider": { "@id": "https://progrowgardening.ca/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://progrowgardening.ca/partnership#faq",
+        "mainEntity": [
           {
-            "@type": "Offer",
-            "name": "Capital Project Referral",
-            "description": "10% of total invoice excluding taxes. No-cut-out period of 18 months from written introduction. After 18 months the client is fully the contractor's with no fee or obligation."
+            "@type": "Question",
+            "name": "How does the ProGrow contractor referral network work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When ProGrow receives a client request outside their scope, they refer it to a vetted contractor in their network. The contractor gets a warm introduction to a qualified client and pays a referral fee after completing the work. After the no-cut-out period ends, the client is fully the contractor's. It also works in reverse: contractors refer garden and maintenance work to ProGrow and earn a referral fee in return."
+            }
           },
           {
-            "@type": "Offer",
-            "name": "Seasonal Contract Referral",
-            "description": "8% of total seasonal contract value. No-cut-out through end of the first contracted season. From season two onward the client is fully the contractor's."
+            "@type": "Question",
+            "name": "What are the referral fee rates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ProGrow's referral fees are tiered by project type: 10% for capital projects, 8% for seasonal contracts, and 6% for one-off jobs. Fees are due within 14 days of the contractor receiving client payment. HST is not charged on referral fees. Rates are fixed for 12 months from the date of the signed agreement."
+            }
           },
           {
-            "@type": "Offer",
-            "name": "One-Off Job Referral",
-            "description": "6% of total invoice including 7-day touch-up work. No-cut-out period of 7 days after job completion."
+            "@type": "Question",
+            "name": "What are the contractor requirements to join the network?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Contractors must carry substantial commercial general liability insurance, hold a current WSIB clearance certificate, and maintain all applicable licences for their trade. ProGrow reviews these documents before any referrals are made."
+            }
           }
         ]
+      },
+      {
+        "@type": ["LandscapeService", "LocalBusiness"],
+        "@id": "https://progrowgardening.ca/#organization",
+        "name": "ProGrow Gardening"
       }
-    }
-    </script>
-
-    <!-- Schema: FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How does the ProGrow contractor referral network work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "When ProGrow receives a client request outside their scope, they refer it to a vetted contractor in their network. The contractor gets a warm introduction to a qualified client and pays a referral fee after completing the work. After the no-cut-out period ends, the client is fully the contractor's. It also works in reverse: contractors who find garden maintenance, planting, or yard cleanup work can refer clients to ProGrow at the same rate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the referral fee rates?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Capital projects: 10% of the total invoice excluding taxes. Seasonal contracts: 8% of the total contract value. One-off jobs: 6% of the total invoice including any 7-day touch-up work. All fees are paid within 14 days of receiving client payment. HST is not charged on referral fees."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the no-cut-out period?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The no-cut-out clock starts on the written introduction, not the quote date or first invoice. For capital projects it is 18 months. For seasonal contracts it runs through the end of the first contracted season. For one-off jobs it is 7 days after job completion. After the period ends, the client is fully the contractor's with no fee, no notice, and no restriction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the minimum requirements to join the referral network?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Contractors must carry $2M CGL insurance, hold WSIB clearance in good standing, and have all applicable licences and certifications valid and current. A signed referral agreement must be in place before any introductions are made."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which trade categories is ProGrow looking for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ProGrow is looking for licensed, insured contractors in: lawn maintenance, tree services, hedge and shrub care, sod installation, hardscaping, commercial and residential garden maintenance, irrigation services, water features, and landscape design and consultation."
-          }
-        }
-      ]
-    }
-    </script>
+    ]
+  }
+  </script>
+  
   </head>
 
   <body>
