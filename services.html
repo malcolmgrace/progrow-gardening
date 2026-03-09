@@ -67,61 +67,88 @@
       }
     </style>
       <link rel="canonical" href="https://progrowgardening.ca/services" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Service",
-          "name": "Garden Maintenance",
-          "description": "Regular weeding, pruning, cultivating, fertilizing, and IPM care to keep your garden thriving throughout every season.",
-          "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
-          "url": "https://progrowgardening.ca/garden-maintenance",
-          "provider": { "@type": "LandscapeService", "name": "ProGrow Gardening" }
-        },
-        {
-          "@type": "Service",
-          "name": "Weed Control",
-          "description": "Eco-friendly weed control using Fiesta iron-based herbicide and manual removal to eliminate dandelions and broadleaf weeds.",
-          "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
-          "url": "https://progrowgardening.ca/weed-control",
-          "provider": { "@type": "LandscapeService", "name": "ProGrow Gardening" }
-        },
-        {
-          "@type": "Service",
-          "name": "Lawn Restoration",
-          "description": "Lawn repair and restoration through soil amendment, overseeding, core aeration, and sod installation for thinning or damaged lawns.",
-          "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
-          "url": "https://progrowgardening.ca/lawn-restoration",
-          "provider": { "@type": "LandscapeService", "name": "ProGrow Gardening" }
-        },
-        {
-          "@type": "Service",
-          "name": "Garden Design",
-          "description": "Custom garden design services in Ottawa, from concept through installation, tailored to your property, style, and long-term goals.",
-          "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
-          "url": "https://progrowgardening.ca/garden-design",
-          "provider": { "@type": "LandscapeService", "name": "ProGrow Gardening" }
-        },
-        {
-          "@type": "Service",
-          "name": "Planting",
-          "description": "Professional planting of trees, shrubs, perennials, and annuals with care for long-term health and lasting results.",
-          "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
-          "url": "https://progrowgardening.ca/planting",
-          "provider": { "@type": "LandscapeService", "name": "ProGrow Gardening" }
-        },
-        {
-          "@type": "Service",
-          "name": "Shrub & Tree Trimming",
-          "description": "Expert shrub trimming, hedge cutting, and tree pruning to promote strong, healthy growth and maintain curb appeal.",
-          "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
-          "url": "https://progrowgardening.ca/shrub-tree-trimming",
-          "provider": { "@type": "LandscapeService", "name": "ProGrow Gardening" }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://progrowgardening.ca/services",
+        "name": "Gardening & Landscaping Services in Ottawa | ProGrow Gardening",
+        "url": "https://progrowgardening.ca/services",
+        "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+        "about": { "@id": "https://progrowgardening.ca/#organization" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+            { "@type": "ListItem", "position": 2, "name": "Our Services", "item": "https://progrowgardening.ca/services" }
+          ]
         }
-      ]
-    }
-    </script>
+      },
+      {
+        "@type": "Service",
+        "@id": "https://progrowgardening.ca/garden-maintenance#service",
+        "name": "Garden Maintenance",
+        "description": "Regular weeding, pruning, cultivating, fertilizing, and IPM care to keep your garden thriving throughout every season.",
+        "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
+        "url": "https://progrowgardening.ca/garden-maintenance",
+        "provider": { "@id": "https://progrowgardening.ca/#organization" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://progrowgardening.ca/weed-control#service",
+        "name": "Weed Control",
+        "description": "Eco-friendly weed control using Fiesta iron-based herbicide and manual removal to eliminate dandelions and broadleaf weeds.",
+        "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
+        "url": "https://progrowgardening.ca/weed-control",
+        "provider": { "@id": "https://progrowgardening.ca/#organization" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://progrowgardening.ca/lawn-restoration#service",
+        "name": "Lawn Restoration",
+        "description": "Lawn repair and restoration through soil amendment, overseeding, core aeration, and sod installation for thinning or damaged lawns.",
+        "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
+        "url": "https://progrowgardening.ca/lawn-restoration",
+        "provider": { "@id": "https://progrowgardening.ca/#organization" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://progrowgardening.ca/garden-design#service",
+        "name": "Garden Design",
+        "description": "Custom garden design services in Ottawa, from concept through installation, tailored to your property, style, and long-term goals.",
+        "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
+        "url": "https://progrowgardening.ca/garden-design",
+        "provider": { "@id": "https://progrowgardening.ca/#organization" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://progrowgardening.ca/planting#service",
+        "name": "Planting",
+        "description": "Professional planting of trees, shrubs, perennials, and annuals with care for long-term health and lasting results.",
+        "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
+        "url": "https://progrowgardening.ca/planting",
+        "provider": { "@id": "https://progrowgardening.ca/#organization" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://progrowgardening.ca/shrub-tree-trimming#service",
+        "name": "Shrub & Tree Trimming",
+        "description": "Expert shrub trimming, hedge cutting, and tree pruning to promote strong, healthy growth and maintain curb appeal.",
+        "areaServed": ["Nepean", "Barrhaven", "Kanata", "Manotick", "Riverside South"],
+        "url": "https://progrowgardening.ca/shrub-tree-trimming",
+        "provider": { "@id": "https://progrowgardening.ca/#organization" }
+      },
+      {
+        "@type": ["LandscapeService", "LocalBusiness"],
+        "@id": "https://progrowgardening.ca/#organization",
+        "name": "ProGrow Gardening"
+      }
+    ]
+  }
+  </script>
+  
 </head>
 
   <body>
