@@ -148,6 +148,22 @@
     {
       "@context": "https://schema.org",
       "@graph": [
+                {
+          "@type": "WebPage",
+          "@id": "https://progrowgardening.ca/about",
+          "name": "About ProGrow Gardening | Certified Horticulturist in Ottawa",
+          "url": "https://progrowgardening.ca/about",
+          "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+          "about": { "@id": "https://progrowgardening.ca/#organization" },
+          "author": { "@id": "https://progrowgardening.ca/#founder" },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+              { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://progrowgardening.ca/about" }
+            ]
+          }
+        },
         {
           "@type": "Person",
           "@id": "https://progrowgardening.ca/#founder",
