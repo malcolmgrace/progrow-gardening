@@ -39,62 +39,112 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Service Schema: Lawn Restoration -->
-    <link rel="canonical" href="https://www.progrowgardening.ca/lawn-restoration">
-    <script type="application/ld+json">
+<!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebPage",
+      "@id": "https://progrowgardening.ca/lawn-restoration",
+      "name": "Lawn Restoration Services in Ottawa | ProGrow Gardening",
+      "url": "https://progrowgardening.ca/lawn-restoration",
+      "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+      "about": { "@id": "https://progrowgardening.ca/#organization" },
+      "author": {
+        "@type": "Person",
+        "@id": "https://progrowgardening.ca/#founder",
+        "name": "Malcolm Grace",
+        "jobTitle": "Certified Horticulturist"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+          { "@type": "ListItem", "position": 2, "name": "Lawn Restoration", "item": "https://progrowgardening.ca/lawn-restoration" }
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://progrowgardening.ca/lawn-restoration#service",
+      "name": "Lawn Restoration Services",
+      "serviceType": "Lawn Restoration",
+      "description": "Expert lawn restoration in Ottawa including soil and seeding, patchy lawn repair, and sod installation. ProGrow Gardening brings damaged lawns back to life.",
+      "url": "https://progrowgardening.ca/lawn-restoration",
+      "provider": { "@id": "https://progrowgardening.ca/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Nepean" },
+        { "@type": "City", "name": "Barrhaven" },
+        { "@type": "City", "name": "Manotick" },
+        { "@type": "City", "name": "Kanata" },
+        { "@type": "City", "name": "Riverside South" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Lawn Restoration Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Overseeding" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sod Installation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Core Aeration" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Soil Amendment" } }
+        ]
+      }
+    },
+    {
+      "@type": ["LandscapeService", "LocalBusiness"],
+      "@id": "https://progrowgardening.ca/#organization",
+      "name": "ProGrow Gardening",
+      "url": "https://progrowgardening.ca"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "WebPage",
-          "@id": "https://progrowgardening.ca/lawn-restoration",
-          "name": "Lawn Restoration Services in Ottawa | ProGrow Gardening",
-          "url": "https://progrowgardening.ca/lawn-restoration",
-          "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
-          "about": { "@id": "https://progrowgardening.ca/#organization" },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
-              { "@type": "ListItem", "position": 2, "name": "Lawn Restoration", "item": "https://progrowgardening.ca/lawn-restoration" }
-            ]
+          "@type": "Question",
+          "name": "Why does my Ottawa lawn look thin and patchy every spring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ottawa winters cause several types of lawn damage that result in thin, patchy turf by spring. Heavy snowpack compresses and suffocates grass. Freeze-thaw cycles heave the soil and break root systems. Spring clay soil compaction restricts drainage and root development. Salt damage near driveways and walkways kills turf in strips. The result is uneven coverage, bare patches, and weak grass that struggles to fill in on its own. Addressing the underlying soil condition, not just overseeding, is what brings a damaged Ottawa lawn back to consistent health."
           }
         },
         {
-          "@type": "Service",
-          "@id": "https://progrowgardening.ca/lawn-restoration#service",
-          "name": "Lawn Restoration Services",
-          "serviceType": "Lawn Restoration",
-          "description": "Expert lawn restoration in Ottawa including soil and seeding, patchy lawn repair, and sod installation. ProGrow Gardening brings damaged lawns back to life.",
-          "url": "https://progrowgardening.ca/lawn-restoration",
-          "provider": { "@id": "https://progrowgardening.ca/#organization" },
-          "areaServed": [
-            { "@type": "City", "name": "Nepean" },
-            { "@type": "City", "name": "Barrhaven" },
-            { "@type": "City", "name": "Manotick" },
-            { "@type": "City", "name": "Kanata" },
-            { "@type": "City", "name": "Riverside South" }
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Lawn Restoration Services",
-            "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Overseeding" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sod Installation" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Core Aeration" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Soil Amendment" } }
-            ]
+          "@type": "Question",
+          "name": "What is the difference between overseeding and sod installation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Overseeding spreads new grass seed across existing turf or bare soil to thicken coverage and fill in patchy areas. It requires proper soil preparation, good seed-to-soil contact, and consistent moisture for 3 to 4 weeks during germination. Results take a full growing season to fully establish. Sod installation uses pre-grown turf rolls that are laid directly onto prepared soil, giving you an established-looking lawn in a single day. Sod costs more upfront but is the right choice when you need immediate results, have severe bare areas, or are dealing with erosion or slopes where seed would wash away."
           }
         },
         {
-          "@type": ["LandscapeService", "LocalBusiness"],
-          "@id": "https://progrowgardening.ca/#organization",
-          "name": "ProGrow Gardening",
-          "url": "https://progrowgardening.ca"
+          "@type": "Question",
+          "name": "When is the best time to restore a lawn in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The two best windows for lawn restoration in Ottawa are late August to early September and mid-May. Late summer is the preferred window for overseeding because soil is warm, rain is more reliable, and cooler temperatures reduce heat stress on new seedlings. Germination is faster and competition from weeds is lower at this time of year. Sod can be installed any time the ground is workable from spring through fall, but spring and early fall installations have the advantage of cooler temperatures and more reliable moisture to support rooting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does core aeration help a damaged Ottawa lawn?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Core aeration is one of the most effective treatments for Ottawa lawns struggling with clay soil compaction. The process removes small plugs of soil across the lawn, opening channels for water, air, and nutrients to reach the root zone. Aeration done before overseeding significantly improves seed-to-soil contact and germination rates. For established lawns showing signs of compaction, annual aeration in late summer or early fall is one of the best investments you can make for long-term lawn health."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if my lawn needs restoration or just regular maintenance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regular maintenance is appropriate when your lawn is fundamentally healthy but needs consistent upkeep to stay that way. Restoration is the right approach when your lawn has significant bare or patchy areas covering more than 30 to 40 percent of the surface, when the soil is heavily compacted or has poor drainage, when thatch buildup is thick enough to prevent water penetration, or when the existing grass species are no longer performing well for your site conditions. ProGrow assesses your lawn during a free property visit and recommends the appropriate approach based on what we find."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 
   <body>
