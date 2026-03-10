@@ -40,50 +40,102 @@
     <link href="css/style.css" rel="stylesheet" />
 
     <!-- Service Schema: Planting -->
-    <script type="application/ld+json">
+    <!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebPage",
+      "@id": "https://progrowgardening.ca/planting",
+      "name": "Professional Planting Services in Ottawa | ProGrow Gardening",
+      "url": "https://progrowgardening.ca/planting",
+      "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+      "about": { "@id": "https://progrowgardening.ca/#organization" },
+      "author": {
+        "@type": "Person",
+        "@id": "https://progrowgardening.ca/#founder",
+        "name": "Malcolm Grace",
+        "jobTitle": "Certified Horticulturist"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+          { "@type": "ListItem", "position": 2, "name": "Planting", "item": "https://progrowgardening.ca/planting" }
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://progrowgardening.ca/planting#service",
+      "name": "Planting Services",
+      "serviceType": "Planting Services",
+      "description": "Professional planting services in Ottawa for trees, shrubs, perennials, and annuals. ProGrow Gardening ensures precision planting for thriving, well-established plants.",
+      "url": "https://progrowgardening.ca/planting",
+      "provider": { "@id": "https://progrowgardening.ca/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Nepean" },
+        { "@type": "City", "name": "Barrhaven" },
+        { "@type": "City", "name": "Manotick" },
+        { "@type": "City", "name": "Kanata" },
+        { "@type": "City", "name": "Riverside South" }
+      ]
+    },
+    {
+      "@type": ["LandscapeService", "LocalBusiness"],
+      "@id": "https://progrowgardening.ca/#organization",
+      "name": "ProGrow Gardening",
+      "url": "https://progrowgardening.ca"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "WebPage",
-          "@id": "https://progrowgardening.ca/planting",
-          "name": "Professional Planting Services in Ottawa | ProGrow Gardening",
-          "url": "https://progrowgardening.ca/planting",
-          "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
-          "about": { "@id": "https://progrowgardening.ca/#organization" },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
-              { "@type": "ListItem", "position": 2, "name": "Planting", "item": "https://progrowgardening.ca/planting" }
-            ]
+          "@type": "Question",
+          "name": "When is the best time to plant trees and shrubs in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The two best windows for planting trees and shrubs in Ottawa are mid-May after the last frost date and early September. Spring planting takes advantage of warming soil and reliable rain during the establishment period. Fall planting allows root development through September and October before freeze-up, giving plants a head start the following spring. Avoid planting during mid-summer heat, when transpiration stress is high and establishment is slower. Ottawa's clay soil warms slowly in spring, so waiting until soil temperature is consistently above 10 degrees C at planting depth gives the best results."
           }
         },
         {
-          "@type": "Service",
-          "@id": "https://progrowgardening.ca/planting#service",
-          "name": "Planting Services",
-          "serviceType": "Planting Services",
-          "description": "Professional planting services in Ottawa for trees, shrubs, perennials, and annuals. ProGrow Gardening ensures precision planting for thriving, well-established plants.",
-          "url": "https://progrowgardening.ca/planting",
-          "provider": { "@id": "https://progrowgardening.ca/#organization" },
-          "areaServed": [
-            { "@type": "City", "name": "Nepean" },
-            { "@type": "City", "name": "Barrhaven" },
-            { "@type": "City", "name": "Manotick" },
-            { "@type": "City", "name": "Kanata" },
-            { "@type": "City", "name": "Riverside South" }
-          ]
+          "@type": "Question",
+          "name": "How deep should trees and shrubs be planted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trees and shrubs should be planted at the same depth they were growing in the container, with the root flare at or just above the soil surface. Planting too deep is one of the most common causes of tree failure. When the root flare is buried, the trunk base stays moist, oxygen cannot reach the roots, and the plant slowly declines over several years. The planting hole should be wide rather than deep, with loosened soil around the perimeter to allow roots to establish outward into the surrounding ground."
+          }
         },
         {
-          "@type": ["LandscapeService", "LocalBusiness"],
-          "@id": "https://progrowgardening.ca/#organization",
-          "name": "ProGrow Gardening",
-          "url": "https://progrowgardening.ca"
+          "@type": "Question",
+          "name": "What trees and shrubs grow well in Ottawa South neighbourhoods?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ottawa's Zone 5b climate and clay-loam soils support a wide range of trees and shrubs when species are chosen to match site conditions. Reliable performers in Nepean, Barrhaven, and surrounding areas include Serviceberry (Amelanchier) for multi-season interest, Eastern Redbud for spring colour in sheltered spots, Little Leaf Linden as a street-tolerant shade tree, and native Dogwood species for shrub borders with fall colour and winter stem interest. For foundation shrubs, compact viburnums, native ninebark, and dwarf spruces perform consistently in Ottawa conditions. Selecting species matched to your specific light, soil, and space avoids the maintenance problems that come with plants in the wrong location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I plant for a low-maintenance garden in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Low-maintenance planting in Ottawa prioritises long-lived native and near-native perennials, hardy shrubs, and groundcovers that suit your actual site conditions without ongoing intervention. Good choices include Purple Coneflower, Black-eyed Susan, Little Bluestem grass, and native asters for sun, and Wild Ginger or Canada Anemone as groundcovers in shadier spots. For shrubs, native species like Serviceberry, Ninebark, and Buttonbush are reliable with minimal care once established. Reducing lawn area in favour of planted beds significantly lowers the total maintenance workload, as turf has the highest labour requirement per square metre of any garden element."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you prepare the soil before planting in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ottawa's clay-loam soil is nutrient-rich but compacts easily and drains slowly, which can stress newly planted material during establishment. Before planting, we assess the soil, break up compaction in the planting area, and incorporate compost to improve drainage and soil biology. For individual tree plantings, the hole is dug two to three times wider than the root ball to give roots an easier path into the surrounding soil. We avoid adding excessive amendments directly to the planting hole, as this can create a bowl effect that causes roots to circle rather than extend outward. Mulching at 7 to 10 cm after planting protects soil moisture and moderates temperature during the establishment period."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 
   <body>
