@@ -39,51 +39,102 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Service Schema: Garden Maintenance -->
-    <script type="application/ld+json">
+<!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-      {
-          "@type": "WebPage",
-          "@id": "https://progrowgardening.ca/garden-maintenance",
-          "name": "Garden Maintenance Services in Ottawa | ProGrow Gardening",
-          "url": "https://progrowgardening.ca/garden-maintenance",
-          "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
-          "about": { "@id": "https://progrowgardening.ca/#organization" },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
-              { "@type": "ListItem", "position": 2, "name": "Garden Maintenance", "item": "https://progrowgardening.ca/garden-maintenance" }
-            ]
+      "@type": "WebPage",
+      "@id": "https://progrowgardening.ca/garden-maintenance",
+      "name": "Garden Maintenance Services in Ottawa | ProGrow Gardening",
+      "url": "https://progrowgardening.ca/garden-maintenance",
+      "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+      "about": { "@id": "https://progrowgardening.ca/#organization" },
+      "author": {
+        "@type": "Person",
+        "@id": "https://progrowgardening.ca/#founder",
+        "name": "Malcolm Grace",
+        "jobTitle": "Certified Horticulturist"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+          { "@type": "ListItem", "position": 2, "name": "Garden Maintenance", "item": "https://progrowgardening.ca/garden-maintenance" }
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://progrowgardening.ca/garden-maintenance#service",
+      "name": "Garden Maintenance Services",
+      "serviceType": "Garden Maintenance",
+      "description": "Professional garden maintenance in Ottawa. ProGrow provides regular weeding, pruning, fertilizing, and IPM care across Nepean, Barrhaven, and Kanata. Delivered by a Certified Horticulturist. Book a free quote.",
+      "url": "https://progrowgardening.ca/garden-maintenance",
+      "provider": { "@id": "https://progrowgardening.ca/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Nepean" },
+        { "@type": "City", "name": "Barrhaven" },
+        { "@type": "City", "name": "Manotick" },
+        { "@type": "City", "name": "Kanata" },
+        { "@type": "City", "name": "Riverside South" }
+      ]
+    },
+    {
+      "@type": ["LandscapeService", "LocalBusiness"],
+      "@id": "https://progrowgardening.ca/#organization",
+      "name": "ProGrow Gardening",
+      "url": "https://progrowgardening.ca"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does a garden maintenance visit include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each garden maintenance visit covers the core groundwork your garden needs to stay healthy and tidy. This includes weeding and manual weed removal from beds, raking and debris clearing, soil cultivation to improve aeration and water absorption, pruning of trees, shrubs, and flowers, deadheading to encourage continued blooming, and fertilizing tailored to your plants' needs. Where pest or disease issues are present, we apply Integrated Pest Management (IPM) principles to address the root cause rather than simply treating symptoms. Every visit is overseen by Malcolm Grace, Certified Horticulturist."
           }
         },
         {
-          "@type": "Service",
-          "@id": "https://progrowgardening.ca/garden-maintenance#service",
-          "name": "Garden Maintenance Services",
-          "serviceType": "Garden Maintenance",
-          "description": "Professional garden maintenance in Ottawa. ProGrow provides regular weeding, pruning, fertilizing, and IPM care across Nepean, Barrhaven, and Kanata. Delivered by a Certified Horticulturist. Book a free quote.",
-          "url": "https://progrowgardening.ca/garden-maintenance",
-          "provider": { "@id": "https://progrowgardening.ca/#organization" },
-          "areaServed": [
-            { "@type": "City", "name": "Nepean" },
-            { "@type": "City", "name": "Barrhaven" },
-            { "@type": "City", "name": "Manotick" },
-            { "@type": "City", "name": "Kanata" },
-            { "@type": "City", "name": "Riverside South" }
-          ]
+          "@type": "Question",
+          "name": "How often should I have my garden maintained in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Ottawa residential gardens benefit from maintenance visits every two weeks during the growing season, which runs from May through October. This frequency keeps weeds from establishing between visits, allows pruning to be done at the right time for each plant, and lets us catch pest or disease issues before they become serious problems. One-time visits are also available for seasonal cleanups or gardens that need an initial reset before starting a regular schedule."
+          }
         },
         {
-          "@type": ["LandscapeService", "LocalBusiness"],
-          "@id": "https://progrowgardening.ca/#organization",
-          "name": "ProGrow Gardening",
-          "url": "https://progrowgardening.ca"
+          "@type": "Question",
+          "name": "What is the difference between garden maintenance and a one-time cleanup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A one-time cleanup resets your garden at a single point in the season, typically in spring or fall. It covers debris removal, cutbacks, edging, and mulching in a single intensive visit. Regular garden maintenance is an ongoing programme through the season that keeps your garden in consistently good condition by returning on a set schedule. Many clients start with a spring cleanup to reset the garden, then move into a regular maintenance plan for the rest of the season."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide garden maintenance in Barrhaven and Nepean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ProGrow Gardening provides garden maintenance services across Nepean, Barrhaven, Kanata, Manotick, and Riverside South. These are our primary service areas in Ottawa South. We are locally based in Nepean and familiar with the soil conditions, growing season, and common garden challenges specific to these neighbourhoods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is integrated pest management and how does it apply to garden maintenance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Integrated pest management (IPM) is a science-based approach that identifies the root cause of pest and disease problems and applies the least harmful effective solution. In garden maintenance, this means we scout for pest and disease issues on every visit rather than waiting for problems to become visible. We prioritise cultural controls first, such as improving soil health, correcting plant placement, and adjusting watering, before moving to chemical intervention. The most common pest problem we see in Ottawa gardens is a plant in the wrong location, which creates stress and makes plants vulnerable. Correct placement eliminates most problems before they start."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 
   <body>
