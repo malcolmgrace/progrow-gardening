@@ -171,9 +171,10 @@ h6,
     .navbar .navbar-brand img {
         width: 160px;
         height: 60px;
-        object-fit: cover;
+        object-fit: contain;  /* was: cover */
         object-position: center center;
     }
+
 }
 
     .navbar .navbar-nav .nav-link {
