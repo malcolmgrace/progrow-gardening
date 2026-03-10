@@ -39,50 +39,100 @@
     <link href="css/style.css" rel="stylesheet" />
 
   <!-- Service Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://progrowgardening.ca/shrub-tree-trimming",
-        "name": "Shrub & Tree Trimming in Ottawa | ProGrow Gardening",
-        "url": "https://progrowgardening.ca/shrub-tree-trimming",
-        "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
-        "about": { "@id": "https://progrowgardening.ca/#organization" },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
-            { "@type": "ListItem", "position": 2, "name": "Shrub & Tree Trimming", "item": "https://progrowgardening.ca/shrub-tree-trimming" }
-          ]
-        }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://progrowgardening.ca/shrub-tree-trimming",
+      "name": "Shrub & Tree Trimming in Ottawa | ProGrow Gardening",
+      "url": "https://progrowgardening.ca/shrub-tree-trimming",
+      "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+      "about": { "@id": "https://progrowgardening.ca/#organization" },
+      "author": {
+        "@type": "Person",
+        "@id": "https://progrowgardening.ca/#founder",
+        "name": "Malcolm Grace",
+        "jobTitle": "Certified Horticulturist"
       },
-      {
-        "@type": "Service",
-        "@id": "https://progrowgardening.ca/shrub-tree-trimming#service",
-        "name": "Shrub & Tree Trimming",
-        "alternateName": ["Hedge Cutting", "Tree Pruning", "Shrub Shaping"],
-        "description": "Expert shrub trimming, hedge cutting, and tree pruning services in Ottawa. We shape and maintain your trees and shrubs for long-term health, safety, and curb appeal.",
-        "url": "https://progrowgardening.ca/shrub-tree-trimming",
-        "provider": { "@id": "https://progrowgardening.ca/#organization" },
-        "areaServed": [
-          { "@type": "City", "name": "Nepean" },
-          { "@type": "City", "name": "Barrhaven" },
-          { "@type": "City", "name": "Manotick" },
-          { "@type": "City", "name": "Kanata" },
-          { "@type": "City", "name": "Riverside South" }
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+          { "@type": "ListItem", "position": 2, "name": "Shrub & Tree Trimming", "item": "https://progrowgardening.ca/shrub-tree-trimming" }
         ]
-      },
-      {
-        "@type": ["LandscapeService", "LocalBusiness"],
-        "@id": "https://progrowgardening.ca/#organization",
-        "name": "ProGrow Gardening"
       }
-    ]
-  }
-  </script>
-
+    },
+    {
+      "@type": "Service",
+      "@id": "https://progrowgardening.ca/shrub-tree-trimming#service",
+      "name": "Shrub & Tree Trimming",
+      "alternateName": ["Hedge Cutting", "Tree Pruning", "Shrub Shaping"],
+      "description": "Expert shrub trimming, hedge cutting, and tree pruning services in Ottawa. We shape and maintain your trees and shrubs for long-term health, safety, and curb appeal.",
+      "url": "https://progrowgardening.ca/shrub-tree-trimming",
+      "provider": { "@id": "https://progrowgardening.ca/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Nepean" },
+        { "@type": "City", "name": "Barrhaven" },
+        { "@type": "City", "name": "Manotick" },
+        { "@type": "City", "name": "Kanata" },
+        { "@type": "City", "name": "Riverside South" }
+      ]
+    },
+    {
+      "@type": ["LandscapeService", "LocalBusiness"],
+      "@id": "https://progrowgardening.ca/#organization",
+      "name": "ProGrow Gardening"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When is the best time to trim shrubs and trees in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Timing depends on the plant. For most deciduous shrubs and trees, late winter or early spring before new growth begins is the preferred window. At this point the plant's structure is fully visible and trimming supports the flush of new growth that follows. Flowering shrubs are the main exception: shrubs that bloom on old wood, such as lilacs and forsythia, should be trimmed immediately after flowering in late spring to avoid cutting off next year's buds. Hedges can typically be cut two to three times through the season to maintain shape and density. Evergreens are best trimmed in late spring once new growth has extended."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between shrub trimming and tree pruning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shrub trimming typically refers to shaping and size control using hand pruners or hedge shears to maintain the form and density of lower-growing woody plants. It includes flowering shrubs, foundation plantings, formal hedges, and ornamental shrubs. Tree pruning involves more structural decisions: removing deadwood and hazardous limbs, thinning the canopy to improve light and airflow, and shaping young trees to develop strong structure early. For larger trees, pruning also has safety implications that require careful assessment of which branches to remove and in what order."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should hedges be cut in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most formal hedges in Ottawa benefit from two to three cuts per season to stay dense and well-defined. A first cut in late spring after initial growth extends sets the shape for the season. A second cut in midsummer maintains that shape. Fast-growing species like cedar or privet may need a third cut in late summer. For informal or natural-style hedges, one annual cut after the main growth flush is often sufficient. Consistent annual trimming keeps hedges from becoming overgrown at the top, which shades out lower branches and causes the base to thin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can overgrown shrubs be cut back hard in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many shrub species tolerate hard renewal pruning, which involves cutting plants back significantly to stimulate a fresh flush of new growth from the base. This approach works well for overgrown lilacs, dogwoods, viburnums, and many other common Ottawa garden shrubs. It is typically done in early spring before growth begins. Not all shrubs recover well from severe cutbacks, and some evergreens will not regenerate from old wood. The right approach depends on the species, the plant's current health, and how far back it needs to go."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you trim flowering shrubs without losing the blooms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Protecting flowering shrubs' bloom cycle is one of the reasons timing matters so much. Shrubs that bloom on old wood set their flower buds in the previous season. Pruning them in early spring removes those buds and eliminates that year's flowers. We time cuts for these species immediately after they finish blooming, which preserves the current year's display and gives the plant a full growing season to set buds for the following year. Shrubs that bloom on new wood can be pruned in early spring without affecting flowering."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
   </head>
 
   <body>
