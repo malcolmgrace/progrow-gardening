@@ -30,27 +30,6 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
 
-<style>
-  .packages-page-header { background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%); padding: 3.5rem 0 3rem; }
-  .packages-page-header h1 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.6rem); }
-  .packages-page-header .breadcrumb-item, .packages-page-header .breadcrumb-item a, .packages-page-header .breadcrumb-item.active { color: rgba(255,255,255,0.75); text-decoration: none; }
-  .packages-page-header .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.4); }
-  .pkg-card { border: 1px solid #dee2e6; border-radius: 0.5rem; overflow: hidden; height: 100%; display: flex; flex-direction: column; }
-  .pkg-card-header { padding: 1.75rem 1.75rem 1.25rem; background: #f8f9fa; border-bottom: 1px solid #dee2e6; }
-  .pkg-card-header.featured { background: var(--primary); border-bottom-color: transparent; color: #fff; }
-  .pkg-card-header.featured .text-muted { color: rgba(255,255,255,0.8) !important; }
-  .pkg-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; background: #e9f5e9; color: var(--primary); border-radius: 2rem; margin-bottom: 0.75rem; }
-  .pkg-title { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.35rem; line-height: 1.2; }
-  .pkg-body { padding: 1.75rem; flex: 1; display: flex; flex-direction: column; }
-  .pkg-list { list-style: none; padding: 0; margin: 0; }
-  .pkg-list li { font-size: 0.925rem; padding: 0.25rem 0; display: flex; align-items: flex-start; gap: 0.6rem; }
-  .pkg-list li i { margin-top: 3px; font-size: 0.8rem; color: var(--primary); }
-  .pkg-inline-form { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; padding: 0 1.75rem; background: #f8faf8; }
-  .pkg-inline-form.is-open { max-height: 700px; padding: 1.5rem 1.75rem; border-top: 1px solid #dee2e6; }
-  .pkg-form-success { display: none; text-align: center; padding: 1rem 0; }
-  .pkg-form-success.is-visible { display: block; }
-</style>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -533,67 +512,6 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
        aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
     <!-- Footer End -->
-
-<!-- Inline package form AJAX submission -->
-<script>
-  document.querySelectorAll('.pkg-ajax-form').forEach(function (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var data = new URLSearchParams(new FormData(form)).toString();
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: data
-      })
-      .then(function (res) {
-        if (res.ok) {
-          form.style.display = 'none';
-          var success = form.closest('.pkg-inline-form').querySelector('.pkg-form-success');
-          if (success) success.classList.add('is-visible');
-        } else {
-          alert('Something went wrong. Please try again or call us directly.');
-        }
-      })
-      .catch(function () {
-        alert('Something went wrong. Please try again or call us directly.');
-      });
-    });
-  });
-</script>
-
-<!-- Package quote toggle -->
-<script>
-  document.querySelectorAll('.btn-pkg-quote').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var targetId = btn.getAttribute('data-pkg-target');
-      var form = document.getElementById(targetId);
-      var isOpen = form.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', isOpen);
-      form.setAttribute('aria-hidden', !isOpen);
-      var icon = btn.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('bi-chevron-down', !isOpen);
-        icon.classList.toggle('bi-chevron-up', isOpen);
-      }
-      // Close other open forms
-      document.querySelectorAll('.pkg-inline-form.is-open').forEach(function (other) {
-        if (other.id !== targetId) {
-          other.classList.remove('is-open');
-          other.setAttribute('aria-hidden', 'true');
-          var otherBtn = document.querySelector('[data-pkg-target="' + other.id + '"]');
-                    if (otherBtn) {
-            otherBtn.setAttribute('aria-expanded', 'false');
-            var otherIcon = otherBtn.querySelector('i');
-            if (otherIcon) {
-              otherIcon.classList.add('bi-chevron-down');
-              otherIcon.classList.remove('bi-chevron-up');
-            }
-          }
-        }
-      });
-    });
-  });
-</script>
 
   <!-- JavaScript Libraries -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

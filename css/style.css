@@ -635,3 +635,626 @@ h6,
 .copyright a:hover {
     color: var(--primary);
 }
+
+/*** Page Headers (shared across service pages) ***/
+/* Used by: garden-design, garden-maintenance, lawn-restoration, planting, quote, shrub-tree-trimming, weed-control */
+.service-page-header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    padding: 3.5rem 0 3rem;
+}
+.service-page-header h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+.service-page-header .breadcrumb-item,
+.service-page-header .breadcrumb-item a,
+.service-page-header .breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+.service-page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Service intro strip — used by: garden-design, garden-maintenance, lawn-restoration, planting, shrub-tree-trimming, weed-control */
+.service-intro-strip {
+    background: #f8f9fa;
+    border-top: 3px solid var(--primary);
+    padding: 2rem;
+    margin-bottom: 0;
+}
+.service-intro-strip p {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    line-height: 1.7;
+}
+
+
+/*** About Page ***/
+.about-page-header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    padding: 3.5rem 0 3rem;
+}
+.about-page-header h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+.about-page-header .breadcrumb-item,
+.about-page-header .breadcrumb-item a,
+.about-page-header .breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+.about-page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.story-lead {
+    font-size: 1.15rem;
+    line-height: 1.85;
+    color: #3a3a3a;
+}
+
+.value-card {
+    border: 0;
+    border-top: 4px solid var(--primary);
+    border-radius: 0 0 6px 6px;
+    padding: 2rem 1.75rem;
+    height: 100%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.value-card:hover {
+    box-shadow: 0 8px 28px rgba(31, 92, 35, 0.12) !important;
+    transform: translateY(-4px);
+}
+.value-card .value-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.credentials-strip {
+    background: var(--light);
+    border-left: 5px solid var(--primary);
+    border-radius: 6px;
+    padding: 1.75rem 2rem;
+}
+.cred-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+}
+.cred-item:last-child { margin-bottom: 0; }
+.cred-item i {
+    color: var(--primary);
+    margin-top: 3px;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+
+.service-area-section {
+    background: var(--dark);
+    color: #fff;
+    padding: 3.5rem 0;
+}
+.neighbourhood-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    padding: 0.35rem 1rem;
+    font-size: 0.9rem;
+    margin: 0.3rem;
+    color: #fff;
+}
+
+/* Shared CTA box — used by: about, gallery, services */
+.about-cta {
+    background: #fff;
+    border: 2px solid var(--light);
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
+}
+
+
+/*** Contact Page ***/
+.contact-page-header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    padding: 3.5rem 0 3rem;
+}
+.contact-page-header h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+.contact-page-header .breadcrumb-item,
+.contact-page-header .breadcrumb-item a,
+.contact-page-header .breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+.contact-page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+/*** FAQ Page ***/
+.faq-page-header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    padding: 3.5rem 0 3rem;
+}
+.faq-page-header h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+.faq-page-header .breadcrumb-item,
+.faq-page-header .breadcrumb-item a,
+.faq-page-header .breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+.faq-page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.credential-bar {
+    background: var(--light);
+    border-bottom: 1px solid #D4E8C0;
+    padding: 0.75rem 0;
+}
+.credential-bar-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+.credential-bar-inner .cred-check {
+    width: 22px;
+    height: 22px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+.faq-intro {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    border-bottom: 1px solid #D4E8C0;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.faq-accordion .accordion-item {
+    border: 0;
+    border-bottom: 1px solid #D4E8C0;
+    border-radius: 0 !important;
+}
+.faq-accordion .accordion-item:first-of-type {
+    border-top: 1px solid #D4E8C0;
+}
+.faq-accordion .accordion-button {
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: transparent;
+    padding: 1.25rem 1rem 1.25rem 0;
+    box-shadow: none;
+}
+.faq-accordion .accordion-button:not(.collapsed) {
+    color: var(--primary);
+    background: transparent;
+    box-shadow: none;
+}
+.faq-accordion .accordion-button::after {
+    background-image: none;
+    content: "+";
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--primary);
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    flex-shrink: 0;
+    transform: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.faq-accordion .accordion-button:not(.collapsed)::after {
+    background: var(--primary);
+    color: #fff;
+    content: "+";
+    transform: rotate(45deg);
+}
+.faq-accordion .accordion-body {
+    padding: 0 1rem 1.75rem 0;
+}
+.faq-accordion .accordion-body p {
+    font-size: 0.975rem;
+    line-height: 1.8;
+    color: #3a3a3a;
+    margin-bottom: 0.85rem;
+}
+.faq-accordion .accordion-body ul {
+    margin: 0.5rem 0 0.85rem 1.1rem;
+}
+.faq-accordion .accordion-body ul li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #3a3a3a;
+    margin-bottom: 0.3rem;
+}
+.faq-accordion .accordion-body a {
+    color: var(--primary);
+}
+
+.pro-tip {
+    background: var(--light);
+    border-left: 3px solid var(--primary);
+    border-radius: 0 4px 4px 0;
+    padding: 0.85rem 1rem;
+    margin: 0.85rem 0;
+}
+.pro-tip .pro-tip-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+}
+.pro-tip p {
+    font-size: 0.9rem !important;
+    color: var(--primary) !important;
+    margin-bottom: 0 !important;
+}
+
+.faq-cta {
+    background: var(--dark);
+    border-radius: 6px;
+    padding: 2.5rem 2rem;
+    margin-top: 3rem;
+}
+
+.related-services h6 {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #777;
+    margin-bottom: 1rem;
+}
+.service-pill {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border: 1px solid #D4E8C0;
+    border-radius: 2px;
+    font-size: 0.875rem;
+    color: var(--primary);
+    text-decoration: none;
+    background: #fff;
+    margin: 0.25rem;
+    transition: background 0.15s, border-color 0.15s;
+}
+.service-pill:hover {
+    background: var(--light);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+/*** Gallery Page ***/
+.gallery-page-header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    padding: 3.5rem 0 3rem;
+}
+.gallery-page-header h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+.gallery-page-header .breadcrumb-item,
+.gallery-page-header .breadcrumb-item a,
+.gallery-page-header .breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+.gallery-page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+/*** Garden Care Packages Page ***/
+.packages-page-header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    padding: 3.5rem 0 3rem;
+}
+.packages-page-header h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+.packages-page-header .breadcrumb-item,
+.packages-page-header .breadcrumb-item a,
+.packages-page-header .breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+.packages-page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.pkg-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.pkg-card-header {
+    padding: 1.75rem 1.75rem 1.25rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+.pkg-card-header.featured {
+    background: var(--primary);
+    border-bottom-color: transparent;
+    color: #fff;
+}
+.pkg-card-header.featured .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+.pkg-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    background: #e9f5e9;
+    color: var(--primary);
+    border-radius: 2rem;
+    margin-bottom: 0.75rem;
+}
+.pkg-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    line-height: 1.2;
+}
+.pkg-body {
+    padding: 1.75rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.pkg-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.pkg-list li {
+    font-size: 0.925rem;
+    padding: 0.25rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+.pkg-list li i {
+    margin-top: 3px;
+    font-size: 0.8rem;
+    color: var(--primary);
+}
+.pkg-inline-form {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 1.75rem;
+    background: #f8faf8;
+}
+.pkg-inline-form.is-open {
+    max-height: 700px;
+    padding: 1.5rem 1.75rem;
+    border-top: 1px solid #dee2e6;
+}
+.pkg-form-success {
+    display: none;
+    text-align: center;
+    padding: 1rem 0;
+}
+.pkg-form-success.is-visible {
+    display: block;
+}
+
+
+/*** Services Page ***/
+.services-page-header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    padding: 3.5rem 0 3rem;
+}
+.services-page-header h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+.services-page-header .breadcrumb-item,
+.services-page-header .breadcrumb-item a,
+.services-page-header .breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+.services-page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+/*** Partnership Page ***/
+.partnership-page-header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    padding: 3.5rem 0 3rem;
+}
+.partnership-page-header h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+.partnership-page-header .breadcrumb-item,
+.partnership-page-header .breadcrumb-item a,
+.partnership-page-header .breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+.partnership-page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.partner-section { padding: 5rem 0; }
+.partner-intro {
+    max-width: 720px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background-color: #dee2e6;
+    border: 1px solid #dee2e6;
+    margin: 1.5rem 0;
+}
+.term-cell {
+    background: #fff;
+    padding: 1.1rem 1.25rem;
+}
+.term-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+.term-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.engagement-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.engagement-card {
+    border: 1px solid #dee2e6;
+    padding: 1.5rem;
+    background: #fff;
+}
+.engagement-card .card-type {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+.engagement-card .fee-rate {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Jost', sans-serif;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+}
+.engagement-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+}
+.engagement-card ul li {
+    font-size: 0.88rem;
+    color: #444;
+    padding: 0.3rem 0;
+    border-top: 1px solid #f0f0f0;
+}
+.engagement-card ul li strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.trade-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+.trade-tag {
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0.85rem;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.partner-cta {
+    background: var(--primary);
+    color: #fff;
+    padding: 2rem 2.25rem;
+    margin-top: 2.5rem;
+}
+.partner-cta p {
+    color: #fff;
+    margin-bottom: 0;
+}
+.partner-cta .cta-heading {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.info-callout {
+    background: #f8f9fa;
+    border-left: 4px solid var(--primary);
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+}
+.info-callout p {
+    margin: 0;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    .terms-grid,
+    .engagement-tabs {
+        grid-template-columns: 1fr;
+    }
+}

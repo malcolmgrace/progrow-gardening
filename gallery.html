@@ -40,59 +40,34 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Page-scoped styles -->
-    <style>
-      .gallery-page-header {
-        background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
-        padding: 3.5rem 0 3rem;
-      }
-      .gallery-page-header h1 {
-        color: #fff;
-        font-size: clamp(1.8rem, 4vw, 2.6rem);
-      }
-      .gallery-page-header .breadcrumb-item,
-      .gallery-page-header .breadcrumb-item a,
-      .gallery-page-header .breadcrumb-item.active {
-        color: rgba(255,255,255,0.75);
-        text-decoration: none;
-      }
-      .gallery-page-header .breadcrumb-item + .breadcrumb-item::before {
-        color: rgba(255,255,255,0.4);
-      }
-      .about-cta {
-        background: #fff;
-        border: 2px solid var(--light);
-        border-radius: 8px;
-        padding: 2.5rem 2rem;
-      }
-    </style>
-      <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://progrowgardening.ca/gallery",
-        "name": "Project Gallery | Lawn & Landscaping Work | ProGrow Gardening",
-        "url": "https://progrowgardening.ca/gallery",
-        "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
-        "about": { "@id": "https://progrowgardening.ca/#organization" },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
-            { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://progrowgardening.ca/gallery" }
-          ]
+    <!-- Google Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://progrowgardening.ca/gallery",
+            "name": "Project Gallery | Lawn & Landscaping Work | ProGrow Gardening",
+            "url": "https://progrowgardening.ca/gallery",
+            "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+            "about": { "@id": "https://progrowgardening.ca/#organization" },
+            "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+                { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://progrowgardening.ca/gallery" }
+            ]
+            }
+        },
+        {
+            "@type": ["LandscapeService", "LocalBusiness"],
+            "@id": "https://progrowgardening.ca/#organization",
+            "name": "ProGrow Gardening"
         }
-      },
-      {
-        "@type": ["LandscapeService", "LocalBusiness"],
-        "@id": "https://progrowgardening.ca/#organization",
-        "name": "ProGrow Gardening"
-      }
-    ]
-  }
-  </script>
+        ]
+    }
+    </script>
     <link rel="canonical" href="https://progrowgardening.ca/gallery" />
 </head>
 
