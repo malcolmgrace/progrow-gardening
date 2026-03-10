@@ -43,55 +43,101 @@
     <link href="css/style.css" rel="stylesheet" />
 
     <!-- Google Schema -->
-    <script type="application/ld+json">
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-                {
-          "@type": "WebPage",
-          "@id": "https://progrowgardening.ca/about",
-          "name": "About ProGrow Gardening | Certified Horticulturist in Ottawa",
-          "url": "https://progrowgardening.ca/about",
-          "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
-          "about": { "@id": "https://progrowgardening.ca/#organization" },
-          "author": { "@id": "https://progrowgardening.ca/#founder" },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
-              { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://progrowgardening.ca/about" }
-            ]
-          }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://progrowgardening.ca/#founder",
-          "name": "Malcolm Grace",
-          "jobTitle": "Certified Horticulturist",
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Certified Horticulturist",
-            "credentialCategory": "Professional Designation"
-          },
-          "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "Algonquin College",
-            "address": { "@type": "PostalAddress", "addressLocality": "Ottawa", "addressRegion": "ON", "addressCountry": "CA" }
-          },
-          "worksFor": { "@id": "https://progrowgardening.ca/#organization" },
-          "url": "https://progrowgardening.ca/about"
-        },
-        {
-          "@type": ["LandscapeService", "LocalBusiness"],
-          "@id": "https://progrowgardening.ca/#organization",
-          "name": "ProGrow Gardening",
-          "url": "https://progrowgardening.ca",
-          "founder": { "@id": "https://progrowgardening.ca/#founder" },
-          "employee": { "@id": "https://progrowgardening.ca/#founder" }
+      "@type": "WebPage",
+      "@id": "https://progrowgardening.ca/about",
+      "name": "About ProGrow Gardening | Certified Horticulturist in Ottawa",
+      "url": "https://progrowgardening.ca/about",
+      "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+      "about": { "@id": "https://progrowgardening.ca/#organization" },
+      "author": { "@id": "https://progrowgardening.ca/#founder" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+          { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://progrowgardening.ca/about" }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://progrowgardening.ca/#founder",
+      "name": "Malcolm Grace",
+      "jobTitle": "Certified Horticulturist",
+      "knowsAbout": [
+        "Garden Maintenance",
+        "Integrated Pest Management",
+        "Soil Amendment",
+        "Weed Control",
+        "Lawn Restoration",
+        "Native Plant Selection",
+        "Shrub and Tree Pruning",
+        "Ottawa Horticulture",
+        "Fiesta Herbicide",
+        "Zone 5b Planting"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Certified Horticulturist",
+        "credentialCategory": "Professional Designation"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Algonquin College",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ottawa",
+          "addressRegion": "ON",
+          "addressCountry": "CA"
         }
-      ]
+      },
+      "worksFor": { "@id": "https://progrowgardening.ca/#organization" },
+      "url": "https://progrowgardening.ca/about"
+    },
+    {
+      "@type": ["LandscapeService", "LocalBusiness"],
+      "@id": "https://progrowgardening.ca/#organization",
+      "name": "ProGrow Gardening",
+      "url": "https://progrowgardening.ca",
+      "foundingDate": "2017",
+      "founder": { "@id": "https://progrowgardening.ca/#founder" },
+      "employee": { "@id": "https://progrowgardening.ca/#founder" },
+      "telephone": "+12498789140",
+      "email": "admin@progrowgardening.ca",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "367 Bankside Way",
+        "addressLocality": "Nepean",
+        "addressRegion": "ON",
+        "postalCode": "K2J 6K4",
+        "addressCountry": "CA"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Nepean" },
+        { "@type": "City", "name": "Barrhaven" },
+        { "@type": "City", "name": "Manotick" },
+        { "@type": "City", "name": "Kanata" },
+        { "@type": "City", "name": "Riverside South" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61574774193213",
+        "https://www.instagram.com/progrowgardening"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "6",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
     }
-    </script>
+  ]
+}
+</script>
 </head>
 
   <body>
@@ -187,26 +233,36 @@
 
             <!-- Story copy -->
             <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
-<p class="text-primary mb-1">Our Story</p>
-<h2 class="display-6 mb-4">Ottawa's Trusted Gardening Professionals</h2>
-
-<p class="story-lead mb-4">
-  ProGrow Gardening is a locally owned, owner-operated lawn and garden company serving Ottawa
-  South and the surrounding area. We work on a straightforward principle: do the job properly,
-  be honest with clients, and take care of every property the way we'd want our own looked after.
-</p>
-<p class="story-lead mb-4">
-  ProGrow was founded by <strong>Malcolm Grace</strong>, a certified horticulturist and graduate of the
-  <strong>Horticultural Industries program at Algonquin College</strong>. That background in plant science,
-  soil health, and landscape management means you get real answers, not guesswork.
-</p>
-<p class="story-lead mb-0">
-  With years of hands-on experience across residential properties in Ottawa, Malcolm built
-  ProGrow around getting the details right. Clear communication, consistent work, and no
-  shortcuts. That's what keeps our clients coming back and referring us to their neighbours.
-</p>
-<p class="story-lead mt-3">Curious about how we approach specific gardening challenges? Visit our <a href="/faq">Ottawa Gardening FAQ</a> for answers written by Malcolm.
-</p>
+              <p class="text-primary mb-1">Our Story</p>
+              <h2 class="display-6 mb-4">Ottawa's Trusted Gardening Professionals</h2>
+              
+              <p class="story-lead mb-4">
+                ProGrow Gardening is a locally owned, owner-operated lawn and garden company serving Ottawa
+                South and the surrounding area. We work on a straightforward principle: do the job properly,
+                be honest with clients, and take care of every property the way we'd want our own looked after.
+              </p>
+              <p class="story-lead mb-4">
+                ProGrow was founded by <strong>Malcolm Grace</strong>, a <strong>Certified Horticulturist</strong>
+                and graduate of the <strong>Horticultural Industries program at Algonquin College</strong>. The
+                Certified Horticulturist designation is a formal credential requiring a standardised exam and
+                ongoing continuing education. It is not a marketing term. It means plant science, soil science,
+                pest and disease identification, and plant culture are areas of verified professional knowledge
+                -- not just experience.
+              </p>
+              <p class="story-lead mb-4">
+                That background shows up in practical ways: plants selected for how they actually perform in
+                Ottawa's Zone 5b climate and clay-loam soil, pruning timed to each plant's biological cycle,
+                weed control using Fiesta iron-based herbicide approved under Ontario's cosmetic pesticide
+                regulations, and pest management through Integrated Pest Management (IPM) principles that
+                address root causes rather than symptoms.
+              </p>
+              <p class="story-lead mb-0">
+                ProGrow has been serving Ottawa homeowners since 2017. Every property gets the same standard
+                of work, and every visit is done by our own team -- not subcontractors. Clear communication,
+                consistent results, and no shortcuts.
+              </p>
+              <p class="story-lead mt-3">Curious about how we approach specific gardening challenges? Visit our <a href="/faq">Ottawa Gardening FAQ</a> for answers written by Malcolm.
+              </p>
             </div>
 
             <!-- Credential sidebar -->
@@ -323,6 +379,109 @@
       </div>
       <!-- Values Section End -->
 
+      <!-- Our Approach Section Start -->
+      <div class="container-xxl pb-5">
+        <div class="container">
+          <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width:520px">
+            <p class="fs-5 fw-bold text-primary">How We Work</p>
+            <h2 class="display-6 mb-5">The Approach Behind Every Visit</h2>
+          </div>
+          <div class="row g-4">
+      
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="value-card shadow-sm bg-white">
+                <div class="value-icon">
+                  <i class="fa fa-leaf"></i>
+                </div>
+                <h4 class="mb-3">Soil-First Philosophy</h4>
+                <p class="text-muted mb-0">
+                  Most garden problems start underground. We assess soil conditions before making
+                  recommendations, and we amend Ottawa's clay-loam soil with organic matter rather
+                  than fighting its natural composition. Healthy soil produces plants that need less
+                  intervention over time.
+                </p>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="value-card shadow-sm bg-white">
+                <div class="value-icon">
+                  <i class="fa fa-bug"></i>
+                </div>
+                <h4 class="mb-3">Integrated Pest Management</h4>
+                <p class="text-muted mb-0">
+                  We apply IPM principles across all maintenance work: identifying the root cause of
+                  pest and disease problems, monitoring on every visit, and treating only when
+                  thresholds are exceeded. Cultural controls come first. Chemical intervention is
+                  a last resort, not a default.
+                </p>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="value-card shadow-sm bg-white">
+                <div class="value-icon">
+                  <i class="fa fa-spray-can"></i>
+                </div>
+                <h4 class="mb-3">Eco-Friendly Weed Control</h4>
+                <p class="text-muted mb-0">
+                  ProGrow uses Fiesta iron-based herbicide as our primary broadleaf weed treatment.
+                  It is registered with Health Canada, approved under Ontario's cosmetic pesticide
+                  regulations, and safe for families and pets once dry. For garden beds, we rely on
+                  manual removal and strategic mulching rather than chemical treatment.
+                </p>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="value-card shadow-sm bg-white">
+                <div class="value-icon">
+                  <i class="fa fa-calendar-alt"></i>
+                </div>
+                <h4 class="mb-3">Timing Matters</h4>
+                <p class="text-muted mb-0">
+                  Ottawa's growing season runs from mid-May through October. Pruning, planting,
+                  fertilizing, and weed treatment all have windows where they are most effective.
+                  We schedule work around those windows, not around what is convenient to book.
+                  The result is better outcomes for the same effort.
+                </p>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="value-card shadow-sm bg-white">
+                <div class="value-icon">
+                  <i class="fa fa-seedling"></i>
+                </div>
+                <h4 class="mb-3">Right Plant, Right Place</h4>
+                <p class="text-muted mb-0">
+                  The most common source of garden problems is a plant in the wrong location. We
+                  select species matched to your actual soil, light, and moisture conditions -- not
+                  what looks good at the garden centre. Plants in the right place establish faster,
+                  need less maintenance, and last longer.
+                </p>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="value-card shadow-sm bg-white">
+                <div class="value-icon">
+                  <i class="fa fa-clipboard-check"></i>
+                </div>
+                <h4 class="mb-3">No Subcontractors</h4>
+                <p class="text-muted mb-0">
+                  Every ProGrow visit is carried out by our own team. We do not send subcontractors
+                  to properties. That means consistent standards, consistent communication, and a
+                  team that knows your garden from the previous visit and can track how it is
+                  progressing over the season.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Our Approach Section End -->
+      
       <!-- Service Area Section Start -->
       <div class="service-area-section wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
