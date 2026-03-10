@@ -39,53 +39,103 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Service Schema: Garden Design -->
-  
-    <script type="application/ld+json">
+   <!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-                {
-          "@type": "WebPage",
-          "@id": "https://progrowgardening.ca/garden-design",
-          "name": "Custom Garden Design in Ottawa | ProGrow Gardening",
-          "url": "https://progrowgardening.ca/garden-design",
-          "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
-          "about": { "@id": "https://progrowgardening.ca/#organization" },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
-              { "@type": "ListItem", "position": 2, "name": "Garden Design", "item": "https://progrowgardening.ca/garden-design" }
-            ]
+      "@type": "WebPage",
+      "@id": "https://progrowgardening.ca/garden-design",
+      "name": "Custom Garden Design in Ottawa | ProGrow Gardening",
+      "url": "https://progrowgardening.ca/garden-design",
+      "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+      "about": { "@id": "https://progrowgardening.ca/#organization" },
+      "author": {
+        "@type": "Person",
+        "@id": "https://progrowgardening.ca/#founder",
+        "name": "Malcolm Grace",
+        "jobTitle": "Certified Horticulturist"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+          { "@type": "ListItem", "position": 2, "name": "Garden Design", "item": "https://progrowgardening.ca/garden-design" }
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://progrowgardening.ca/garden-design#service",
+      "name": "Garden Design Services",
+      "serviceType": "Garden Design",
+      "serviceOutput": "Planting Plan",
+      "description": "Custom garden design in Ottawa from concept through installation. ProGrow Gardening creates functional, beautiful outdoor spaces tailored to your property and lifestyle.",
+      "url": "https://progrowgardening.ca/garden-design",
+      "provider": { "@id": "https://progrowgardening.ca/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Nepean" },
+        { "@type": "City", "name": "Barrhaven" },
+        { "@type": "City", "name": "Manotick" },
+        { "@type": "City", "name": "Kanata" },
+        { "@type": "City", "name": "Riverside South" }
+      ]
+    },
+    {
+      "@type": ["LandscapeService", "LocalBusiness"],
+      "@id": "https://progrowgardening.ca/#organization",
+      "name": "ProGrow Gardening",
+      "url": "https://progrowgardening.ca"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does a custom garden design include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A custom garden design with ProGrow covers the full scope of planning and installation for your outdoor space. This includes an initial property assessment to understand your soil, light conditions, existing plants, and goals; a layout plan for beds, borders, and any paths or structural elements; plant selection matched to your site conditions and style preferences; soil preparation and amendment before planting; full installation of all plant material with proper technique; and mulching and aftercare guidance. We handle the project from the first site visit through to completion, coordinating all elements so you are not managing multiple contractors."
           }
         },
         {
-          "@type": "Service",
-          "@id": "https://progrowgardening.ca/garden-design#service",
-          "name": "Garden Design Services",
-          "serviceType": "Garden Design",
-          "serviceOutput": "Planting Plan",
-          "description": "Custom garden design in Ottawa from concept through installation. ProGrow Gardening creates functional, beautiful outdoor spaces tailored to your property and lifestyle.",
-          "url": "https://progrowgardening.ca/garden-design",
-          "provider": { "@id": "https://progrowgardening.ca/#organization" },
-          "areaServed": [
-            { "@type": "City", "name": "Nepean" },
-            { "@type": "City", "name": "Barrhaven" },
-            { "@type": "City", "name": "Manotick" },
-            { "@type": "City", "name": "Kanata" },
-            { "@type": "City", "name": "Riverside South" }
-          ]
+          "@type": "Question",
+          "name": "How do you design a garden for Ottawa's climate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Designing for Ottawa's Zone 5b climate means selecting plants proven to survive our winters reliably, understanding that clay-loam soil drains slowly and needs organic matter management, and accounting for a compressed growing season from mid-May through October. Good Ottawa garden design avoids plants at the edge of their hardiness zone unless in sheltered microclimates, prioritises species that perform well in clay rather than fighting the native soil, and plans for four seasons of interest including winter structure. We also factor in Ottawa's spring dandelion and weed pressure, designing beds with mulch and groundcover strategies that minimise ongoing maintenance."
+          }
         },
         {
-          "@type": ["LandscapeService", "LocalBusiness"],
-          "@id": "https://progrowgardening.ca/#organization",
-          "name": "ProGrow Gardening",
-          "url": "https://progrowgardening.ca"
+          "@type": "Question",
+          "name": "Can you restore a neglected or overgrown garden bed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Garden bed restoration is one of the most common design projects we handle. Neglected beds typically have compacted soil, declining plants, invasive species that have spread unchecked, and a loss of the original structure and visual flow. The restoration process involves removing plants that are not performing or are in the wrong place, clearing invasive or problem growth, rebuilding soil health through organic matter and aeration, and replanting with a considered selection of species that suit the current site conditions. The result is a garden that works well again without requiring a full reconstruction from scratch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I design a low-maintenance garden in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Low-maintenance garden design in Ottawa starts with species selection. Plants matched to your actual light, soil, and moisture conditions require far less ongoing intervention than plants fighting unsuitable conditions. Key principles include applying 7 to 10 cm of bark mulch annually to suppress weed germination, using long-lived native perennials and hardy shrubs rather than high-maintenance annuals, planting groundcovers under shrubs to fill space and block weeds, and reducing lawn area where possible since turf has the highest ongoing labour requirement of any garden element. A well-designed low-maintenance garden looks well-kept with significantly less time than a conventionally planted one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is soil and planting design and why does it matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Soil and planting design means selecting plant combinations that are well-matched to your specific soil conditions and amending the soil where needed before installation. In Ottawa, this matters because our native clay-loam soil has specific characteristics: it is nutrient-rich but compacts easily, drains slowly, and warms later in spring than lighter soils. Plants that thrive in well-drained sandy soil will struggle in Ottawa's clay without soil modification. We assess the soil before recommending any plant material, so the design is built around what will genuinely perform on your property rather than what looks good in a catalogue."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 
   <body>
