@@ -39,51 +39,111 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Service Schema: Weed Control -->
-    <script type="application/ld+json">
+    <!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebPage",
+      "@id": "https://progrowgardening.ca/weed-control",
+      "name": "Eco-Friendly Weed Control Ottawa | ProGrow Gardening",
+      "url": "https://progrowgardening.ca/weed-control",
+      "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
+      "about": { "@id": "https://progrowgardening.ca/#organization" },
+      "author": {
+        "@type": "Person",
+        "@id": "https://progrowgardening.ca/#founder",
+        "name": "Malcolm Grace",
+        "jobTitle": "Certified Horticulturist"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
+          { "@type": "ListItem", "position": 2, "name": "Weed Control", "item": "https://progrowgardening.ca/weed-control" }
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://progrowgardening.ca/weed-control#service",
+      "name": "Weed Control Services",
+      "serviceType": "Weed Control",
+      "description": "Targeted weed control in Ottawa using Fiesta spray, manual removal, and preventative treatments. ProGrow Gardening keeps lawn and garden beds clean all season.",
+      "url": "https://progrowgardening.ca/weed-control",
+      "provider": { "@id": "https://progrowgardening.ca/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Nepean" },
+        { "@type": "City", "name": "Barrhaven" },
+        { "@type": "City", "name": "Manotick" },
+        { "@type": "City", "name": "Kanata" },
+        { "@type": "City", "name": "Riverside South" }
+      ]
+    },
+    {
+      "@type": ["LandscapeService", "LocalBusiness"],
+      "@id": "https://progrowgardening.ca/#organization",
+      "name": "ProGrow Gardening",
+      "url": "https://progrowgardening.ca"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "WebPage",
-          "@id": "https://progrowgardening.ca/weed-control",
-          "name": "Eco-Friendly Weed Control Ottawa | ProGrow Gardening",
-          "url": "https://progrowgardening.ca/weed-control",
-          "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
-          "about": { "@id": "https://progrowgardening.ca/#organization" },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://progrowgardening.ca/" },
-              { "@type": "ListItem", "position": 2, "name": "Weed Control", "item": "https://progrowgardening.ca/weed-control" }
-            ]
+          "@type": "Question",
+          "name": "Is Fiesta weed spray safe for pets and children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Fiesta is an iron-based herbicide and is considered safe for pets and children once the treated area has dried, which typically takes a few hours. It does not contain the synthetic chemicals found in conventional herbicides like 2,4-D. Fiesta is registered with Health Canada and approved under Ontario's cosmetic pesticide regulations. Keep pets and children off treated areas until the product is fully dry, typically 2 to 4 hours after application."
           }
         },
         {
-          "@type": "Service",
-          "@id": "https://progrowgardening.ca/weed-control#service",
-          "name": "Weed Control Services",
-          "serviceType": "Weed Control",
-          "description": "Targeted weed control in Ottawa using Fiesta spray, manual removal, and preventative treatments. ProGrow Gardening keeps lawn and garden beds clean all season.",
-          "url": "https://progrowgardening.ca/weed-control",
-          "provider": { "@id": "https://progrowgardening.ca/#organization" },
-          "areaServed": [
-            { "@type": "City", "name": "Nepean" },
-            { "@type": "City", "name": "Barrhaven" },
-            { "@type": "City", "name": "Manotick" },
-            { "@type": "City", "name": "Kanata" },
-            { "@type": "City", "name": "Riverside South" }
-          ]
+          "@type": "Question",
+          "name": "How quickly does Fiesta weed killer work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most broadleaf weeds show visible browning and die-back within 3 to 7 days of a Fiesta application, depending on temperature and weed species. Dandelions typically respond within a week under good conditions. Fiesta works best when applied to actively growing weeds on a warm, sunny day with no rain forecast for at least six hours. Ottawa's May dandelion flush is the prime treatment window."
+          }
         },
         {
-          "@type": ["LandscapeService", "LocalBusiness"],
-          "@id": "https://progrowgardening.ca/#organization",
-          "name": "ProGrow Gardening",
-          "url": "https://progrowgardening.ca"
+          "@type": "Question",
+          "name": "How many Fiesta applications do I need per season?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For most Ottawa lawns, two to three Fiesta applications per season provides good coverage and keeps broadleaf weed populations under control. Heavy infestations may need an initial treatment followed by a follow-up visit two to three weeks later once the first application has taken effect and surviving weeds can be targeted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is the best time to treat weeds in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dandelion season in Ottawa peaks in May. Treating early in the season, before weeds go to seed, gives the best results and significantly reduces how many return the following year. Early application gives the fastest visible browning and the most effective knockdown before weeds spread. A second pass in late spring or early summer catches any regrowth and late-emerging species."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Fiesta spray and manual weed removal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fiesta spray is an iron-based herbicide applied directly to broadleaf weeds on lawns and open areas. It targets dandelions, clover, plantain, and similar weeds without harming grass. Manual weed removal is a hands-on approach used for woody invasives, overgrown garden beds, and heavily infested areas where chemical treatment is either not appropriate or not sufficient. For manual removal, root systems are extracted entirely to prevent regrowth. Many Ottawa properties benefit from a combination of both approaches depending on the type and severity of the weed problem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What preventative weed control options are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ProGrow offers preventative weed maintenance that includes pre-emergent treatments to stop weed seeds from germinating, strategic mulching at 7 to 10 cm depth which suppresses the majority of annual weed germination, weed barrier installation in garden beds, and regular monitoring through the season to catch problems before they establish. Preventative programmes are more cost-effective than repeated reactive treatments and result in significantly fewer weeds by mid-season."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
+
 </head>
 
   <body>
