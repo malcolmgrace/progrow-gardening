@@ -170,9 +170,7 @@ h6,
     
     .navbar .navbar-brand img {
         width: 160px;
-        height: 60px;
-        object-fit: contain;  /* was: cover */
-        object-position: center center;
+        height: auto;
     }
 
 }
