@@ -168,10 +168,14 @@ h6,
         height: auto;
     }
 
+@media (max-width: 991.98px) {
     .navbar .navbar-brand img {
-        width: 185px;
-        height: auto;
+        width: 160px;
+        height: 60px;
+        object-fit: cover;
+        object-position: center center;
     }
+}
 
     .navbar .navbar-nav .nav-link {
         margin-right: 0;
