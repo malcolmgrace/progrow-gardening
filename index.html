@@ -34,58 +34,85 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <link href="css/style.css" rel="stylesheet">
-
-    <script type="application/ld+json">
+ 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": ["LandscapeService", "LocalBusiness"],
+      "@id": "https://progrowgardening.ca/#organization",
+      "name": "ProGrow Gardening",
+      "url": "https://progrowgardening.ca",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://progrowgardening.ca/img/ProGrow_Logo_White.png"
+      },
+      "telephone": "+12498789140",
+      "email": "admin@progrowgardening.ca",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "367 Bankside Way",
+        "addressLocality": "Nepean",
+        "addressRegion": "ON",
+        "postalCode": "K2J 6K4",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "45.25131387426371",
+        "longitude": "-75.73419302981107"
+      },
+      "openingHours": "Mo-Sa 08:00-18:00",
+      "areaServed": [
+        { "@type": "City", "name": "Nepean" },
+        { "@type": "City", "name": "Barrhaven" },
+        { "@type": "City", "name": "Manotick" },
+        { "@type": "City", "name": "Kanata" },
+        { "@type": "City", "name": "Riverside South" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61574774193213",
+        "https://www.instagram.com/progrowgardening"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "6",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
         {
-          "@type": ["LandscapeService", "LocalBusiness"],
-          "@id": "https://progrowgardening.ca/#organization",
-          "name": "ProGrow Gardening",
-          "url": "https://progrowgardening.ca",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://progrowgardening.ca/img/ProGrow_Logo_White.png"
-          },
-          "telephone": "+12498789140",
-          "email": "admin@progrowgardening.ca",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "367 Bankside Way",
-            "addressLocality": "Nepean",
-            "addressRegion": "ON",
-            "postalCode": "K2J 6K4",
-            "addressCountry": "CA"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "45.25131387426371",
-            "longitude": "-75.73419302981107"
-          },
-          "openingHours": "Mo-Sa 08:00-18:00",
-          "areaServed": [
-            { "@type": "City", "name": "Nepean" },
-            { "@type": "City", "name": "Barrhaven" },
-            { "@type": "City", "name": "Manotick" },
-            { "@type": "City", "name": "Kanata" },
-            { "@type": "City", "name": "Riverside South" }
-          ],
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61574774193213",
-            "https://www.instagram.com/progrowgardening"
-          ]
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Rachel D." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Malcolm did an amazing job with my garden. He was professional, reliable, and the pricing was very fair. Everything looked great when he was finished and he clearly takes pride in his work. I would definitely recommend ProGrow Gardening to anyone looking for quality landscaping or garden care."
         },
         {
-          "@type": "WebSite",
-          "@id": "https://progrowgardening.ca/#website",
-          "url": "https://progrowgardening.ca",
-          "name": "ProGrow Gardening",
-          "publisher": { "@id": "https://progrowgardening.ca/#organization" }
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Tyler M." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Malcolm did a great job and was very fairly priced. Will definitely use the service again! Thank you!"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Alex S." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Excellent work. Punctual and hard working. Good price. Cannot recommend more. 10/10"
         }
       ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://progrowgardening.ca/#website",
+      "url": "https://progrowgardening.ca",
+      "name": "ProGrow Gardening",
+      "publisher": { "@id": "https://progrowgardening.ca/#organization" }
     }
-    </script>
+  ]
+}
+</script>
 </head>
 
 <body>
