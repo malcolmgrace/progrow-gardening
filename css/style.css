@@ -167,14 +167,12 @@ h6,
     .navbar .navbar-brand {
         height: auto;
     }
-    
+
     .navbar .navbar-brand img {
         width: 180px;
         height: auto;
         display: block;
     }
-
-}
 
     .navbar .navbar-nav .nav-link {
         margin-right: 0;
