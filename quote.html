@@ -153,69 +153,382 @@
       </div>
       <!-- Page Header End -->
 
-      <!-- Quote Form Start -->
-      <div class="container-fluid quote my-0 py-5" data-parallax="scroll" data-image-src="img/carousel-quote-page.jpg">
-        <div class="container py-5">
-          <div class="row justify-content-center">
-            <div class="col-lg-7">
-              <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
-                <h2 class="text-center mb-3"><strong>Get a Free, No-Obligation Quote</strong></h2>
-                <hr />
-                <p class="text-center mb-4">Fill out the form and we will get back to you within one business day to discuss your needs.</p>
-                <form name="gardening-quote" method="POST" action="/thank-you" netlify netlify-honeypot="bot-field">
-                  <input type="hidden" name="bot-field" />
-                  <input type="hidden" name="form-name" value="gardening-quote" />
-                  <div class="row g-3">
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="text" class="form-control bg-light border-0" id="gname" name="name" placeholder="Name" required />
-                        <label for="gname">Name</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="email" class="form-control bg-light border-0" id="gmail" name="email" placeholder="Email" required />
-                        <label for="gmail">Email</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <input type="tel" class="form-control bg-light border-0" id="cname" name="phone" placeholder="Phone Number" required />
-                        <label for="cname">Phone Number</label>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-floating">
-                        <select class="form-control bg-light border-0" id="cage" name="service-type" required>
-                          <option value="">Select</option>
-                          <option value="garden-maintenance">Garden Maintenance</option>
-                          <option value="weed-control">Weed Control</option>
-                          <option value="lawn-restoration">Lawn Restoration</option>
-                          <option value="garden-design">Garden Design</option>
-                          <option value="planting">Planting</option>
-                          <option value="shrub-tree-trimming">Shrub &amp; Tree Trimming</option>
-                          <option value="other">Other</option>
-                        </select>
-                        <label for="cage">Service Type</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-floating">
-                        <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" name="message" style="height: 100px" required></textarea>
-                        <label for="message">Message</label>
-                      </div>
-                    </div>
-                    <div class="col-12 text-center">
-                      <button class="btn btn-primary py-3 px-4" type="submit">Submit Now</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+<!-- Quote Form Start -->
+
+<div class="container-fluid quote my-0 py-5" data-parallax="scroll" data-image-src="img/carousel-quote-page.jpg">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
+
+```
+      <!-- Header -->
+      <h2 class="text-center mb-1"><strong>Get a Free, No-Obligation Quote</strong></h2>
+      <p class="text-center text-muted mb-4" style="font-size:0.95rem;">We respond within one business day — usually same day.</p>
+
+      <!-- Progress Bar -->
+      <div class="mb-4">
+        <div class="d-flex justify-content-between mb-1" style="font-size:0.8rem; font-weight:600; color:#6c757d; text-transform:uppercase; letter-spacing:0.04em;">
+          <span id="step-label-1" class="step-label active-label">1. Service</span>
+          <span id="step-label-2" class="step-label">2. Your Property</span>
+          <span id="step-label-3" class="step-label">3. Contact</span>
+        </div>
+        <div class="progress" style="height:6px; border-radius:4px;">
+          <div id="quote-progress" class="progress-bar" role="progressbar" style="width:33%; background-color:#4CAF50; transition:width 0.4s ease;"></div>
         </div>
       </div>
-      <!-- Quote Form End -->
+
+      <!-- Hidden Netlify form (real submission target) -->
+      <form name="gardening-quote" method="POST" action="/thank-you" netlify netlify-honeypot="bot-field" id="netlify-form" style="display:none;">
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="gardening-quote" />
+        <input type="hidden" name="name" id="h-name" />
+        <input type="hidden" name="email" id="h-email" />
+        <input type="hidden" name="phone" id="h-phone" />
+        <input type="hidden" name="service-type" id="h-service" />
+        <input type="hidden" name="neighbourhood" id="h-neighbourhood" />
+        <input type="hidden" name="property-size" id="h-property-size" />
+        <input type="hidden" name="message" id="h-message" />
+      </form>
+
+      <!-- STEP 1: Service Selection -->
+      <div id="step-1" class="quote-step">
+        <p class="mb-3 fw-semibold text-center" style="font-size:1.05rem;">What can we help you with?</p>
+        <div class="row g-3" id="service-cards">
+
+          <div class="col-6 col-md-4">
+            <div class="service-card" data-value="garden-maintenance" onclick="selectService(this)">
+              <div class="service-icon">🌿</div>
+              <div class="service-name">Garden Maintenance</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="service-card" data-value="weed-control" onclick="selectService(this)">
+              <div class="service-icon">🌱</div>
+              <div class="service-name">Weed Control</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="service-card" data-value="lawn-restoration" onclick="selectService(this)">
+              <div class="service-icon">🌾</div>
+              <div class="service-name">Lawn Restoration</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="service-card" data-value="garden-design" onclick="selectService(this)">
+              <div class="service-icon">✏️</div>
+              <div class="service-name">Garden Design</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="service-card" data-value="planting" onclick="selectService(this)">
+              <div class="service-icon">🪴</div>
+              <div class="service-name">Planting</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="service-card" data-value="shrub-tree-trimming" onclick="selectService(this)">
+              <div class="service-icon">✂️</div>
+              <div class="service-name">Shrub &amp; Tree Trimming</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="service-card" data-value="other" onclick="selectService(this)">
+              <div class="service-icon">💬</div>
+              <div class="service-name">Something Else</div>
+            </div>
+          </div>
+
+        </div>
+        <div id="service-error" class="text-danger mt-2 text-center" style="display:none; font-size:0.9rem;">Please select a service to continue.</div>
+        <div class="text-center mt-4">
+          <button class="btn btn-primary px-5 py-2" onclick="goToStep(2)">Next &rarr;</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Property Details -->
+      <div id="step-2" class="quote-step" style="display:none;">
+        <p class="mb-3 fw-semibold text-center" style="font-size:1.05rem;">Tell us about your property</p>
+
+        <div class="row g-3">
+          <!-- Neighbourhood -->
+          <div class="col-12">
+            <label class="form-label fw-semibold mb-1" style="font-size:0.9rem;">Which neighbourhood are you in?</label>
+            <div class="row g-2" id="neighbourhood-cards">
+              <div class="col-6 col-md-4"><div class="pill-card" data-value="Nepean" onclick="selectPill(this, 'neighbourhood')">Nepean</div></div>
+              <div class="col-6 col-md-4"><div class="pill-card" data-value="Barrhaven" onclick="selectPill(this, 'neighbourhood')">Barrhaven</div></div>
+              <div class="col-6 col-md-4"><div class="pill-card" data-value="Kanata" onclick="selectPill(this, 'neighbourhood')">Kanata</div></div>
+              <div class="col-6 col-md-4"><div class="pill-card" data-value="Manotick" onclick="selectPill(this, 'neighbourhood')">Manotick</div></div>
+              <div class="col-6 col-md-4"><div class="pill-card" data-value="Riverside South" onclick="selectPill(this, 'neighbourhood')">Riverside South</div></div>
+              <div class="col-6 col-md-4"><div class="pill-card" data-value="Other" onclick="selectPill(this, 'neighbourhood')">Other / Not Sure</div></div>
+            </div>
+            <div id="neighbourhood-error" class="text-danger mt-1" style="display:none; font-size:0.85rem;">Please select your neighbourhood.</div>
+          </div>
+
+          <!-- Property Size -->
+          <div class="col-12 mt-2">
+            <label class="form-label fw-semibold mb-1" style="font-size:0.9rem;">How would you describe your yard?</label>
+            <div class="row g-2" id="size-cards">
+              <div class="col-4">
+                <div class="pill-card text-center" data-value="Small (standard lot)" onclick="selectPill(this, 'size')">
+                  <div style="font-size:1.3rem;">🏡</div>
+                  <div style="font-size:0.82rem; font-weight:600;">Small</div>
+                  <div style="font-size:0.72rem; color:#888;">Standard lot</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="pill-card text-center" data-value="Medium (larger suburban)" onclick="selectPill(this, 'size')">
+                  <div style="font-size:1.3rem;">🏠</div>
+                  <div style="font-size:0.82rem; font-weight:600;">Medium</div>
+                  <div style="font-size:0.72rem; color:#888;">Larger suburban</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="pill-card text-center" data-value="Large (acreage or estate)" onclick="selectPill(this, 'size')">
+                  <div style="font-size:1.3rem;">🌳</div>
+                  <div style="font-size:0.82rem; font-weight:600;">Large</div>
+                  <div style="font-size:0.72rem; color:#888;">Acreage / estate</div>
+                </div>
+              </div>
+            </div>
+            <div id="size-error" class="text-danger mt-1" style="display:none; font-size:0.85rem;">Please select a yard size.</div>
+          </div>
+
+          <!-- Message -->
+          <div class="col-12 mt-1">
+            <label class="form-label fw-semibold mb-1" style="font-size:0.9rem;">Anything else we should know? <span class="text-muted fw-normal">(optional)</span></label>
+            <textarea class="form-control bg-light border-0" id="v-message" rows="3"
+              placeholder="e.g. The back beds are overgrown and haven't been touched in two years. There's a large cedar hedge along the fence line. I'm home weekday mornings."></textarea>
+            <div class="text-muted mt-1" style="font-size:0.78rem;">Specific details help us give you a more accurate quote.</div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-4">
+          <button class="btn btn-outline-secondary px-4 py-2" onclick="goToStep(1)">&larr; Back</button>
+          <button class="btn btn-primary px-5 py-2" onclick="goToStep(3)">Next &rarr;</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Contact Info -->
+      <div id="step-3" class="quote-step" style="display:none;">
+        <p class="mb-3 fw-semibold text-center" style="font-size:1.05rem;">How should we reach you?</p>
+
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="form-floating">
+              <input type="text" class="form-control bg-light border-0" id="v-name" placeholder="Name" />
+              <label for="v-name">Your Name</label>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-floating">
+              <input type="tel" class="form-control bg-light border-0" id="v-phone" placeholder="Phone Number" />
+              <label for="v-phone">Phone Number</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-floating">
+              <input type="email" class="form-control bg-light border-0" id="v-email" placeholder="Email" />
+              <label for="v-email">Email Address</label>
+            </div>
+          </div>
+          <div id="contact-error" class="col-12 text-danger" style="display:none; font-size:0.88rem;"></div>
+        </div>
+
+        <!-- Trust signals -->
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4 mb-2">
+          <div class="trust-badge">✅ Certified Horticulturist</div>
+          <div class="trust-badge">⏱ Reply within 1 business day</div>
+          <div class="trust-badge">🔒 No spam, ever</div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-3">
+          <button class="btn btn-outline-secondary px-4 py-2" onclick="goToStep(2)">&larr; Back</button>
+          <button class="btn btn-primary px-5 py-2 fw-semibold" onclick="submitQuoteForm()">Send My Request ✉</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+</div>
+<!-- Quote Form End -->
+
+<style>
+/* Service cards */
+.service-card {
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 16px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  user-select: none;
+  background: #fafafa;
+}
+.service-card:hover {
+  border-color: #4CAF50;
+  background: #f0faf0;
+  transform: translateY(-2px);
+}
+.service-card.selected {
+  border-color: #4CAF50;
+  background: #e8f5e9;
+}
+.service-icon {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+.service-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.2;
+}
+
+/* Pill cards (neighbourhood, size) */
+.pill-card {
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #444;
+  background: #fafafa;
+  transition: border-color 0.2s, background 0.2s;
+  user-select: none;
+}
+.pill-card:hover {
+  border-color: #4CAF50;
+  background: #f0faf0;
+}
+.pill-card.selected {
+  border-color: #4CAF50;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Trust badges */
+.trust-badge {
+  font-size: 0.8rem;
+  color: #555;
+  background: #f5f5f5;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-weight: 500;
+}
+
+/* Step label active state */
+.step-label {
+  color: #aaa;
+  transition: color 0.3s;
+}
+.active-label {
+  color: #2e7d32 !important;
+  font-weight: 700;
+}
+
+/* Form controls */
+.form-control:focus {
+  border-color: #4CAF50 !important;
+  box-shadow: 0 0 0 0.2rem rgba(76,175,80,0.15) !important;
+}
+</style>
+
+<script>
+(function() {
+  var selectedService = '';
+  var selectedNeighbourhood = '';
+  var selectedSize = '';
+
+  window.selectService = function(el) {
+    document.querySelectorAll('.service-card').forEach(function(c){ c.classList.remove('selected'); });
+    el.classList.add('selected');
+    selectedService = el.getAttribute('data-value');
+    document.getElementById('service-error').style.display = 'none';
+  };
+
+  window.selectPill = function(el, group) {
+    var parent = group === 'neighbourhood' ? 'neighbourhood-cards' : 'size-cards';
+    document.querySelectorAll('#' + parent + ' .pill-card').forEach(function(c){ c.classList.remove('selected'); });
+    el.classList.add('selected');
+    if (group === 'neighbourhood') {
+      selectedNeighbourhood = el.getAttribute('data-value');
+      document.getElementById('neighbourhood-error').style.display = 'none';
+    } else {
+      selectedSize = el.getAttribute('data-value');
+      document.getElementById('size-error').style.display = 'none';
+    }
+  };
+
+  window.goToStep = function(n) {
+    // Validate before advancing
+    if (n === 2) {
+      if (!selectedService) {
+        document.getElementById('service-error').style.display = 'block';
+        return;
+      }
+    }
+    if (n === 3) {
+      var valid = true;
+      if (!selectedNeighbourhood) { document.getElementById('neighbourhood-error').style.display = 'block'; valid = false; }
+      if (!selectedSize) { document.getElementById('size-error').style.display = 'block'; valid = false; }
+      if (!valid) return;
+    }
+
+    // Hide all steps
+    document.querySelectorAll('.quote-step').forEach(function(s){ s.style.display = 'none'; });
+    document.getElementById('step-' + n).style.display = 'block';
+
+    // Update progress bar
+    var pct = n === 1 ? 33 : n === 2 ? 66 : 100;
+    document.getElementById('quote-progress').style.width = pct + '%';
+
+    // Update step labels
+    document.querySelectorAll('.step-label').forEach(function(l){ l.classList.remove('active-label'); });
+    document.getElementById('step-label-' + n).classList.add('active-label');
+
+    // Scroll to top of form
+    var formEl = document.querySelector('.quote');
+    if (formEl) formEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  window.submitQuoteForm = function() {
+    var name  = document.getElementById('v-name').value.trim();
+    var email = document.getElementById('v-email').value.trim();
+    var phone = document.getElementById('v-phone').value.trim();
+    var errEl = document.getElementById('contact-error');
+    var errors = [];
+
+    if (!name)  errors.push('Please enter your name.');
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push('Please enter a valid email address.');
+    if (!phone) errors.push('Please enter your phone number.');
+
+    if (errors.length) {
+      errEl.innerHTML = errors.join('<br>');
+      errEl.style.display = 'block';
+      return;
+    }
+    errEl.style.display = 'none';
+
+    // Populate hidden form
+    document.getElementById('h-name').value          = name;
+    document.getElementById('h-email').value         = email;
+    document.getElementById('h-phone').value         = phone;
+    document.getElementById('h-service').value       = selectedService;
+    document.getElementById('h-neighbourhood').value = selectedNeighbourhood;
+    document.getElementById('h-property-size').value = selectedSize;
+    document.getElementById('h-message').value       = document.getElementById('v-message').value.trim();
+
+    document.getElementById('netlify-form').submit();
+  };
+})();
+</script>
 
     </main>
 
