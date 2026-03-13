@@ -189,7 +189,7 @@
         <input type="hidden" name="email" id="h-email" />
         <input type="hidden" name="phone" id="h-phone" />
         <input type="hidden" name="service-type" id="h-service" />
-        <input type="hidden" name="neighbourhood" id="h-neighbourhood" />
+        <input type="hidden" name="address" id="h-address" />
         <input type="hidden" name="property-size" id="h-property-size" />
         <input type="hidden" name="message" id="h-message" />
       </form>
@@ -254,40 +254,35 @@
         <p class="mb-3 fw-semibold text-center" style="font-size:1.05rem;">Tell us about your property</p>
 
         <div class="row g-3">
-          <!-- Neighbourhood -->
-          <div class="col-12">
-            <label class="form-label fw-semibold mb-1" style="font-size:0.9rem;">Which neighbourhood are you in?</label>
-            <div class="row g-2" id="neighbourhood-cards">
-              <div class="col-6 col-md-4"><div class="pill-card" data-value="Nepean" onclick="selectPill(this, 'neighbourhood')">Nepean</div></div>
-              <div class="col-6 col-md-4"><div class="pill-card" data-value="Barrhaven" onclick="selectPill(this, 'neighbourhood')">Barrhaven</div></div>
-              <div class="col-6 col-md-4"><div class="pill-card" data-value="Kanata" onclick="selectPill(this, 'neighbourhood')">Kanata</div></div>
-              <div class="col-6 col-md-4"><div class="pill-card" data-value="Manotick" onclick="selectPill(this, 'neighbourhood')">Manotick</div></div>
-              <div class="col-6 col-md-4"><div class="pill-card" data-value="Riverside South" onclick="selectPill(this, 'neighbourhood')">Riverside South</div></div>
-              <div class="col-6 col-md-4"><div class="pill-card" data-value="Other" onclick="selectPill(this, 'neighbourhood')">Other / Not Sure</div></div>
-            </div>
-            <div id="neighbourhood-error" class="text-danger mt-1" style="display:none; font-size:0.85rem;">Please select your neighbourhood.</div>
+        <!-- Address -->
+        <div class="col-12">
+          <label class="form-label fw-semibold mb-1" style="font-size:0.9rem;">Property address</label>
+          <div class="form-floating">
+            <input type="text" class="form-control bg-light border-0" id="v-address" placeholder="Address" />
+            <label for="v-address">Street address, Ottawa</label>
           </div>
-
+          <div id="address-error" class="text-danger mt-1" style="display:none; font-size:0.85rem;">Please enter your property address.</div>
+        </div>
           <!-- Property Size -->
           <div class="col-12 mt-2">
             <label class="form-label fw-semibold mb-1" style="font-size:0.9rem;">How would you describe your yard?</label>
             <div class="row g-2" id="size-cards">
               <div class="col-4">
-                <div class="pill-card text-center" data-value="Small (standard lot)" onclick="selectPill(this, 'size')">
+                <div class="pill-card text-center" data-value="Small (standard lot)" onclick="selectPill(this)">
                   <div style="font-size:1.3rem;">🏡</div>
                   <div style="font-size:0.82rem; font-weight:600;">Small</div>
                   <div style="font-size:0.72rem; color:#888;">Standard lot</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="pill-card text-center" data-value="Medium (larger suburban)" onclick="selectPill(this, 'size')">
+                <div class="pill-card text-center" data-value="Medium (larger suburban)" onclick="selectPill(this)">
                   <div style="font-size:1.3rem;">🏠</div>
                   <div style="font-size:0.82rem; font-weight:600;">Medium</div>
                   <div style="font-size:0.72rem; color:#888;">Larger suburban</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="pill-card text-center" data-value="Large (acreage or estate)" onclick="selectPill(this, 'size')">
+                <div class="pill-card text-center" data-value="Large (acreage or estate)" onclick="selectPill(this)">
                   <div style="font-size:1.3rem;">🌳</div>
                   <div style="font-size:0.82rem; font-weight:600;">Large</div>
                   <div style="font-size:0.72rem; color:#888;">Acreage / estate</div>
@@ -441,7 +436,6 @@
 <script>
 (function() {
   var selectedService = '';
-  var selectedNeighbourhood = '';
   var selectedSize = '';
 
   window.selectService = function(el) {
@@ -451,18 +445,12 @@
     document.getElementById('service-error').style.display = 'none';
   };
 
-  window.selectPill = function(el, group) {
-    var parent = group === 'neighbourhood' ? 'neighbourhood-cards' : 'size-cards';
-    document.querySelectorAll('#' + parent + ' .pill-card').forEach(function(c){ c.classList.remove('selected'); });
-    el.classList.add('selected');
-    if (group === 'neighbourhood') {
-      selectedNeighbourhood = el.getAttribute('data-value');
-      document.getElementById('neighbourhood-error').style.display = 'none';
-    } else {
-      selectedSize = el.getAttribute('data-value');
-      document.getElementById('size-error').style.display = 'none';
-    }
-  };
+window.selectPill = function(el) {
+  document.querySelectorAll('#size-cards .pill-card').forEach(function(c){ c.classList.remove('selected'); });
+  el.classList.add('selected');
+  selectedSize = el.getAttribute('data-value');
+  document.getElementById('size-error').style.display = 'none';
+};
 
   window.goToStep = function(n) {
     // Validate before advancing
@@ -474,7 +462,8 @@
     }
     if (n === 3) {
       var valid = true;
-      if (!selectedNeighbourhood) { document.getElementById('neighbourhood-error').style.display = 'block'; valid = false; }
+      var address = document.getElementById('v-address').value.trim();
+if (!address) { document.getElementById('address-error').style.display = 'block'; valid = false; }
       if (!selectedSize) { document.getElementById('size-error').style.display = 'block'; valid = false; }
       if (!valid) return;
     }
@@ -519,13 +508,31 @@
     document.getElementById('h-email').value         = email;
     document.getElementById('h-phone').value         = phone;
     document.getElementById('h-service').value       = selectedService;
-    document.getElementById('h-neighbourhood').value = selectedNeighbourhood;
+    var address = document.getElementById('v-address').value.trim();
+document.getElementById('h-address').value = document.getElementById('v-address').value.trim();
     document.getElementById('h-property-size').value = selectedSize;
     document.getElementById('h-message').value       = document.getElementById('v-message').value.trim();
 
     document.getElementById('netlify-form').submit();
   };
 })();
+    function initAutocomplete() {
+      var input = document.getElementById('v-address');
+      var autocomplete = new google.maps.places.Autocomplete(input, {
+        types: ['address'],
+        componentRestrictions: { country: 'ca' },
+        bounds: new google.maps.LatLngBounds(
+        new google.maps.LatLng(44.55, -76.80),
+        new google.maps.LatLng(46.20, -74.70)
+        ),
+        strictBounds: false
+      });
+      autocomplete.addListener('place_changed', function() {
+        var place = autocomplete.getPlace();
+        document.getElementById('v-address').value = place.formatted_address || '';
+        document.getElementById('address-error').style.display = 'none';
+      });
+    }
 </script>
 
     </main>
@@ -592,6 +599,7 @@
     <!-- Footer End -->
 
   <!-- JavaScript Libraries -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&libraries=places&callback=initAutocomplete" async defer></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="lib/wow/wow.min.js" defer></script>
