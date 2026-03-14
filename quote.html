@@ -600,6 +600,13 @@
     el.classList.add('shake');
   }
 
+  function showError(el) {
+    el.style.display = 'block';
+    el.classList.remove('shake');
+    void el.offsetWidth; // force reflow so re-triggers if already showing
+    el.classList.add('shake');
+  }
+
   window.selectService = function(el) {
     el.classList.toggle('selected');
     selectedService = [...document.querySelectorAll('#service-cards .service-card.selected')]
@@ -619,7 +626,7 @@ window.selectPill = function(el) {
 if (n === 2) {
   var anySelected = document.querySelectorAll('#service-cards .service-card.selected, #partner-cards .service-card.selected').length > 0;
   if (!anySelected) {
-    document.getElementById('service-error').style.display = 'block';
+    showError(document.getElementById('service-error'));
     return;
   }
 }
@@ -627,10 +634,10 @@ if (n === 2) {
       var valid = true;
       var address = document.getElementById('v-address').value.trim();
       if (!addressConfirmed || !address) {
-        document.getElementById('address-error').style.display = 'block';
+        showError(document.getElementById('address-error'));
         valid = false;
       }
-      if (!selectedSize) { document.getElementById('size-error').style.display = 'block'; valid = false; }
+      if (!selectedSize) { showError(document.getElementById('size-error')); valid = false; }
       if (!valid) return;
     }
 
@@ -680,7 +687,7 @@ if (n === 2) {
 
     if (errors.length) {
       errEl.innerHTML = errors.map(function(e){ return document.createTextNode(e).nodeValue; }).join('<br>');
-      errEl.style.display = 'block';
+      showError(errEl);
       return;
     }
     errEl.style.display = 'none';
