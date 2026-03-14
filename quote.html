@@ -167,7 +167,7 @@
 ```
       <!-- Header -->
       <h2 class="text-center mb-1"><strong>Get a Free, No-Obligation Quote</strong></h2>
-      <p class="text-center text-muted mb-4" style="font-size:0.95rem;">We respond within one business day — usually same day.</p>
+      <p class="text-center mb-4" style="font-size:0.88rem; color:#999; font-weight:400; font-family:'Open Sans',sans-serif;">We respond within one business day &mdash; <strong style="color:#4CAF50; font-weight:600;">usually same day.</strong></p>
 
       <!-- Progress Bar -->
       <div class="mb-4">
@@ -192,16 +192,16 @@
         <input type="hidden" name="address" id="h-address" />
         <input type="hidden" name="property-size" id="h-property-size" />
         <input type="hidden" name="message" id="h-message" />
+        <input type="hidden" name="partner-services" id="h-partner-services" />
       </form>
 
       <!-- STEP 1: Service Selection -->
       <div id="step-1" class="quote-step">
-        <p class="mb-3 fw-semibold text-center" style="font-size:1.05rem;">What can we help you with?</p>
+        <p class="mb-3 text-center" style="font-family:'Jost',sans-serif; font-size:1.1rem; font-weight:700; color:#1a1a1a;">What can we help you with? <span style="font-size:0.72rem; font-weight:600; color:#4CAF50; text-transform:uppercase; letter-spacing:0.07em;">Select all that apply</span></p>
         <div class="row g-3" id="service-cards">
-
           <div class="col-6 col-md-4">
             <div class="service-card" data-value="garden-maintenance" onclick="selectService(this)">
-              <div class="service-icon">🌿</div>
+              <div class="service-icon">🌻</div>
               <div class="service-name">Garden Maintenance</div>
             </div>
           </div>
@@ -219,7 +219,7 @@
           </div>
           <div class="col-6 col-md-4">
             <div class="service-card" data-value="garden-design" onclick="selectService(this)">
-              <div class="service-icon">✏️</div>
+              <div class="service-icon">🏡</div>
               <div class="service-name">Garden Design</div>
             </div>
           </div>
@@ -231,7 +231,7 @@
           </div>
           <div class="col-6 col-md-4">
             <div class="service-card" data-value="shrub-tree-trimming" onclick="selectService(this)">
-              <div class="service-icon">✂️</div>
+              <div class="service-icon">🌲</div>
               <div class="service-name">Shrub &amp; Tree Trimming</div>
             </div>
           </div>
@@ -242,7 +242,64 @@
             </div>
           </div>
         </div>
+
         <div id="service-error" class="text-danger mt-2 text-center" style="display:none; font-size:0.9rem;">Please select a service to continue.</div>
+
+        <!-- Partner Services -->
+        <div class="mt-4">
+          <p class="mb-2" style="font-family:'Jost',sans-serif; font-size:1.0rem; font-weight:700; color:#1a1a1a;">Also need any of these? <span style="font-size:0.72rem; font-weight:600; color:#4CAF50; text-transform:uppercase; letter-spacing:0.07em;">We'll connect you with a trusted contractor</span></p>
+          <div class="row g-3" id="partner-cards">
+            <div class="col-6 col-md-4">
+              <div class="service-card" data-value="Seasonal Lawn Maintenance" onclick="togglePartner(this)">
+                <div class="service-icon">🌾</div>
+                <div class="service-name">Seasonal Lawn Maintenance</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="service-card" data-value="Hedge &amp; Shrub Care" onclick="togglePartner(this)">
+                <div class="service-icon">✂️</div>
+                <div class="service-name">Hedge &amp; Shrub Care</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="service-card" data-value="Tree Services" onclick="togglePartner(this)">
+                <div class="service-icon">🌳</div>
+                <div class="service-name">Tree Services</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="service-card" data-value="Sod Installation" onclick="togglePartner(this)">
+                <div class="service-icon">🟩</div>
+                <div class="service-name">Sod Installation</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="service-card" data-value="Hardscaping" onclick="togglePartner(this)">
+                <div class="service-icon">🧱</div>
+                <div class="service-name">Hardscaping</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="service-card" data-value="Irrigation &amp; Sprinkler Systems" onclick="togglePartner(this)">
+                <div class="service-icon">💧</div>
+                <div class="service-name">Irrigation &amp; Sprinkler Systems</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="service-card" data-value="Pond &amp; Water Feature Installation" onclick="togglePartner(this)">
+                <div class="service-icon">⛲</div>
+                <div class="service-name">Pond &amp; Water Feature Installation</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="service-card" data-value="Landscape Design &amp; Consultation" onclick="togglePartner(this)">
+                <div class="service-icon">🎨</div>
+                <div class="service-name">Landscape Design &amp; Consultation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="text-center mt-4">
           <button class="btn btn-primary px-5 py-2" onclick="goToStep(2)">Next &rarr;</button>
         </div>
@@ -250,12 +307,12 @@
 
       <!-- STEP 2: Property Details -->
       <div id="step-2" class="quote-step" style="display:none;">
-        <p class="mb-3 fw-semibold text-center" style="font-size:1.05rem;">Tell us about your property</p>
+        <p class="mb-3 text-center" style="font-family:'Jost',sans-serif; font-size:1.1rem; font-weight:700; color:#1a1a1a;">Tell us about your property</p>
 
         <div class="row g-3">
         <!-- Address -->
         <div class="col-12">
-          <label class="form-label fw-semibold mb-1" style="font-size:0.9rem;">Property address</label>
+          <label class="form-label mb-1" style="font-family:'Jost',sans-serif; font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; color:#555;">Property address</label>
           <div class="form-floating">
           <input type="text" class="form-control bg-light border-0" id="v-address" placeholder="Address" />
             <label for="v-address">e.g. 123 Maple Drive, Ottawa</label>
@@ -264,7 +321,7 @@
         </div>
           <!-- Property Size -->
           <div class="col-12 mt-2">
-            <label class="form-label fw-semibold mb-1" style="font-size:0.9rem;">How would you describe your yard?</label>
+            <label class="form-label mb-1" style="font-family:'Jost',sans-serif; font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; color:#555;">How would you describe your yard?</label>
             <div class="row g-2" id="size-cards">
               <div class="col-6">
                 <div class="pill-card text-center" data-value="Small (standard lot)" onclick="selectPill(this)">
@@ -300,10 +357,10 @@
 
           <!-- Message -->
           <div class="col-12 mt-1">
-            <label class="form-label fw-semibold mb-1" style="font-size:0.9rem;">Anything else we should know? <span class="text-muted fw-normal">(optional)</span></label>
+            <label class="form-label mb-1" style="font-family:'Jost',sans-serif; font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; color:#555;">Anything else we should know? <span style="font-weight:400; color:#aaa; text-transform:none; letter-spacing:0;">(optional)</span></label>
             <textarea class="form-control bg-light border-0" id="v-message" rows="3"
               placeholder="e.g. The back beds are overgrown and haven't been touched in two years. There's a large cedar hedge along the fence line. I'm home weekday mornings."></textarea>
-            <div class="text-muted mt-1" style="font-size:0.78rem;">Specific details help us give you a more accurate quote.</div>
+            <div class="mt-1" style="font-size:0.78rem; color:#aaa; font-family:'Open Sans',sans-serif;">Specific details help us give you a more accurate quote.</div>
           </div>
         </div>
 
@@ -315,7 +372,7 @@
 
       <!-- STEP 3: Contact Info -->
       <div id="step-3" class="quote-step" style="display:none;">
-        <p class="mb-3 fw-semibold text-center" style="font-size:1.05rem;">How should we reach you?</p>
+        <p class="mb-3 text-center" style="font-family:'Jost',sans-serif; font-size:1.1rem; font-weight:700; color:#1a1a1a;">How should we reach you?</p>
 
         <div class="row g-3">
           <div class="col-sm-6">
@@ -445,10 +502,10 @@
   var selectedSize = '';
 
   window.selectService = function(el) {
-    document.querySelectorAll('.service-card').forEach(function(c){ c.classList.remove('selected'); });
-    el.classList.add('selected');
-    selectedService = el.getAttribute('data-value');
-    document.getElementById('service-error').style.display = 'none';
+    el.classList.toggle('selected');
+    selectedService = [...document.querySelectorAll('#service-cards .service-card.selected')]
+      .map(function(c){ return c.getAttribute('data-value'); }).join(', ');
+    if (selectedService) document.getElementById('service-error').style.display = 'none';
   };
 
 window.selectPill = function(el) {
@@ -460,12 +517,13 @@ window.selectPill = function(el) {
 
   window.goToStep = function(n) {
     // Validate before advancing
-    if (n === 2) {
-      if (!selectedService) {
-        document.getElementById('service-error').style.display = 'block';
-        return;
-      }
-    }
+if (n === 2) {
+  var anySelected = document.querySelectorAll('#service-cards .service-card.selected').length > 0;
+  if (!anySelected) {
+    document.getElementById('service-error').style.display = 'block';
+    return;
+  }
+}
     if (n === 3) {
       var valid = true;
       var address = document.getElementById('v-address').value.trim();
@@ -518,7 +576,8 @@ if (!address) { document.getElementById('address-error').style.display = 'block'
 document.getElementById('h-address').value = document.getElementById('v-address').value.trim();
     document.getElementById('h-property-size').value = selectedSize;
     document.getElementById('h-message').value       = document.getElementById('v-message').value.trim();
-
+document.getElementById('h-partner-services').value = [...document.querySelectorAll('#partner-cards .service-card.selected')]
+  .map(function(c){ return c.getAttribute('data-value'); }).join(', ');
     document.getElementById('netlify-form').submit();
   };
 })();
@@ -539,6 +598,9 @@ document.getElementById('h-address').value = document.getElementById('v-address'
         document.getElementById('address-error').style.display = 'none';
       });
     }
+    window.togglePartner = function(el) {
+  el.classList.toggle('selected');
+};
 </script>
 
     </main>
