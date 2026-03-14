@@ -243,7 +243,7 @@
           </div>
         </div>
 
-        <div id="service-error" class="text-danger mt-2 text-center" style="display:none; font-size:0.9rem;">Please select a service to continue.</div>
+        <div id="service-error" class="text-danger mt-2 text-center" style="display:none; font-size:0.9rem;">Please select at least one service to continue.</div>
 
         <!-- Partner Services -->
         <div class="mt-4">
@@ -377,20 +377,26 @@
         <div class="row g-3">
           <div class="col-sm-6">
             <div class="form-floating">
-              <input type="text" class="form-control bg-light border-0" id="v-name" placeholder="Name" />
-              <label for="v-name">Your Name</label>
+              <input type="text" class="form-control bg-light border-0" id="v-fname" placeholder="First Name" autocomplete="given-name" />
+              <label for="v-fname">First Name</label>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-floating">
-              <input type="tel" class="form-control bg-light border-0" id="v-phone" placeholder="Phone Number" />
-              <label for="v-phone">Phone Number</label>
+              <input type="text" class="form-control bg-light border-0" id="v-lname" placeholder="Last Name" autocomplete="family-name" />
+              <label for="v-lname">Last Name</label>
             </div>
           </div>
           <div class="col-12">
             <div class="form-floating">
-              <input type="email" class="form-control bg-light border-0" id="v-email" placeholder="Email" />
+              <input type="email" class="form-control bg-light border-0" id="v-email" placeholder="Email Address" autocomplete="email" inputmode="email" />
               <label for="v-email">Email Address</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-floating">
+              <input type="tel" class="form-control bg-light border-0" id="v-phone" placeholder="Phone Number" autocomplete="tel" inputmode="numeric" maxlength="14" />
+              <label for="v-phone">Phone Number</label>
             </div>
           </div>
           <div id="contact-error" class="col-12 text-danger" style="display:none; font-size:0.88rem;"></div>
@@ -494,12 +500,105 @@
   border-color: #4CAF50 !important;
   box-shadow: 0 0 0 0.2rem rgba(76,175,80,0.15) !important;
 }
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15%       { transform: translateX(-6px); }
+  30%       { transform: translateX(6px); }
+  45%       { transform: translateX(-4px); }
+  60%       { transform: translateX(4px); }
+  75%       { transform: translateX(-2px); }
+  90%       { transform: translateX(2px); }
+}
+.shake {
+  animation: shake 0.45s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15%       { transform: translateX(-6px); }
+  30%       { transform: translateX(6px); }
+  45%       { transform: translateX(-4px); }
+  60%       { transform: translateX(4px); }
+  75%       { transform: translateX(-2px); }
+  90%       { transform: translateX(2px); }
+}
+.shake {
+  animation: shake 0.45s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15%       { transform: translateX(-6px); }
+  30%       { transform: translateX(6px); }
+  45%       { transform: translateX(-4px); }
+  60%       { transform: translateX(4px); }
+  75%       { transform: translateX(-2px); }
+  90%       { transform: translateX(2px); }
+}
+.shake {
+  animation: shake 0.45s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15%       { transform: translateX(-6px); }
+  30%       { transform: translateX(6px); }
+  45%       { transform: translateX(-4px); }
+  60%       { transform: translateX(4px); }
+  75%       { transform: translateX(-2px); }
+  90%       { transform: translateX(2px); }
+}
+.shake {
+  animation: shake 0.45s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15%       { transform: translateX(-6px); }
+  30%       { transform: translateX(6px); }
+  45%       { transform: translateX(-4px); }
+  60%       { transform: translateX(4px); }
+  75%       { transform: translateX(-2px); }
+  90%       { transform: translateX(2px); }
+}
+.shake {
+  animation: shake 0.45s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15%       { transform: translateX(-6px); }
+  30%       { transform: translateX(6px); }
+  45%       { transform: translateX(-4px); }
+  60%       { transform: translateX(4px); }
+  75%       { transform: translateX(-2px); }
+  90%       { transform: translateX(2px); }
+}
+.shake {
+  animation: shake 0.45s ease;
+}
 </style>
 
 <script>
 (function() {
   var selectedService = '';
   var selectedSize = '';
+  var addressConfirmed = false;
+
+  function showError(el) {
+    el.style.display = 'block';
+    el.classList.remove('shake');
+    void el.offsetWidth; // force reflow so re-triggers if already showing
+    el.classList.add('shake');
+  }
+
+  function showError(el) {
+    el.style.display = 'block';
+    el.classList.remove('shake');
+    void el.offsetWidth; // force reflow so re-triggers if already showing
+    el.classList.add('shake');
+  }
 
   window.selectService = function(el) {
     el.classList.toggle('selected');
@@ -518,7 +617,7 @@ window.selectPill = function(el) {
   window.goToStep = function(n) {
     // Validate before advancing
 if (n === 2) {
-  var anySelected = document.querySelectorAll('#service-cards .service-card.selected').length > 0;
+  var anySelected = document.querySelectorAll('#service-cards .service-card.selected, #partner-cards .service-card.selected').length > 0;
   if (!anySelected) {
     document.getElementById('service-error').style.display = 'block';
     return;
@@ -527,7 +626,10 @@ if (n === 2) {
     if (n === 3) {
       var valid = true;
       var address = document.getElementById('v-address').value.trim();
-if (!address) { document.getElementById('address-error').style.display = 'block'; valid = false; }
+      if (!addressConfirmed || !address) {
+        document.getElementById('address-error').style.display = 'block';
+        valid = false;
+      }
       if (!selectedSize) { document.getElementById('size-error').style.display = 'block'; valid = false; }
       if (!valid) return;
     }
@@ -549,37 +651,50 @@ if (!address) { document.getElementById('address-error').style.display = 'block'
     if (formEl) formEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  // Auto-format phone as (XXX) XXX-XXXX while typing
+  document.getElementById('v-phone').addEventListener('input', function() {
+    var digits = this.value.replace(/\D/g, '').slice(0, 10);
+    if (digits.length <= 3) {
+      this.value = digits.length ? '(' + digits : '';
+    } else if (digits.length <= 6) {
+      this.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3);
+    } else {
+      this.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6);
+    }
+  });
+
   window.submitQuoteForm = function() {
-    var name  = document.getElementById('v-name').value.trim();
+    var fname = document.getElementById('v-fname').value.trim();
+    var lname = document.getElementById('v-lname').value.trim();
     var email = document.getElementById('v-email').value.trim();
     var phone = document.getElementById('v-phone').value.trim();
     var errEl = document.getElementById('contact-error');
     var errors = [];
+    var nameRe = /^[A-Za-zÀ-ÖØ-öø-ÿ'\-]{1,30}$/;
 
-    if (!name || !/^[A-Za-zÀ-ÖØ-öø-ÿ'\- ]{2,60}$/.test(name)) errors.push('Please enter a valid name (letters only).');
+    if (!fname || !nameRe.test(fname)) errors.push('Please enter a valid first name.');
+    if (!lname || !nameRe.test(lname)) errors.push('Please enter a valid last name.');
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push('Please enter a valid email address.');
     var phoneDigits = phone.replace(/\D/g,'');
-    if (!phone || phoneDigits.length < 10 || phoneDigits.length > 11 || !/^[\d\s\-().+]+$/.test(phone)) errors.push('Please enter a valid phone number.');
+    if (!phone || phoneDigits.length !== 10) errors.push('Please enter a valid 10-digit phone number.');
 
     if (errors.length) {
-      var phoneDigits = phone.replace(/\D/g,'');
-errEl.innerHTML = errors.map(function(e){ return document.createTextNode(e).nodeValue; }).join('<br>');
+      errEl.innerHTML = errors.map(function(e){ return document.createTextNode(e).nodeValue; }).join('<br>');
       errEl.style.display = 'block';
       return;
     }
     errEl.style.display = 'none';
 
     // Populate hidden form
-    document.getElementById('h-name').value          = name;
+    document.getElementById('h-name').value          = fname + ' ' + lname;
     document.getElementById('h-email').value         = email;
     document.getElementById('h-phone').value         = phone;
     document.getElementById('h-service').value       = selectedService;
-    var address = document.getElementById('v-address').value.trim();
-document.getElementById('h-address').value = document.getElementById('v-address').value.trim();
+    document.getElementById('h-address').value       = document.getElementById('v-address').value.trim();
     document.getElementById('h-property-size').value = selectedSize;
     document.getElementById('h-message').value       = document.getElementById('v-message').value.trim();
-document.getElementById('h-partner-services').value = [...document.querySelectorAll('#partner-cards .service-card.selected')]
-  .map(function(c){ return c.getAttribute('data-value'); }).join(', ');
+    document.getElementById('h-partner-services').value = [...document.querySelectorAll('#partner-cards .service-card.selected')]
+      .map(function(c){ return c.getAttribute('data-value'); }).join(', ');
     document.getElementById('netlify-form').submit();
   };
 })();
@@ -596,8 +711,15 @@ document.getElementById('h-partner-services').value = [...document.querySelector
       });
       autocomplete.addListener('place_changed', function() {
         var place = autocomplete.getPlace();
-        document.getElementById('v-address').value = place.formatted_address || '';
-        document.getElementById('address-error').style.display = 'none';
+        if (place && place.formatted_address) {
+          document.getElementById('v-address').value = place.formatted_address;
+          document.getElementById('address-error').style.display = 'none';
+          addressConfirmed = true;
+        }
+      });
+
+      document.getElementById('v-address').addEventListener('input', function() {
+        addressConfirmed = false;
       });
     }
     window.togglePartner = function(el) {
