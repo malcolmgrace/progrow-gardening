@@ -241,7 +241,6 @@
               <div class="service-name">Something Else</div>
             </div>
           </div>
-
         </div>
         <div id="service-error" class="text-danger mt-2 text-center" style="display:none; font-size:0.9rem;">Please select a service to continue.</div>
         <div class="text-center mt-4">
@@ -267,25 +266,32 @@
           <div class="col-12 mt-2">
             <label class="form-label fw-semibold mb-1" style="font-size:0.9rem;">How would you describe your yard?</label>
             <div class="row g-2" id="size-cards">
-              <div class="col-4">
+              <div class="col-6">
                 <div class="pill-card text-center" data-value="Small (standard lot)" onclick="selectPill(this)">
                   <div style="font-size:1.3rem;">🏡</div>
                   <div style="font-size:0.82rem; font-weight:600;">Small</div>
                   <div style="font-size:0.72rem; color:#888;">Standard lot</div>
                 </div>
               </div>
-              <div class="col-4">
+              <div class="col-6">
                 <div class="pill-card text-center" data-value="Medium (larger suburban)" onclick="selectPill(this)">
                   <div style="font-size:1.3rem;">🏠</div>
                   <div style="font-size:0.82rem; font-weight:600;">Medium</div>
                   <div style="font-size:0.72rem; color:#888;">Larger suburban</div>
                 </div>
               </div>
-              <div class="col-4">
+              <div class="col-6">
                 <div class="pill-card text-center" data-value="Large (acreage or estate)" onclick="selectPill(this)">
                   <div style="font-size:1.3rem;">🌳</div>
                   <div style="font-size:0.82rem; font-weight:600;">Large</div>
                   <div style="font-size:0.72rem; color:#888;">Acreage / estate</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="pill-card text-center" data-value="Commercial property" onclick="selectPill(this)">
+                  <div style="font-size:1.3rem;">🏢</div>
+                  <div style="font-size:0.82rem; font-weight:600;">Commercial</div>
+                  <div style="font-size:0.72rem; color:#888;">Business / condo</div>
                 </div>
               </div>
             </div>
