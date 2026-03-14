@@ -195,7 +195,9 @@
 
                 <!-- STEP 1: Service Selection -->
                 <div id="step-1" class="quote-step">
-                  <p class="mb-3 text-center" style="font-family:'Jost',sans-serif; font-size:1.1rem; font-weight:700; color:#1a1a1a;">What can we help you with? <span style="font-size:0.72rem; font-weight:600; color:#4CAF50; text-transform:uppercase; letter-spacing:0.07em;">Select all that apply</span></p>
+                  <p class="mb-3 text-center" style="font-family:'Jost',sans-serif; font-size:1.1rem; font-weight:700; color:#1a1a1a;">What can we help you with?</p>
+<p class="text-center mt-n2 mb-3" style="font-size:0.72rem; font-weight:600; color:#4CAF50; text-transform:uppercase; letter-spacing:0.07em;">Select all that apply</p>
+
                   <div class="row g-3" id="service-cards">
                     <div class="col-6 col-md-4">
                       <div class="service-card" data-value="garden-maintenance" onclick="selectService(this)">
@@ -245,7 +247,8 @@
 
                   <!-- Partner Services -->
                   <div class="mt-4">
-                    <p class="mb-2" style="font-family:'Jost',sans-serif; font-size:1.0rem; font-weight:700; color:#1a1a1a;">Also need any of these? <span style="font-size:0.72rem; font-weight:600; color:#4CAF50; text-transform:uppercase; letter-spacing:0.07em;">We'll connect you with a trusted contractor</span></p>
+                    <p class="mb-1 text-center" style="font-family:'Jost',sans-serif; font-size:1.0rem; font-weight:700; color:#1a1a1a;">Looking for other services?</p>
+                    <p class="mb-2 text-center" style="font-size:0.72rem; font-weight:600; color:#4CAF50; text-transform:uppercase; letter-spacing:0.07em;">We'll connect you with a trusted contractor</p>
                     <div class="row g-3" id="partner-cards">
                       <div class="col-6 col-md-4">
                         <div class="service-card" data-value="Seasonal Lawn Maintenance" onclick="togglePartner(this)">
@@ -607,7 +610,7 @@
 
       window.goToStep = function(n) {
         if (n === 2) {
-          var anySelected = document.querySelectorAll('#service-cards .service-card.selected').length > 0;
+          var anySelected = document.querySelectorAll('#service-cards .service-card.selected, #partner-cards .service-card.selected').length > 0;
           if (!anySelected) {
             showError(document.getElementById('service-error'));
             return;
