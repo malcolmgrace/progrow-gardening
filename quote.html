@@ -556,12 +556,14 @@ if (!address) { document.getElementById('address-error').style.display = 'block'
     var errEl = document.getElementById('contact-error');
     var errors = [];
 
-    if (!name)  errors.push('Please enter your name.');
+    if (!name || !/^[A-Za-zÀ-ÖØ-öø-ÿ'\- ]{2,60}$/.test(name)) errors.push('Please enter a valid name (letters only).');
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push('Please enter a valid email address.');
-    if (!phone) errors.push('Please enter your phone number.');
+    var phoneDigits = phone.replace(/\D/g,'');
+    if (!phone || phoneDigits.length < 10 || phoneDigits.length > 11 || !/^[\d\s\-().+]+$/.test(phone)) errors.push('Please enter a valid phone number.');
 
     if (errors.length) {
-      errEl.innerHTML = errors.join('<br>');
+      var phoneDigits = phone.replace(/\D/g,'');
+errEl.innerHTML = errors.map(function(e){ return document.createTextNode(e).nodeValue; }).join('<br>');
       errEl.style.display = 'block';
       return;
     }
