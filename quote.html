@@ -286,7 +286,7 @@
 
                 <!-- Hidden Netlify form (real submission target) -->
                 <form
-                  name="gardening-quote"
+                  name="gardening-quote-v2"
                   method="POST"
                   action="/thank-you"
                   data-netlify="true"
@@ -298,7 +298,7 @@
                   <input
                     type="hidden"
                     name="form-name"
-                    value="gardening-quote"
+                    value="gardening-quote-v2"
                   />
                   <input type="hidden" name="subject" id="h-subject" />
                   <input type="hidden" name="name" id="h-name" />
@@ -1193,9 +1193,9 @@
           ].map(function(c) { return c.getAttribute("data-value"); }).join(", ") || "Referral only";
           document.getElementById("h-address").value = document
             .getElementById("v-address")
-            .value.trim();
+            .value.trim() || "Not provided";
           var sizeEl = document.querySelector("#size-cards .pill-card.selected");
-          document.getElementById("h-property-size").value = sizeEl ? sizeEl.getAttribute("data-value") : "";
+          document.getElementById("h-property-size").value = sizeEl ? sizeEl.getAttribute("data-value") : "Not provided";
           document.getElementById("h-message").value = document
             .getElementById("v-message")
             .value.trim();
