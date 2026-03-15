@@ -300,6 +300,7 @@
                     name="form-name"
                     value="gardening-quote"
                   />
+                  <input type="hidden" name="subject" id="h-subject" />
                   <input type="hidden" name="name" id="h-name" />
                   <input type="hidden" name="email" id="h-email" />
                   <input type="hidden" name="phone" id="h-phone" />
@@ -1183,6 +1184,7 @@
           }
           errEl.style.display = "none";
 
+          document.getElementById("h-subject").value = "New Quote Request — " + fname + " " + lname;
           document.getElementById("h-name").value = fname + " " + lname;
           document.getElementById("h-email").value = email;
           document.getElementById("h-phone").value = phone;
@@ -1194,7 +1196,7 @@
           document.getElementById("h-message").value = document
             .getElementById("v-message")
             .value.trim();
-          document.getElementById("h-partner-services").value = [
+          var partnerSelected = [
             ...document.querySelectorAll(
               "#partner-cards .service-card.selected",
             ),
@@ -1203,6 +1205,9 @@
               return c.getAttribute("data-value");
             })
             .join(", ");
+          var partnerField = document.getElementById("h-partner-services");
+          partnerField.value = partnerSelected || "";
+          partnerField.disabled = !partnerSelected;
           document.getElementById("netlify-form").submit();
         };
 
