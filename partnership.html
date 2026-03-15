@@ -629,15 +629,18 @@
                 </p>
                 <form
                   name="partner-application"
+                  data-netlify-honeypot="bot-field"
                   method="POST"
                   data-netlify="true"
                   action="/thank-you"
                 >
+                  <input type="hidden" name="bot-field" />
                   <input
                     type="hidden"
                     name="form-name"
                     value="partner-application"
                   />
+                  <input type="hidden" name="subject" value="New Partner Application" />
                   <div
                     style="
                       display: grid;
