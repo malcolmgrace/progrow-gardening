@@ -1188,11 +1188,14 @@
           document.getElementById("h-name").value = fname + " " + lname;
           document.getElementById("h-email").value = email;
           document.getElementById("h-phone").value = phone;
-          document.getElementById("h-service").value = selectedService;
+          document.getElementById("h-service").value = [
+            ...document.querySelectorAll("#service-cards .service-card.selected")
+          ].map(function(c) { return c.getAttribute("data-value"); }).join(", ") || "Referral only";
           document.getElementById("h-address").value = document
             .getElementById("v-address")
             .value.trim();
-          document.getElementById("h-property-size").value = selectedSize;
+          var sizeEl = document.querySelector("#size-cards .pill-card.selected");
+          document.getElementById("h-property-size").value = sizeEl ? sizeEl.getAttribute("data-value") : "";
           document.getElementById("h-message").value = document
             .getElementById("v-message")
             .value.trim();
