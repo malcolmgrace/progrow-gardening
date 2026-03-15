@@ -1206,8 +1206,8 @@
             })
             .join(", ");
           var partnerField = document.getElementById("h-partner-services");
-          partnerField.value = partnerSelected || "";
-          partnerField.disabled = !partnerSelected;
+          var partnerField = document.getElementById("h-partner-services");
+          partnerField.value = partnerSelected || "None";
           document.getElementById("netlify-form").submit();
         };
 
