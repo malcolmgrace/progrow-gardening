@@ -409,6 +409,19 @@
                     </div>
                     <div class="col-12">
                       <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control bg-white border-0"
+                          id="p1-address"
+                          name="address"
+                          placeholder="Property Address"
+                          required
+                          autocomplete="off"
+                        /><label for="p1-address">Property Address</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
                         <textarea
                           class="form-control bg-white border-0"
                           placeholder="Message"
@@ -592,6 +605,19 @@
                     </div>
                     <div class="col-12">
                       <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control bg-white border-0"
+                          id="p2-address"
+                          name="address"
+                          placeholder="Property Address"
+                          required
+                          autocomplete="off"
+                        /><label for="p2-address">Property Address</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
                         <textarea
                           class="form-control bg-white border-0"
                           placeholder="Message"
@@ -760,6 +786,19 @@
                           placeholder="Phone"
                           required
                         /><label for="p3-phone">Phone</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control bg-white border-0"
+                          id="p3-address"
+                          name="address"
+                          placeholder="Property Address"
+                          required
+                          autocomplete="off"
+                        /><label for="p3-address">Property Address</label>
                       </div>
                     </div>
                     <div class="col-12">
@@ -1070,6 +1109,19 @@
                         /><label for="gphone">Phone Number</label>
                       </div>
                     </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control bg-light border-0"
+                          id="g-address"
+                          name="address"
+                          placeholder="Property Address"
+                          required
+                          autocomplete="off"
+                        /><label for="g-address">Property Address</label>
+                      </div>
+                    </div>
                     <div class="col-sm-6">
                       <div class="form-floating">
                         <!-- FIX: form-select (not form-control) for Bootstrap 5 dropdowns -->
@@ -1234,6 +1286,96 @@
       ><i class="bi bi-arrow-up" aria-hidden="true"></i
     ></a>
     <!-- Footer End -->
+
+    <!-- Google Maps Autocomplete + Phone Validation -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChcZnMPWzDMcmsrtY8GfszS8sU1WMQ5jQ&libraries=places&callback=initPkgAutocomplete"
+      defer
+    ></script>
+    <script>
+      function initPkgAutocomplete() {
+        var addressFields = [
+          { id: 'p1-address' },
+          { id: 'p2-address' },
+          { id: 'p3-address' },
+          { id: 'g-address'  },
+        ];
+        var bounds = new google.maps.LatLngBounds(
+          new google.maps.LatLng(44.55, -76.8),
+          new google.maps.LatLng(46.2, -74.7)
+        );
+        addressFields.forEach(function(f) {
+          var input = document.getElementById(f.id);
+          if (!input) return;
+          var ac = new google.maps.places.Autocomplete(input, {
+            types: ['address'],
+            componentRestrictions: { country: 'ca' },
+            bounds: bounds,
+            strictBounds: false,
+          });
+          ac.addListener('place_changed', function() {
+            var place = ac.getPlace();
+            if (place && place.formatted_address) {
+              input.value = place.formatted_address;
+            }
+          });
+        });
+      }
+
+      (function() {
+        var phoneIds = ['p1-phone', 'p2-phone', 'p3-phone', 'gphone'];
+        function formatPhone(input) {
+          input.addEventListener('input', function() {
+            var digits = this.value.replace(/\D/g, '').slice(0, 10);
+            if (digits.length <= 3) {
+              this.value = digits.length ? '(' + digits : '';
+            } else if (digits.length <= 6) {
+              this.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3);
+            } else {
+              this.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6);
+            }
+          });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+          phoneIds.forEach(function(id) {
+            var el = document.getElementById(id);
+            if (el) formatPhone(el);
+          });
+
+          document.querySelectorAll('.pkg-ajax-form').forEach(function(form) {
+            form.addEventListener('submit', function(e) {
+              var phoneInput = form.querySelector('input[type="tel"]');
+              if (phoneInput) {
+                var digits = phoneInput.value.replace(/\D/g, '');
+                if (digits.length !== 10) {
+                  e.preventDefault();
+                  e.stopImmediatePropagation();
+                  phoneInput.setCustomValidity('Please enter a valid 10-digit phone number.');
+                  phoneInput.reportValidity();
+                  return;
+                }
+                phoneInput.setCustomValidity('');
+              }
+            }, true);
+          });
+
+          var gphone = document.getElementById('gphone');
+          var gform = gphone ? gphone.closest('form') : null;
+          if (gform) {
+            gform.addEventListener('submit', function(e) {
+              var digits = gphone.value.replace(/\D/g, '');
+              if (digits.length !== 10) {
+                e.preventDefault();
+                gphone.setCustomValidity('Please enter a valid 10-digit phone number.');
+                gphone.reportValidity();
+              } else {
+                gphone.setCustomValidity('');
+              }
+            });
+          }
+        });
+      })();
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
