@@ -1377,6 +1377,65 @@
       })();
     </script>
 
+    <!-- Google Maps Autocomplete + Phone Validation -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChcZnMPWzDMcmsrtY8GfszS8sU1WMQ5jQ&libraries=places&callback=initServiceAutocomplete"
+      defer
+    ></script>
+    <script>
+      function initServiceAutocomplete() {
+        var input = document.getElementById('g-address');
+        if (!input) return;
+        var ac = new google.maps.places.Autocomplete(input, {
+          types: ['address'],
+          componentRestrictions: { country: 'ca' },
+          bounds: new google.maps.LatLngBounds(
+            new google.maps.LatLng(44.55, -76.8),
+            new google.maps.LatLng(46.2, -74.7)
+          ),
+          strictBounds: false,
+        });
+        ac.addListener('place_changed', function() {
+          var place = ac.getPlace();
+          if (place && place.formatted_address) {
+            input.value = place.formatted_address;
+          }
+        });
+      }
+
+      (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+          var phoneInput = document.getElementById('cname');
+          if (phoneInput) {
+            phoneInput.addEventListener('input', function() {
+              var digits = this.value.replace(/\D/g, '').slice(0, 10);
+              if (digits.length <= 3) {
+                this.value = digits.length ? '(' + digits : '';
+              } else if (digits.length <= 6) {
+                this.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3);
+              } else {
+                this.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6);
+              }
+            });
+
+            var form = phoneInput.closest('form');
+            if (form) {
+              form.addEventListener('submit', function(e) {
+                var digits = phoneInput.value.replace(/\D/g, '');
+                if (digits.length !== 10) {
+                  e.preventDefault();
+                  phoneInput.setCustomValidity('Please enter a valid 10-digit phone number.');
+                  phoneInput.reportValidity();
+                } else {
+                  phoneInput.setCustomValidity('');
+                }
+              });
+            }
+          }
+        });
+      })();
+    </script>
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
