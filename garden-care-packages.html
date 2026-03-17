@@ -3,10 +3,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Garden Care Packages in Ottawa | ProGrow Gardening</title>
+    <title>Garden Care Packages in Ottawa | Seasonal Garden Maintenance | ProGrow Gardening</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta
-      content="garden care packages Ottawa, garden maintenance plan, bi-weekly garden service, Ottawa gardening"
+      content="garden care packages Ottawa, seasonal garden maintenance Ottawa, recurring garden service Nepean, garden maintenance Barrhaven, garden care Kanata, Ottawa gardening"
       name="keywords"
     />
     <meta
@@ -64,6 +64,7 @@
             "url": "https://progrowgardening.ca/garden-care-packages",
             "isPartOf": { "@id": "https://progrowgardening.ca/#website" },
             "about": { "@id": "https://progrowgardening.ca/#organization" },
+            "author": { "@id": "https://progrowgardening.ca/#organization" },
             "breadcrumb": {
               "@type": "BreadcrumbList",
               "itemListElement": [
@@ -103,13 +104,107 @@
               "reviewCount": "6",
               "bestRating": "5",
               "worstRating": "1"
-            }
+            },
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Essential Garden Care",
+                "description": "Bi-weekly or monthly garden bed maintenance for small residential properties. Includes weeding, edging, deadheading, and debris removal.",
+                "price": "150",
+                "priceCurrency": "CAD",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "150",
+                  "priceCurrency": "CAD",
+                  "unitText": "per visit",
+                  "minPrice": "150"
+                },
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2025-04-01",
+                "validThrough": "2025-11-30",
+                "url": "https://progrowgardening.ca/garden-care-packages"
+              },
+              {
+                "@type": "Offer",
+                "name": "Professional Garden Maintenance",
+                "description": "Bi-weekly garden maintenance including shrub pruning, perennial cutbacks, staking, and garden condition reporting.",
+                "price": "240",
+                "priceCurrency": "CAD",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "240",
+                  "priceCurrency": "CAD",
+                  "unitText": "per visit",
+                  "minPrice": "240"
+                },
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2025-04-01",
+                "validThrough": "2025-11-30",
+                "url": "https://progrowgardening.ca/garden-care-packages"
+              },
+              {
+                "@type": "Offer",
+                "name": "Managed Garden Program",
+                "description": "Full-season managed garden care with priority scheduling, seasonal cutbacks, plant health monitoring, and end-of-season reset.",
+                "price": "320",
+                "priceCurrency": "CAD",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "320",
+                  "priceCurrency": "CAD",
+                  "unitText": "per visit",
+                  "minPrice": "320"
+                },
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2025-04-01",
+                "validThrough": "2025-11-30",
+                "url": "https://progrowgardening.ca/garden-care-packages"
+              }
+            ]
           },
           {
             "@type": ["LandscapeService", "LocalBusiness"],
             "@id": "https://progrowgardening.ca/#organization",
             "name": "ProGrow Gardening",
             "url": "https://progrowgardening.ca"
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://progrowgardening.ca/garden-care-packages#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do your garden care packages include lawn care?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. ProGrow focuses exclusively on ornamental garden beds, shrubs, and perennials. Lawn cutting, turf maintenance, and grass care are not included in any package."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer one-time garden cleanups?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "One-time cleanups are available as an initial visit for gardens that need to be brought up to a maintainable condition before recurring service begins. They are not offered as standalone visits outside of an ongoing package."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is garden maintenance pricing determined?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "All packages are flat-rate and priced based on the size and complexity of your garden beds. Starting prices are listed for each package, but your confirmed rate is provided after a site review. A minimum visit charge applies to all bookings."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What areas in Ottawa do you service?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "ProGrow Gardening serves residential and small commercial properties in Nepean, Barrhaven, Riverside South, Manotick, and Kanata. If you are unsure whether your address is within the service area, mention it when you request a quote."
+                }
+              }
+            ]
           }
         ]
       }
@@ -1182,6 +1277,69 @@
         </div>
       </div>
       <!-- Quote Form End -->
+
+      <!-- FAQ Section Start -->
+      <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="text-center mb-4">
+              <p class="fs-5 fw-bold text-primary mb-1">Common Questions</p>
+              <h2 class="display-6">Garden Care Package FAQ</h2>
+            </div>
+            <div class="accordion" id="pkgFaq">
+              <div class="accordion-item border-0 mb-3">
+                <h3 class="accordion-header" id="faq1-heading">
+                  <button class="accordion-button collapsed fw-500" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                    Do your garden care packages include lawn care?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faq1-heading" data-bs-parent="#pkgFaq">
+                  <div class="accordion-body text-muted">
+                    No. ProGrow focuses exclusively on ornamental garden beds, shrubs, and perennials. Lawn cutting, turf maintenance, and grass care are not included in any package.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-3">
+                <h3 class="accordion-header" id="faq2-heading">
+                  <button class="accordion-button collapsed fw-500" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    Do you offer one-time garden cleanups?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#pkgFaq">
+                  <div class="accordion-body text-muted">
+                    One-time cleanups are available as an initial visit for gardens that need to be brought up to a maintainable condition before recurring service begins. They are not offered as standalone visits outside of an ongoing package.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-3">
+                <h3 class="accordion-header" id="faq3-heading">
+                  <button class="accordion-button collapsed fw-500" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    How is garden maintenance pricing determined?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#pkgFaq">
+                  <div class="accordion-body text-muted">
+                    All packages are flat-rate and priced based on the size and complexity of your garden beds. Starting prices are listed for each package, but your confirmed rate is provided after a site review. A minimum visit charge applies to all bookings.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0">
+                <h3 class="accordion-header" id="faq4-heading">
+                  <button class="accordion-button collapsed fw-500" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    What areas in Ottawa do you service?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#pkgFaq">
+                  <div class="accordion-body text-muted">
+                    ProGrow Gardening serves residential and small commercial properties in Nepean, Barrhaven, Riverside South, Manotick, and Kanata. If you are unsure whether your address is within the service area, mention it when you request a quote.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ Section End -->
 
       <!-- Bottom CTA Strip Start -->
       <div class="container-xxl py-5">
