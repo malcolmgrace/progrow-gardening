@@ -120,7 +120,7 @@
               {
                 "@type": "Offer",
                 "name": "Professional Garden Maintenance",
-                "description": "Bi-weekly garden maintenance including shrub pruning, perennial cutbacks, staking, and garden condition reporting.",
+                "description": "Bi-weekly garden maintenance including shrub pruning, perennial cutbacks, spring and fall cleanups, staking, and weed suppression.",
                 "price": "240",
                 "priceCurrency": "CAD",
                 "priceSpecification": {
@@ -138,7 +138,7 @@
               {
                 "@type": "Offer",
                 "name": "Managed Garden Program",
-                "description": "Full-season managed garden care with priority scheduling, seasonal cutbacks, plant health monitoring, and end-of-season reset.",
+                "description": "Full-season managed garden care with priority scheduling, seasonal cleanups, plant health monitoring, garden condition reporting, and end-of-season reset.",
                 "price": "320",
                 "priceCurrency": "CAD",
                 "priceSpecification": {
@@ -633,9 +633,6 @@
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i> Weed suppression follow-up between visits
                   </li>
-                  <li>
-                    <i class="fa fa-check" aria-hidden="true"></i> Garden condition summary by email after each visit
-                  </li>
                 </ul>
                 <div class="pkg-section-label">Not Included</div>
                 <ul class="pkg-list exclusions">
@@ -650,6 +647,9 @@
                   </li>
                   <li>
                     <i class="fa fa-minus" aria-hidden="true"></i> Mulch, topsoil, or soil amendment supply
+                  </li>
+                  <li>
+                    <i class="fa fa-minus" aria-hidden="true"></i> Garden condition reporting
                   </li>
                   <li>
                     <i class="fa fa-minus" aria-hidden="true"></i> Lawn care of any kind
@@ -793,7 +793,7 @@
               </div>
               <div class="pkg-body">
                 <div class="pkg-section-label">Who This Is For</div>
-                <p style="font-size:0.9rem; color:#444; margin-bottom:1rem;">Designed for properties where the garden is a priority and where consistent, attentive care is expected throughout the season. This package is a good fit if you want proactive plant health management, full seasonal cutbacks, and an end-of-season reset handled without you having to ask.</p>
+                <p style="font-size:0.9rem; color:#444; margin-bottom:1rem;">Designed for properties where the garden is a priority and where consistent, attentive care is expected throughout the season. This package is a good fit if you want proactive plant health management, full seasonal cleanups, and an end-of-season reset handled without you having to ask.</p>
                 <div class="pkg-section-label">Visit Schedule</div>
                 <ul class="pkg-list inclusions">
                   <li>
@@ -813,6 +813,9 @@
                   </li>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i> Full spring and fall seasonal cleanups
+                  </li>
+                  <li>
+                    <i class="fa fa-check" aria-hidden="true"></i> Garden condition reporting by email after each visit
                   </li>
                   <li>
                     <i class="fa fa-check" aria-hidden="true"></i> Proactive plant health monitoring with intervention recommendations
@@ -1039,10 +1042,7 @@
                 <tr>
                   <td>Shrub pruning</td>
                   <td class="text-center">
-                    <i
-                      class="fa fa-minus check-no"
-                      aria-label="Not included"
-                    ></i>
+                    <i class="fa fa-minus check-no" aria-label="Not included"></i>
                   </td>
                   <td class="text-center">
                     <i class="fa fa-check check-yes" aria-label="Included"></i>
@@ -1054,10 +1054,19 @@
                 <tr>
                   <td>Perennial cutbacks</td>
                   <td class="text-center">
-                    <i
-                      class="fa fa-minus check-no"
-                      aria-label="Not included"
-                    ></i>
+                    <i class="fa fa-minus check-no" aria-label="Not included"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check check-yes" aria-label="Included"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check check-yes" aria-label="Included"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Spring and fall cleanup visits</td>
+                  <td class="text-center">
+                    <i class="fa fa-minus check-no" aria-label="Not included"></i>
                   </td>
                   <td class="text-center">
                     <i class="fa fa-check check-yes" aria-label="Included"></i>
@@ -1069,34 +1078,10 @@
                 <tr>
                   <td>Garden condition reporting (email)</td>
                   <td class="text-center">
-                    <i
-                      class="fa fa-minus check-no"
-                      aria-label="Not included"
-                    ></i>
+                    <i class="fa fa-minus check-no" aria-label="Not included"></i>
                   </td>
                   <td class="text-center">
-                    <i
-                      class="fa fa-minus check-no"
-                      aria-label="Not included"
-                    ></i>
-                  </td>
-                  <td class="text-center">
-                    <i class="fa fa-check check-yes" aria-label="Included"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Seasonal spring and fall cutbacks</td>
-                  <td class="text-center">
-                    <i
-                      class="fa fa-minus check-no"
-                      aria-label="Not included"
-                    ></i>
-                  </td>
-                  <td class="text-center">
-                    <i
-                      class="fa fa-minus check-no"
-                      aria-label="Not included"
-                    ></i>
+                    <i class="fa fa-minus check-no" aria-label="Not included"></i>
                   </td>
                   <td class="text-center">
                     <i class="fa fa-check check-yes" aria-label="Included"></i>
@@ -1105,16 +1090,10 @@
                 <tr>
                   <td>End-of-season garden reset</td>
                   <td class="text-center">
-                    <i
-                      class="fa fa-minus check-no"
-                      aria-label="Not included"
-                    ></i>
+                    <i class="fa fa-minus check-no" aria-label="Not included"></i>
                   </td>
                   <td class="text-center">
-                    <i
-                      class="fa fa-minus check-no"
-                      aria-label="Not included"
-                    ></i>
+                    <i class="fa fa-minus check-no" aria-label="Not included"></i>
                   </td>
                   <td class="text-center">
                     <i class="fa fa-check check-yes" aria-label="Included"></i>
@@ -1123,16 +1102,10 @@
                 <tr>
                   <td>Priority scheduling</td>
                   <td class="text-center">
-                    <i
-                      class="fa fa-minus check-no"
-                      aria-label="Not included"
-                    ></i>
+                    <i class="fa fa-minus check-no" aria-label="Not included"></i>
                   </td>
                   <td class="text-center">
-                    <i
-                      class="fa fa-minus check-no"
-                      aria-label="Not included"
-                    ></i>
+                    <i class="fa fa-minus check-no" aria-label="Not included"></i>
                   </td>
                   <td class="text-center">
                     <i class="fa fa-check check-yes" aria-label="Included"></i>
@@ -1492,23 +1465,18 @@
 
     <!-- Google Maps Autocomplete + Phone Validation -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChcZnMPWzDMcmsrtY8GfszS8sU1WMQ5jQ&libraries=places&callback=initPkgAutocomplete"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChcZnMPWzDMcmsrtY8GfszS8sU1WMQ5jQ&libraries=places&loading=async&callback=initAutocomplete"
       defer
     ></script>
     <script>
-      function initPkgAutocomplete() {
-        var addressFields = [
-          { id: 'p1-address' },
-          { id: 'p2-address' },
-          { id: 'p3-address' },
-          { id: 'g-address'  },
-        ];
+      function initAutocomplete() {
         var bounds = new google.maps.LatLngBounds(
           new google.maps.LatLng(44.55, -76.8),
           new google.maps.LatLng(46.2, -74.7)
         );
-        addressFields.forEach(function(f) {
-          var input = document.getElementById(f.id);
+        var addressIds = ['p1-address', 'p2-address', 'p3-address', 'g-address'];
+        addressIds.forEach(function(id) {
+          var input = document.getElementById(id);
           if (!input) return;
           var ac = new google.maps.places.Autocomplete(input, {
             types: ['address'],
@@ -1575,65 +1543,6 @@
                 gphone.setCustomValidity('');
               }
             });
-          }
-        });
-      })();
-    </script>
-
-    <!-- Google Maps Autocomplete + Phone Validation -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChcZnMPWzDMcmsrtY8GfszS8sU1WMQ5jQ&libraries=places&callback=initServiceAutocomplete"
-      defer
-    ></script>
-    <script>
-      function initServiceAutocomplete() {
-        var input = document.getElementById('g-address');
-        if (!input) return;
-        var ac = new google.maps.places.Autocomplete(input, {
-          types: ['address'],
-          componentRestrictions: { country: 'ca' },
-          bounds: new google.maps.LatLngBounds(
-            new google.maps.LatLng(44.55, -76.8),
-            new google.maps.LatLng(46.2, -74.7)
-          ),
-          strictBounds: false,
-        });
-        ac.addListener('place_changed', function() {
-          var place = ac.getPlace();
-          if (place && place.formatted_address) {
-            input.value = place.formatted_address;
-          }
-        });
-      }
-
-      (function() {
-        document.addEventListener('DOMContentLoaded', function() {
-          var phoneInput = document.getElementById('cname');
-          if (phoneInput) {
-            phoneInput.addEventListener('input', function() {
-              var digits = this.value.replace(/\D/g, '').slice(0, 10);
-              if (digits.length <= 3) {
-                this.value = digits.length ? '(' + digits : '';
-              } else if (digits.length <= 6) {
-                this.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3);
-              } else {
-                this.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6);
-              }
-            });
-
-            var form = phoneInput.closest('form');
-            if (form) {
-              form.addEventListener('submit', function(e) {
-                var digits = phoneInput.value.replace(/\D/g, '');
-                if (digits.length !== 10) {
-                  e.preventDefault();
-                  phoneInput.setCustomValidity('Please enter a valid 10-digit phone number.');
-                  phoneInput.reportValidity();
-                } else {
-                  phoneInput.setCustomValidity('');
-                }
-              });
-            }
           }
         });
       })();
