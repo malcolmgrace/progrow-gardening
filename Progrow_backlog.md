@@ -1,6 +1,6 @@
 # PROGROW GARDENING — Assistant Backlog
 
-**Last updated:** March 28, 2026 | **Owner:** Malcolm Grace | admin@progrowgardening.ca | (249) 878-9140
+**Last updated:** March 28, 2026 (night) | **Owner:** Malcolm Grace | admin@progrowgardening.ca | (249) 878-9140
 
 -----
 
@@ -57,7 +57,7 @@
 |#|Lead               |Package                         |Address                                |Status                                   |
 |-|-------------------|--------------------------------|---------------------------------------|-----------------------------------------|
 |1|**David Osborne**  |Pro + Spring Cleanup Bundle     |5171 Cecil Rowat Lane, Manotick K4M 0E2|**QT-0124 sent March 28**                |
-|2|**Essential Lead** |Essential $190 biweekly         |21 Wiltshire Cir, Nepean               |Notified — quote pending                 |
+|2|**Essential Lead** |Essential $190 biweekly         |21 Wiltshire Cir, Nepean               |Quote in progress — Alex Metaxes (613) 617-4178 \| alex.p.metaxes@gmail.com |
 |3|**M2 Lead (Nima)** |Managed                         |9 Chancellor Ct, Nepean                |Site visit April 10                      |
 |4|**David Dash (M1)**|Managed + Spring Cleanup + Mulch|30-34 Colonnade Sq, Nepean             |2nd visit pending (snow/beds not visible)|
 
@@ -69,6 +69,7 @@
 - **Option B:** $3,451.50 paid in full within 14 days. Save $383.50. No deposit required.
 - Quote date: March 28, 2026. Valid until: April 11, 2026
 - **Google Form:** https://forms.gle/B8WtgjTcbxXLgb6Q8
+- **Auto-confirmation:** Apps Script live, tested Mar 28, 0% error rate
 - **Property notes:** Large Manotick estate on Rideau River. Two structures (main house + carriage house). Multiple garden zones — front island beds, full facade bed, both sides, rear, riverfront terrace with balustrade, carriage house side. Mature hydrangeas, ornamental yews, creeping juniper, columnar cedars, perennials throughout. Front Japanese Yew shows structural damage from a fallen tree — replacement to be discussed and quoted separately in season.
 
 ### David Dash — Colonnade Sq Commercial (M1)
@@ -141,8 +142,8 @@
 
 |# |Item                                                                                                                          |Status                |Done|
 |--|------------------------------------------------------------------------------------------------------------------------------|----------------------|----|
-|1 |Send QT-0124 package to David Osborne — email, quote, season planner, form link                                               |**SENDING TODAY**    |    |
-|2 |Send Essential quote to 21 Wiltshire Cir lead                                                                                 |**THIS WEEK**         |    |
+|1 |Send QT-0124 package to David Osborne — email, quote, season planner, form link                                               |**DONE Mar 28**      |✓   |
+|2 |Send Essential quote to Alex Metaxes — 21 Wiltshire Cir. Spring cleanup $375, Essential $190 biweekly. Full stack (PDF + email + form). Source: website.                                                |**THIS WEEK**         |    |
 |3 |Site visit — 9 Chancellor Ct, Nepean (M2 Managed) — Client: Nima — Quote to build same day after visit                       |**APRIL 10**          |    |
 |4 |David Dash 2nd visit: Pending snow melt — bring tape measure, photograph all bed zones, note mulch depth. Build 3 quotes after.|**PENDING**           |    |
 |5 |Garden Care Packages page SEO — 11 on-page changes identified. Apply when time permits.                                       |**PENDING**           |    |
