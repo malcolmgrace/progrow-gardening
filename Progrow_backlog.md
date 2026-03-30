@@ -1,6 +1,6 @@
 # PROGROW GARDENING — Assistant Backlog
 
-**Last updated:** March 29, 2026 | **Owner:** Malcolm Grace | <admin@progrowgardening.ca> | (249) 878-9140
+**Last updated:** March 29, 2026 (final) | **Owner:** Malcolm Grace | [admin@progrowgardening.ca](mailto:admin@progrowgardening.ca) | (249) 878-9140
 
 -----
 
@@ -11,7 +11,7 @@
 - **Structure:** Sole proprietor, registered 2026 (ran informally 2025 — ~$5k revenue, cleanups + odd jobs)
 - **Current model:** Solo operation alongside full-time unionized employment (hard 4:30 finish daily)
 - **Service areas:** Barrhaven, Kanata, Manotick, Riverside South, Nepean
-- **Payment:** E-transfer (<admin@progrowgardening.ca>) + cash. Bookkeeping in Wave. EQ Bank business chequing.
+- **Payment:** E-transfer ([admin@progrowgardening.ca](mailto:admin@progrowgardening.ca)) + cash. Bookkeeping in Wave. EQ Bank business chequing.
 - **Tools:** Battery-powered hand tools, personal vehicle (CX-3)
 - **Long-term goal:** ProGrow as primary income by 2030
 
@@ -53,16 +53,16 @@
 
 ## 3. 2026 SEASON — CLIENT PIPELINE
 
-### Confirmed / Near-Confirmed (4 prospects, 1 signed as of March 29)
+### Confirmed / Near-Confirmed (4 prospects, 0 signed as of March 29)
 
-|#|Lead               |Package                                        |Address                                |Status                                                                  |
-|-|-------------------|-----------------------------------------------|---------------------------------------|------------------------------------------------------------------------|
-|1|**David Osborne**  |Pro + Spring Cleanup Bundle (monthly)          |5171 Cecil Rowat Lane, Manotick K4M 0E2|**QT-0124 sent March 28 — revised to monthly Mar 29, revised quote sent**|
-|2|**Essential Lead** |Essential $190 biweekly                        |21 Wiltshire Cir, Nepean               |Quote in progress — Alex Metaxes (613) 617-4178 \| <alex.p.metaxes@gmail.com>|
-|3|**M2 Lead (Nima)** |Managed                                        |9 Chancellor Ct, Nepean                |Site visit April 10                                                     |
-|4|**David Dash (M1)**|Managed + Spring Cleanup (commercial)          |30-34 Colonnade Sq N, Nepean           |**QT-0126 sent March 29 — awaiting board approval via David Dash**      |
+|#|Lead               |Package                              |Address                                |Status                                                                                                             |
+|-|-------------------|-------------------------------------|---------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+|1|**David Osborne**  |Pro + Spring Cleanup Bundle (monthly)|5171 Cecil Rowat Lane, Manotick K4M 0E2|**QT-0124 sent March 28 — revised to monthly Mar 29 — verbal yes via email, awaiting signed quote**                |
+|2|**Alex Metaxes**   |Essential $190 biweekly              |21 Wiltshire Cir, Nepean               |**QT-0125 sent — awaiting response** — (613) 617-4178 | [alex.p.metaxes@gmail.com](mailto:alex.p.metaxes@gmail.com)|
+|3|**Nima Farid**     |Managed                              |9 Chancellor Ct, Ottawa ON K1V 0W7     |Site visit April 10 — no quote yet. (415) 409-8097 | [nima.farid@gmail.com](mailto:nima.farid@gmail.com)           |
+|4|**David Dash (M1)**|Managed + Spring Cleanup (commercial)|30-34 Colonnade Sq N, Nepean           |**QT-0126 sent March 29 — awaiting board approval via David Dash**                                                 |
 
----
+-----
 
 ### David Osborne — QT-0124 Details
 
@@ -75,7 +75,7 @@
 - **Auto-confirmation:** Apps Script live, tested Mar 28, 0% error rate. Updated Mar 29 to reflect monthly pricing ($2,155.00 total, $1,939.50 Option B).
 - **Property notes:** Large Manotick estate on Rideau River. Two structures (main house + carriage house). Multiple garden zones — front island beds, full facade bed, both sides, rear, riverfront terrace with balustrade, carriage house side. Mature hydrangeas, ornamental yews, creeping juniper, columnar cedars, perennials throughout. Front Japanese Yew shows structural damage from a fallen tree — replacement to be discussed and quoted separately in season.
 
----
+-----
 
 ### David Dash — Colonnade Sq Commercial (M1) — QT-0126
 
@@ -84,62 +84,62 @@
 - **Property type:** Large commercial/industrial complex, Nepean
 - Two main building masses + connecting sections. Multiple parking lot island beds. Perimeter green space along Colonnade Rd N. Brick paver courtyard with raised tree beds and bench seating. Corner and entrance feature beds.
 - **Signing authority:** David Dash manages the board but requires overall board approval. Dash is the internal champion — quote must be clean enough for him to present and get rubber-stamped.
-- **Insurance:** Malcolm's general liability policy starts April 1 — insurer noted in quote document.
+- **Insurance:** Malcolm’s general liability policy starts April 1 — insurer noted in quote document.
 - **Quote structure:** Commercial invoice schedule (no Option A/B deposit model). Two-party signature block (no Google Form). Quote valid until April 12, 2026.
 
 #### Bed Measurements — 2nd Visit (March 29, 2026)
 
 All measurements in metres. Shape factor of 0.75 applied to irregular beds (IB, LB-S).
 
-| Bed      | L (m) | W (m) | Area (sq ft) | Notes                        |
-|----------|-------|-------|--------------|------------------------------|
-| FE-W     | 9.8   | 3.2   | 338          |                              |
-| DB/PL-W  | 10.4  | 6.4   | 716          |                              |
-| DB/M-W   | 4.0   | 5.0   | 215          |                              |
-| DB-W     | 5.4   | 4.0   | 233          |                              |
-| IB-1     | 2.3   | 1.8   | 45 → 34      | 0.75 shape factor (irregular)|
-| IB-2     | 2.4   | 2.8   | 72 → 54      | 0.75 shape factor (irregular)|
-| IB-3     | 2.4   | 2.5   | 65 → 49      | 0.75 shape factor (irregular)|
-| LB-S     | 10.9  | 10.7  | 1,255 → 941  | 0.75 shape factor, picnic area|
-| ES-W     | 1.6   | 1.5   | 26           |                              |
-| ES-S     | 1.6   | 0.9   | 15           |                              |
-| ES-E     | 3.3   | 1.9   | 67           |                              |
-| MI-E     | 4.7   | 6.2   | 321          |                              |
-| DB-E     | 4.3   | 2.5   | 118          |                              |
-| FE-E     | 4.8   | 3.0   | 155          |                              |
-| BE-W     | 17.0  | 1.5   | 274          |                              |
-| BE-SW    | 6.0   | 3.7   | 243          |                              |
-| BE-S     | 12.2  | 1.0   | 131          |                              |
-| BE-E     | 12.0  | 1.0   | 258          | x2                           |
-| **TOTAL**|       |       | **4,189 sq ft**|                            |
+|Bed      |L (m)|W (m)|Area (sq ft)   |Notes                         |
+|---------|-----|-----|---------------|------------------------------|
+|FE-W     |9.8  |3.2  |338            |                              |
+|DB/PL-W  |10.4 |6.4  |716            |                              |
+|DB/M-W   |4.0  |5.0  |215            |                              |
+|DB-W     |5.4  |4.0  |233            |                              |
+|IB-1     |2.3  |1.8  |45 → 34        |0.75 shape factor (irregular) |
+|IB-2     |2.4  |2.8  |72 → 54        |0.75 shape factor (irregular) |
+|IB-3     |2.4  |2.5  |65 → 49        |0.75 shape factor (irregular) |
+|LB-S     |10.9 |10.7 |1,255 → 941    |0.75 shape factor, picnic area|
+|ES-W     |1.6  |1.5  |26             |                              |
+|ES-S     |1.6  |0.9  |15             |                              |
+|ES-E     |3.3  |1.9  |67             |                              |
+|MI-E     |4.7  |6.2  |321            |                              |
+|DB-E     |4.3  |2.5  |118            |                              |
+|FE-E     |4.8  |3.0  |155            |                              |
+|BE-W     |17.0 |1.5  |274            |                              |
+|BE-SW    |6.0  |3.7  |243            |                              |
+|BE-S     |12.2 |1.0  |131            |                              |
+|BE-E     |12.0 |1.0  |258            |x2                            |
+|**TOTAL**|     |     |**4,189 sq ft**|                              |
 
 #### QT-0126 Pricing
 
-| Item                    | Detail                                      |
-|-------------------------|---------------------------------------------|
-| Total bed area          | 4,189 sq ft, mixed condition                |
-| Spring Cleanup          | $950 (invoiced on completion)               |
-| Managed Package rate    | $420/visit (31% commercial premium)         |
-| Visit frequency         | Bi-weekly (14 visits, April–November)       |
-| Monthly billing rate    | $840/month (May–November, 7 months)         |
-| Season recurring total  | $5,880                                      |
-| **Season grand total**  | **$6,830** (8 invoices, net-15 each)        |
-| Full-season prepay      | $6,147 (10% off — available on request)     |
-| Quote date              | March 29, 2026                              |
-| Valid until             | April 12, 2026                              |
+|Item                  |Detail                                 |
+|----------------------|---------------------------------------|
+|Total bed area        |4,189 sq ft, mixed condition           |
+|Spring Cleanup        |$950 (invoiced on completion)          |
+|Managed Package rate  |$420/visit (31% commercial premium)    |
+|Visit frequency       |Bi-weekly (14 visits, April–November)  |
+|Monthly billing rate  |$840/month (May–November, 7 months)    |
+|Season recurring total|$5,880                                 |
+|**Season grand total**|**$6,830** (8 invoices, net-15 each)   |
+|Full-season prepay    |$6,147 (10% off — available on request)|
+|Quote date            |March 29, 2026                         |
+|Valid until           |April 12, 2026                         |
 
 #### Invoice Schedule (as quoted)
 
-| Invoice | Description                        | Amount   | Timing                    |
-|---------|------------------------------------|----------|---------------------------|
-| 1       | Spring Cleanup — all zones         | $950.00  | On completion             |
-| 2       | Managed Garden Program — May       | $840.00  | Net-15, billed May 1      |
-| 3       | Managed Garden Program — June      | $840.00  | Net-15, billed June 1     |
-| 4       | Managed Garden Program — July      | $840.00  | Net-15, billed July 1     |
-| 5       | Managed Garden Program — August    | $840.00  | Net-15, billed August 1   |
-| 6       | Managed Garden Program — September | $840.00  | Net-15, billed September 1|
-| 7       | Managed Garden Program — October   | $840.00  | Net-15, billed October 1  |
-| 8       | Managed Garden Program — November  | $840.00  | Net-15, billed November 1 |
+|Invoice|Description                       |Amount |Timing                    |
+|-------|----------------------------------|-------|--------------------------|
+|1      |Spring Cleanup — all zones        |$950.00|On completion             |
+|2      |Managed Garden Program — May      |$840.00|Net-15, billed May 1      |
+|3      |Managed Garden Program — June     |$840.00|Net-15, billed June 1     |
+|4      |Managed Garden Program — July     |$840.00|Net-15, billed July 1     |
+|5      |Managed Garden Program — August   |$840.00|Net-15, billed August 1   |
+|6      |Managed Garden Program — September|$840.00|Net-15, billed September 1|
+|7      |Managed Garden Program — October  |$840.00|Net-15, billed October 1  |
+|8      |Managed Garden Program — November |$840.00|Net-15, billed November 1 |
 
 #### Commercial Quote Notes
 
@@ -209,22 +209,22 @@ All measurements in metres. Shape factor of 0.75 applied to irregular beds (IB, 
 
 ## 7. OPEN ITEMS (priority order)
 
-|# |Item                                                                                                                          |Status                |Done|
-|--|------------------------------------------------------------------------------------------------------------------------------|----------------------|----|
-|1 |Send QT-0124 package to David Osborne — email, quote, season planner, form link                                               |**DONE Mar 28**       |✓   |
-|2 |Send Essential quote to Alex Metaxes — 21 Wiltshire Cir. Spring cleanup $375, Essential $190 biweekly. Full stack (PDF + email + form). Source: website.|**THIS WEEK**         |    |
-|3 |Site visit — 9 Chancellor Ct, Nepean (M2 Managed) — Client: Nima — Quote to build same day after visit                       |**APRIL 10**          |    |
-|4 |David Dash — QT-0126 sent Mar 29. Awaiting board approval via Dash. Mulch quote still outstanding (build separately post-approval).|**PENDING APPROVAL**  |    |
-|5 |Garden Care Packages page SEO — 11 on-page changes identified. Apply when time permits.                                       |**PENDING**           |    |
-|6 |David Osborne revised quote (monthly) — Excel updated, Apps Script updated, revised quote sent Mar 29                         |**DONE Mar 29**       |✓   |
-|7 |Burnout question: Malcolm to reflect — has he experienced it before, what does it look like                                   |**OPEN**              |    |
-|8 |Accountant: Confirm referral income HST treatment before accepting referral fees                                               |**OPEN**              |    |
-|9 |Mileage logbook: Set up by April 1. Track all business km from season open.                                                   |**ONGOING from Apr 1**|    |
-|10|Winter service: Decide on offering (snow clearing and/or holiday lighting most likely)                                        |**OPEN**              |    |
-|11|RRSPs: Start contributions once cash flow stabilizes post-mortgage                                                            |**OPEN**              |    |
-|12|Credit card: Clear Scotiabank Value Visa before August. $1,000/mo from employment through April, then ProGrow income to finish.|**ONGOING**           |    |
-|13|Rewrite Apps Script to be universal — reads Config sheet per client instead of hardcoded Osborne values.                      |**DONE Mar 29**       |✓   |
-|14|Liability insurance — policy starts April 1. Include insurer name + coverage amount in all future commercial quotes.          |**DONE — starts Apr 1**|✓  |
+|# |Item                                                                                                                                                                                             |Status                 |Done|
+|--|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|----|
+|1 |Send QT-0124 package to David Osborne — email, quote, season planner, form link                                                                                                                  |**DONE Mar 28**        |✓   |
+|2 |Alex Metaxes — QT-0125 sent. Full stack (PDF + email + form + Apps Script tested). Awaiting response.                                                                                            |**SENT — PENDING**     |    |
+|3 |Site visit — 9 Chancellor Ct, Ottawa ON K1V 0W7 — Nima Farid — (415) 409-8097 | nima.farid@gmail.com — Garden: flower bed, front yard, back yard, pool area. Quote to build same day after visit.|**APRIL 10**           |    |
+|4 |David Dash — QT-0126 sent Mar 29. Awaiting board approval. Follow up if no response by April 10. Mulch quote to build post-approval.                                                             |**PENDING APPROVAL**   |    |
+|5 |Garden Care Packages page SEO — 11 on-page changes identified. Apply when time permits.                                                                                                          |**PENDING**            |    |
+|6 |David Osborne revised quote (monthly) — Excel updated, Apps Script updated, revised quote sent Mar 29                                                                                            |**DONE Mar 29**        |✓   |
+|7 |Burnout question: Malcolm to reflect — has he experienced it before, what does it look like                                                                                                      |**OPEN**               |    |
+|8 |Accountant: Confirm referral income HST treatment before accepting referral fees                                                                                                                 |**OPEN**               |    |
+|9 |Mileage logbook: Set up by April 1. Track all business km from season open.                                                                                                                      |**ONGOING from Apr 1** |    |
+|10|Winter service: Decide on offering (snow clearing and/or holiday lighting most likely)                                                                                                           |**OPEN**               |    |
+|11|RRSPs: Start contributions once cash flow stabilizes post-mortgage                                                                                                                               |**OPEN**               |    |
+|12|Credit card: Clear Scotiabank Value Visa before August. $1,000/mo from employment through April, then ProGrow income to finish.                                                                  |**ONGOING**            |    |
+|13|Rewrite Apps Script to be universal — reads Config sheet per client instead of hardcoded Osborne values.                                                                                         |**DONE Mar 29**        |✓   |
+|14|Liability insurance — policy starts April 1. Include insurer name + coverage amount in all future commercial quotes.                                                                             |**DONE — starts Apr 1**|✓   |
 
 -----
 
@@ -263,7 +263,7 @@ All measurements in metres. Shape factor of 0.75 applied to irregular beds (IB, 
 
 This section documents the standard systems used to quote and onboard clients. Two stacks: residential and commercial.
 
----
+-----
 
 ### RESIDENTIAL STACK (Osborne, Alex, Nima — standard)
 
@@ -275,14 +275,14 @@ This section documents the standard systems used to quote and onboard clients. T
 
 - **Quote** — line items, visit count, per-visit rate, spring cleanup price, Option A deposit, Option A monthly, Option B total, Option B discount amount, quote number, quote date, valid until date
 - **Config** — single-column reference sheet the Apps Script reads (see Component 3 below)
-- **What's Next** — season visit planner, activity level descriptors (no hourly data)
+- **What’s Next** — season visit planner, activity level descriptors (no hourly data)
 
 **Per-client setup:**
 
 1. Duplicate the master workbook, rename to client name + quote number (e.g. Alex Metaxes QT-0125)
-2. Update all yellow-highlighted fields: client name, address, package, visit rate, visit count, cleanup price
-3. All totals, Option A/B calculations, and monthly amounts auto-calculate — verify before proceeding
-4. Populate the Config tab from the Quote tab values (copy-paste, no formulas needed in Config)
+1. Update all yellow-highlighted fields: client name, address, package, visit rate, visit count, cleanup price
+1. All totals, Option A/B calculations, and monthly amounts auto-calculate — verify before proceeding
+1. Populate the Config tab from the Quote tab values (copy-paste, no formulas needed in Config)
 
 **Key calculated fields to verify before sending:**
 
@@ -299,7 +299,7 @@ This section documents the standard systems used to quote and onboard clients. T
 
 - Overall structure, layout, and brand styling
 - ProGrow logo, colour scheme, footer
-- Tone and section order: intro, what's included, next steps, form CTA
+- Tone and section order: intro, what’s included, next steps, form CTA
 
 **What to update per client:**
 
@@ -344,25 +344,25 @@ This section documents the standard systems used to quote and onboard clients. T
 - Copy the form response spreadsheet ID into the Config sheet
 - Set the Apps Script trigger: From form, On form submit, sendConfirmationEmail
 
-##### Config sheet structure (in the client's Google Sheet)
+##### Config sheet structure (in the client’s Google Sheet)
 
 The universal Apps Script reads this sheet by row label. Keep row labels exact.
 
-| Row label | Example value |
-|---|---|
-| Quote Number | QT-0125 |
-| Client First Name | Alex |
-| Package Name | Essential Garden Care |
-| Spring Cleanup Price | $375.00 |
-| Service Total | $2,835.00 |
-| Option A Deposit | $375.00 |
-| Option A Monthly | $350.00 |
-| Option A Months | 7 |
-| Option B Total | $2,551.50 |
-| Option B Savings | $283.50 |
-| Season Range | May-November 2026 |
-| Visit Count | 14 |
-| Quote Valid Until | April 11, 2026 |
+|Row label           |Example value        |
+|--------------------|---------------------|
+|Quote Number        |QT-0125              |
+|Client First Name   |Alex                 |
+|Package Name        |Essential Garden Care|
+|Spring Cleanup Price|$375.00              |
+|Service Total       |$2,835.00            |
+|Option A Deposit    |$375.00              |
+|Option A Monthly    |$350.00              |
+|Option A Months     |7                    |
+|Option B Total      |$2,551.50            |
+|Option B Savings    |$283.50              |
+|Season Range        |May-November 2026    |
+|Visit Count         |14                   |
+|Quote Valid Until   |April 11, 2026       |
 
 ##### Apps Script (universal — do not edit per client)
 
@@ -371,7 +371,7 @@ The universal Apps Script reads this sheet by row label. Keep row labels exact.
 - The confirmation email HTML template is fixed — only the Config values change
 - **Status as of March 29, 2026:** Universal script complete. Reads Config sheet dynamically — no per-client edits required. QT-0124 confirmation email updated to reflect monthly pricing ($2,155.00 total, $1,939.50 Option B).
 
----
+-----
 
 ### COMMERCIAL STACK (Dash — template for future commercial clients)
 
@@ -387,7 +387,7 @@ The universal Apps Script reads this sheet by row label. Keep row labels exact.
 
 - Subject line: `ProGrow Gardening — Service Quote [QT-XXXX] | [Property Name]`
 - Short summary bullet points: cleanup price, monthly rate, season total, invoice count
-- Close: "Looking forward to working with you." — no hedging language
+- Close: “Looking forward to working with you.” — no hedging language
 - Tone: businesslike but not cold — adjust per relationship (Dash = casual/direct)
 
 #### Component 3 — Two-party signature block (no Google Form)
@@ -399,4 +399,4 @@ The universal Apps Script reads this sheet by row label. Keep row labels exact.
 
 -----
 
-*ProGrow Gardening · Malcolm Grace · <admin@progrowgardening.ca> · (249) 878-9140 · progrowgardening.ca*
+*ProGrow Gardening · Malcolm Grace · [admin@progrowgardening.ca](mailto:admin@progrowgardening.ca) · (249) 878-9140 · progrowgardening.ca*
