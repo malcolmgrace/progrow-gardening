@@ -1,6 +1,6 @@
 # PROGROW GARDENING — Assistant Backlog
 
-**Last updated:** March 28, 2026 (night) | **Owner:** Malcolm Grace | admin@progrowgardening.ca | (249) 878-9140
+**Last updated:** March 29, 2026 | **Owner:** Malcolm Grace | <admin@progrowgardening.ca> | (249) 878-9140
 
 -----
 
@@ -11,7 +11,7 @@
 - **Structure:** Sole proprietor, registered 2026 (ran informally 2025 — ~$5k revenue, cleanups + odd jobs)
 - **Current model:** Solo operation alongside full-time unionized employment (hard 4:30 finish daily)
 - **Service areas:** Barrhaven, Kanata, Manotick, Riverside South, Nepean
-- **Payment:** E-transfer (admin@progrowgardening.ca) + cash. Bookkeeping in Wave. EQ Bank business chequing.
+- **Payment:** E-transfer (<admin@progrowgardening.ca>) + cash. Bookkeeping in Wave. EQ Bank business chequing.
 - **Tools:** Battery-powered hand tools, personal vehicle (CX-3)
 - **Long-term goal:** ProGrow as primary income by 2030
 
@@ -45,7 +45,7 @@
 - No lawn care offered
 - Travel fee waived for package clients (x14 visits)
 - 10% discount for full-season prepay (Option B) — already in Garden Care Package Agreement
-- **Deposit structure:** Option A = full spring cleanup cost as deposit, secures package spot. Monthly maintenance billing begins May at $480/month. Option B = full payment within 14 days, no deposit. Apply to all future residential quotes.
+- **Deposit structure:** Option A = full spring cleanup cost as deposit, secures package spot. Monthly maintenance billing begins May (rate = (service total minus cleanup) / 7). Option B = full payment within 14 days, no deposit. Apply to all future residential quotes.
 - **Spring cleanup pricing:** Standard residential $375–$475 depending on size and complexity. Always do full site assessment before locking price.
 
 -----
@@ -56,19 +56,19 @@
 
 |#|Lead               |Package                         |Address                                |Status                                   |
 |-|-------------------|--------------------------------|---------------------------------------|-----------------------------------------|
-|1|**David Osborne**  |Pro + Spring Cleanup Bundle     |5171 Cecil Rowat Lane, Manotick K4M 0E2|**QT-0124 sent March 28**                |
-|2|**Essential Lead** |Essential $190 biweekly         |21 Wiltshire Cir, Nepean               |Quote in progress — Alex Metaxes (613) 617-4178 \| alex.p.metaxes@gmail.com |
+|1|**David Osborne**  |Pro + Spring Cleanup Bundle (monthly)|5171 Cecil Rowat Lane, Manotick K4M 0E2|**QT-0124 sent March 28 — revised to monthly Mar 29**|
+|2|**Essential Lead** |Essential $190 biweekly         |21 Wiltshire Cir, Nepean               |Quote in progress — Alex Metaxes (613) 617-4178 \| <alex.p.metaxes@gmail.com> |
 |3|**M2 Lead (Nima)** |Managed                         |9 Chancellor Ct, Nepean                |Site visit April 10                      |
 |4|**David Dash (M1)**|Managed + Spring Cleanup + Mulch|30-34 Colonnade Sq, Nepean             |2nd visit pending (snow/beds not visible)|
 
 ### David Osborne — QT-0124 Details
 
 - Spring Cleanup: $475 (large estate, riverfront, multiple zones)
-- Pro Package: 14 x $240 = $3,360
-- **Option A:** $475.00 deposit (covers spring cleanup in full, secures Pro Package spot). Then $480/month May–November (7 months). Total: $3,835
-- **Option B:** $3,451.50 paid in full within 14 days. Save $383.50. No deposit required.
+- Pro Package: 7 x $240 = $1,680 (monthly visits, May–November)
+- **Option A:** $475.00 deposit (covers spring cleanup in full, secures Pro Package spot). Then $240/month May–November (7 months). Total: $2,155.00
+- **Option B:** $1,939.50 paid in full within 14 days. Save $215.50. No deposit required.
 - Quote date: March 28, 2026. Valid until: April 11, 2026
-- **Google Form:** https://forms.gle/B8WtgjTcbxXLgb6Q8
+- **Google Form:** <https://forms.gle/B8WtgjTcbxXLgb6Q8>
 - **Auto-confirmation:** Apps Script live, tested Mar 28, 0% error rate
 - **Property notes:** Large Manotick estate on Rideau River. Two structures (main house + carriage house). Multiple garden zones — front island beds, full facade bed, both sides, rear, riverfront terrace with balustrade, carriage house side. Mature hydrangeas, ornamental yews, creeping juniper, columnar cedars, perennials throughout. Front Japanese Yew shows structural damage from a fallen tree — replacement to be discussed and quoted separately in season.
 
@@ -147,14 +147,13 @@
 |3 |Site visit — 9 Chancellor Ct, Nepean (M2 Managed) — Client: Nima — Quote to build same day after visit                       |**APRIL 10**          |    |
 |4 |David Dash 2nd visit: Pending snow melt — bring tape measure, photograph all bed zones, note mulch depth. Build 3 quotes after.|**PENDING**           |    |
 |5 |Garden Care Packages page SEO — 11 on-page changes identified. Apply when time permits.                                       |**PENDING**           |    |
-|6 |April 15 checkpoint: Count confirmed prepays. Target $6,000+ for strong cash position heading into mortgage closing.          |**APRIL 15**          |    |
 |7 |Burnout question: Malcolm to reflect — has he experienced it before, what does it look like                                   |**OPEN**              |    |
 |8 |Accountant: Confirm referral income HST treatment before accepting referral fees                                               |**OPEN**              |    |
 |9 |Mileage logbook: Set up by April 1. Track all business km from season open.                                                   |**ONGOING from Apr 1**|    |
 |10|Winter service: Decide on offering (snow clearing and/or holiday lighting most likely)                                        |**OPEN**              |    |
 |11|RRSPs: Start contributions once cash flow stabilizes post-mortgage                                                            |**OPEN**              |    |
 |12|Credit card: Clear Scotiabank Value Visa before August. $1,000/mo from employment through April, then ProGrow income to finish.|**ONGOING**           |    |
-|13|Rewrite Apps Script to be universal — reads Config sheet per client instead of hardcoded Osborne values. Required before next quote goes out.|**THIS WEEK**         |    |
+|13|Rewrite Apps Script to be universal — reads Config sheet per client instead of hardcoded Osborne values. Required before next quote goes out.|**DONE Mar 29**       |✓   |
 
 -----
 
@@ -163,8 +162,7 @@
 ### Prepay
 
 - 10% discount for full-season prepay already in contract — mention directly in covering message
-- April 15 checkpoint: if $6,000+ in prepays confirmed, cash position is strong heading into mortgage closing
-- David Osborne Option B = $3,451.50 — single largest pre-May cash event
+- David Osborne Option B = $1,939.50 — single largest pre-May cash event
 
 ### April Lead Rush
 
@@ -193,17 +191,20 @@ This section documents the standard three-part system used to quote and onboard 
 **Purpose:** Source of truth for all pricing. Every number that appears in the email, form, and script flows from here.
 
 **Required tabs:**
+
 - **Quote** — line items, visit count, per-visit rate, spring cleanup price, Option A deposit, Option A monthly, Option B total, Option B discount amount, quote number, quote date, valid until date
 - **Config** — single-column reference sheet the Apps Script reads (see Component 3 below)
 - **What's Next** — season visit planner, activity level descriptors (no hourly data)
 
 **Per-client setup:**
+
 1. Duplicate the master workbook, rename to client name + quote number (e.g. Alex Metaxes QT-0125)
 2. Update all yellow-highlighted fields: client name, address, package, visit rate, visit count, cleanup price
 3. All totals, Option A/B calculations, and monthly amounts auto-calculate — verify before proceeding
 4. Populate the Config tab from the Quote tab values (copy-paste, no formulas needed in Config)
 
 **Key calculated fields to verify before sending:**
+
 - Option A total = cleanup + (monthly x 7) — must equal service total
 - Option B = service total x 0.90 — round to 2 decimal places
 - Option B savings = service total minus Option B
@@ -216,11 +217,13 @@ This section documents the standard three-part system used to quote and onboard 
 **Purpose:** Covering message sent directly to the client alongside the PDF quote attachment. Sets tone, summarizes the offer, and directs them to the Google Form.
 
 **What stays the same every quote:**
+
 - Overall structure, layout, and brand styling
 - ProGrow logo, colour scheme, footer
 - Tone and section order: intro, what's included, next steps, form CTA
 
 **What to update per client:**
+
 - Client first name (greeting line and body copy)
 - Package name (Essential / Professional / Managed)
 - Spring cleanup price
@@ -231,6 +234,7 @@ This section documents the standard three-part system used to quote and onboard 
 - Any property-specific notes
 
 **Tone notes:**
+
 - Direct, warm, no filler language
 - No em dashes
 - No AI-sounding phrases
@@ -245,6 +249,7 @@ This section documents the standard three-part system used to quote and onboard 
 #### Google Form setup (per client)
 
 **Fields that are standard — do not change:**
+
 - Email (required)
 - First Name (required)
 - Last Name (required)
@@ -252,11 +257,13 @@ This section documents the standard three-part system used to quote and onboard 
 - Date of Acceptance (required)
 
 **Fields to update per client:**
+
 - Payment terms text in the form description — update Option A deposit amount, monthly rate, and Option B total
 - Payment Selection options — update dollar amounts in both option labels
 - Form title — update quote number and client name
 
 **After building the form:**
+
 - Copy the form response spreadsheet ID into the Config sheet
 - Set the Apps Script trigger: From form, On form submit, sendConfirmationEmail
 
@@ -285,8 +292,8 @@ The universal Apps Script reads this sheet by row label. Keep row labels exact.
 - One script lives in a standalone Google Apps Script project linked to all form response sheets
 - On form submit, it reads the Config sheet from the linked spreadsheet to populate all dynamic values in the confirmation email
 - The confirmation email HTML template is fixed — only the Config values change
-- **Status as of March 28, 2026:** Current script (QT-0124) is hardcoded to Osborne values. Universal rewrite is open item 13.
+- **Status as of March 29, 2026:** Universal script complete. Reads Config sheet dynamically — no per-client edits required. QT-0124 confirmation email updated to reflect monthly pricing ($2,155.00 total, $1,939.50 Option B).
 
 -----
 
-*ProGrow Gardening · Malcolm Grace · admin@progrowgardening.ca · (249) 878-9140 · progrowgardening.ca*
+*ProGrow Gardening · Malcolm Grace · <admin@progrowgardening.ca> · (249) 878-9140 · progrowgardening.ca*
