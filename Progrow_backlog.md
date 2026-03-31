@@ -1,6 +1,6 @@
 # PROGROW GARDENING — Assistant Backlog
 
-**Last updated:** March 29, 2026 | **Owner:** Malcolm Grace | <admin@progrowgardening.ca> | (249) 878-9140
+**Last updated:** March 30, 2026 | **Owner:** Malcolm Grace | <admin@progrowgardening.ca> | (249) 878-9140
 
 -----
 
@@ -53,14 +53,15 @@
 
 ## 3. 2026 SEASON — CLIENT PIPELINE
 
-### Confirmed / Near-Confirmed (4 prospects, 1 signed as of March 29)
+### Confirmed / Near-Confirmed (5 prospects as of March 30)
 
 |#|Lead               |Package                                        |Address                                |Status                                                                  |
 |-|-------------------|-----------------------------------------------|---------------------------------------|------------------------------------------------------------------------|
 |1|**David Osborne**  |Pro + Spring Cleanup Bundle (monthly)          |5171 Cecil Rowat Lane, Manotick K4M 0E2|**QT-0124 sent March 28 — revised to monthly Mar 29, revised quote sent**|
-|2|**Essential Lead** |Essential $190 biweekly                        |21 Wiltshire Cir, Nepean               |Quote in progress — Alex Metaxes (613) 617-4178 \| <alex.p.metaxes@gmail.com>|
+|2|**Alex Metaxes**   |Essential $190 biweekly + Spring Cleanup       |21 Wiltshire Cir, Nepean               |**QT-0125 sent March 29** — (613) 617-4178 \| <alex.p.metaxes@gmail.com>|
 |3|**M2 Lead (Nima)** |Managed                                        |9 Chancellor Ct, Nepean                |Site visit April 10                                                     |
 |4|**David Dash (M1)**|Managed + Spring Cleanup (commercial)          |30-34 Colonnade Sq N, Nepean           |**QT-0126 sent March 29 — awaiting board approval via David Dash**      |
+|5|**Joe Iaderosa**   |Essential $190 biweekly + Spring Cleanup       |1544 River Rd, Manotick K4M 1B4        |**QT-0127 sent March 30** — (613) 913-3487 \| <jiaderosa@icloud.com>   |
 
 ---
 
@@ -77,7 +78,28 @@
 
 ---
 
-### David Dash — Colonnade Sq Commercial (M1) — QT-0126
+### Alex Metaxes — QT-0125 Details
+
+- Spring Cleanup: $375 (standard residential)
+- Essential Package: **14 x $190 = $2,660** (biweekly visits, May–November)
+- **Option A:** $375.00 deposit (covers spring cleanup in full, secures Essential Package spot). Then **$380/month** May–November (7 months). Total: **$3,035.00**
+- **Option B:** **$2,731.50** paid in full within 14 days. Save **$303.50**. No deposit required.
+- Quote date: March 29, 2026. Valid until: April 12, 2026
+- Source: website lead
+
+---
+
+### Joe Iaderosa — QT-0127 Details
+
+- First recurring client from 2025 season
+- Spring Cleanup: $275
+- Essential Package: **14 x $190 = $2,660** (biweekly visits, May–November)
+- **Option A:** $275.00 deposit (covers spring cleanup in full, secures Essential Package spot). Then **$380/month** May–November (7 months). Total: **$2,935.00**
+- **Option B:** **$2,641.50** paid in full within 14 days. Save **$293.50**. No deposit required.
+- Quote date: March 30, 2026. Valid until: April 13, 2026
+- **Google Form:** <https://docs.google.com/forms/d/e/1FAIpQLSfvA1An1qZsI_o7ureV5XXCvoZ-kGHn2JKaFsbx5EI3cH8Ebw/viewform>
+
+---
 
 - **Contact:** David Dash, commercial condo manager
 - **Funded by:** Condo unit owners at 30-34 Colonnade Sq N
@@ -168,7 +190,7 @@ All measurements in metres. Shape factor of 0.75 applied to irregular beds (IB, 
 |**Net**                            |       |    |      |**$22,820**|
 
 - HST threshold: $30,000 — small supplier, no registration required below this. Current base case leaves ~$4,380 buffer.
-- **HST watch:** Osborne ($2,155) + Dash ($6,830) = $8,985 already. Landing 4 more standard clients puts you close to $30k. Track carefully. April 15 checkpoint.
+- **HST watch:** Osborne ($2,155) + Dash ($6,830) + Alex ($3,035) + Joe ($2,935) = $14,955 already quoted. Landing 2–3 more standard clients puts you close to $30k. Track carefully. April 15 checkpoint.
 - Strategy: Stay under $30,000 this season. Register HST January 1, 2027 — proactive, clean start to scale year.
 - Spring cleanups + referrals tracked separately.
 
@@ -212,7 +234,7 @@ All measurements in metres. Shape factor of 0.75 applied to irregular beds (IB, 
 |# |Item                                                                                                                          |Status                |Done|
 |--|------------------------------------------------------------------------------------------------------------------------------|----------------------|----|
 |1 |Send QT-0124 package to David Osborne — email, quote, season planner, form link                                               |**DONE Mar 28**       |✓   |
-|2 |Send Essential quote to Alex Metaxes — 21 Wiltshire Cir. Spring cleanup $375, Essential $190 biweekly. Full stack (PDF + email + form). Source: website.|**THIS WEEK**         |    |
+|2 |Send Essential quote to Alex Metaxes — 21 Wiltshire Cir. Spring cleanup $375, Essential $190 biweekly. Full stack (PDF + email + form). Source: website.|**DONE Mar 29**       |✓   |
 |3 |Site visit — 9 Chancellor Ct, Nepean (M2 Managed) — Client: Nima — Quote to build same day after visit                       |**APRIL 10**          |    |
 |4 |David Dash — QT-0126 sent Mar 29. Awaiting board approval via Dash. Mulch quote still outstanding (build separately post-approval).|**PENDING APPROVAL**  |    |
 |5 |Garden Care Packages page SEO — 11 on-page changes identified. Apply when time permits.                                       |**PENDING**           |    |
@@ -225,6 +247,7 @@ All measurements in metres. Shape factor of 0.75 applied to irregular beds (IB, 
 |12|Credit card: Clear Scotiabank Value Visa before August. $1,000/mo from employment through April, then ProGrow income to finish.|**ONGOING**           |    |
 |13|Rewrite Apps Script to be universal — reads Config sheet per client instead of hardcoded Osborne values.                      |**DONE Mar 29**       |✓   |
 |14|Liability insurance — policy starts April 1. Include insurer name + coverage amount in all future commercial quotes.          |**DONE — starts Apr 1**|✓  |
+|15|Send QT-0127 to Joe Iaderosa — Essential $190 biweekly + Spring Cleanup $275. Full stack (PDF + email + form).                |**DONE Mar 30**       |✓   |
 
 -----
 
