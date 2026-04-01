@@ -170,11 +170,11 @@
 |---|---|---|
 | Vehicle | CX-3 (personal). CRA per-km method @ $0.72/km. | MileIQ tracking live from Apr 1. Est. 4,536 business km = ~$3,266 deduction. |
 | Insurance | Wawanesa #49924430 — $801.42/yr | $67.00/mo auto-withdrawn from EQ Bank. Active Apr 1. 100% deductible. |
-| Tools | Shovel + hoe $68.91 (actual, Apr 1), hedge trimmer est. $425 | All under $1,500 — fully expensed in 2026. Update when trimmer purchased. |
+| Tools | Shovel + hoe $68.91 (actual, Apr 1), EGO HT2601 hedge trimmer $395.49 (actual, Apr 1) | All under $1,500 — fully expensed in 2026. RCPT-002 logged. |
 | Supplies | Yard waste bags, gloves, misc consumables | Est. $330/season. Bag-for-curbside process eliminates dump fees. |
 | Marketing | Kijiji ad $50 (one-time) | Domain/hosting already covered. Reassess ROI — focusing on commercial. |
 | Accountant | $400 placeholder | March 2027 for 2026 T1 + T2125 filing. |
-| **TOTAL PROJECTED** | **~$5,347** | CRA per-km covers fuel, maintenance, personal auto insurance — do not claim separately. |
+| **TOTAL PROJECTED** | **~$5,318** | CRA per-km covers fuel, maintenance, personal auto insurance — do not claim separately. |
 
 ---
 
@@ -207,7 +207,7 @@
 | 23 | Bookkeeping updated Apr 1 — Alex row corrected (monthly, $1,505 package), deposit collected, SiteOne tools logged, INV-2026-003 marked Paid. | **DONE Apr 1** | ✓ |
 | 24 | Joe Iaderosa — follow up on QT-0127. Valid until Apr 13. | **OPEN** | |
 | 25 | David Dash — follow up on board approval. Quote valid Apr 12. | **OPEN** | |
-| 26 | Backpack blower removed from expense plan — not purchasing. Hedge trimmer (battery, est. $425) remains. Bookkeeping updated. | **DONE Apr 1** | ✓ |
+| 26 | EGO HT2601 hedge trimmer purchased Apr 1 — $395.49, Canadian Tire, RCPT-002. Expense Log and Projections updated. Register warranty within 90 days. | **DONE Apr 1** | ✓ |
 
 ---
 
@@ -313,7 +313,8 @@ Rebuilt `ProGrow_Bookkeeping_2026.xlsx` P&L sheet from scratch with the followin
 - **INV-2026-003 (Alex deposit):** Marked Paid — $375 e-transfer received Apr 1. Option A confirmed.
 - **Expense Log:** SiteOne Landscape Supply purchase logged — Pro-Trade Round Point Shovel 48" + Pro-Trade Oscillating Hoe 6" 54", $68.91, RCPT-001, Apr 1, 100% deductible.
 - **P&L Summary:** Alex row updated — Monthly (was Biweekly), package revenue corrected to $1,505 (7 × $215), Collected to Date updated to $375.
-- **Expense Projections:** Electric backpack blower ($500 est.) removed — not purchasing. Tools & Equipment revised to $500 (shovel $75 + hedge trimmer $425). Grand Total projected expenses down to $5,347.
+- **Expense Projections:** Electric backpack blower ($500 est.) removed — not purchasing. Hedge trimmer updated from $425 est. to $395.49 actual (EGO HT2601, Canadian Tire, RCPT-002). Tools & Equipment total $470.49. Grand Total projected expenses revised to $5,318.
+- **Expense Log:** EGO HT2601 logged — $395.49, Apr 1 2026, RCPT-002, 100% deductible.
 
 ---
 
@@ -348,17 +349,17 @@ Rebuilt `ProGrow_Bookkeeping_2026.xlsx` P&L sheet from scratch with the followin
 
 | Scenario | Gross Revenue | Expenses | Net Business Income |
 |---|---|---|---|
-| Confirmed only (Osborne + Alex) | $4,035 | $5,347 | ($1,312) loss |
-| Confirmed + all 3 pending | $19,800 | $5,347 | **$14,453** |
-| Full model — $28,500 target | $28,500 | $5,347 | **$23,153** |
+| Confirmed only (Osborne + Alex) | $4,035 | $5,318 | ($1,283) loss |
+| Confirmed + all 3 pending | $19,800 | $5,318 | **$14,482** |
+| Full model — $28,500 target | $28,500 | $5,318 | **$23,182** |
 
 ### Full Model Tax Estimate ($28,500 gross)
 
 | Item | Amount |
 |---|---|
 | Projected gross revenue | $28,500 |
-| Total deductible expenses | ($5,347) |
-| Net business income | $23,153 |
+| Total deductible expenses | ($5,318) |
+| Net business income | $23,182 |
 | Est. federal + Ontario tax | ~$4,200–$5,200 |
 | CPP self-employment (~11.9%) | ~$2,755 |
 | **Total tax + CPP obligation** | **~$6,955–$7,955** |
