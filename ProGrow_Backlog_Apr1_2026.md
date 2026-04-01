@@ -1,5 +1,5 @@
 # PROGROW GARDENING
-## Assistant Backlog | Updated March 31, 2026
+## Assistant Backlog | Updated April 1, 2026
 
 **Malcolm Grace** | admin@progrowgardening.ca | (249) 878-9140 | progrowgardening.ca
 
@@ -16,7 +16,7 @@
 | **Service Areas** | Barrhaven, Kanata, Manotick, Riverside South, Nepean |
 | **Payment** | E-transfer (admin@progrowgardening.ca) + cash \| EQ Bank business chequing |
 | **Tools** | Battery-powered hand tools, personal vehicle (CX-3) \| Mileage via MileIQ from Apr 1 |
-| **Insurance** | Wawanesa Commercial Policy #49924430 (GL + Non-Owned Auto) \| Starts Apr 1, 2026 |
+| **Insurance** | Wawanesa Commercial Policy #49924430 (GL + Non-Owned Auto) \| Active from Apr 1, 2026 |
 | **Long-Term Goal** | ProGrow as primary income by 2030 |
 
 ---
@@ -35,7 +35,7 @@
 - Overgrown gardens require initial cleanup first (quoted separately).
 - No lawn care offered. Travel fee waived for package clients (14 visits).
 - 10% discount for full-season prepay (Option B) — residential only.
-- Deposit structure (residential): Option A = full spring cleanup cost as deposit, secures package spot. Monthly billing May–Nov at (service total minus cleanup) / 7. Option B = full payment within 14 days, no deposit.
+- Deposit structure (residential): Option A = full spring cleanup cost as deposit, secures package spot. Monthly billing May–Nov at per-visit rate. Option B = full payment within 14 days, no deposit.
 - Commercial billing: No deposit/prepay framing. Spring cleanup invoiced on completion (net-15). Recurring billed monthly net-15. Prepay available on request at 10% — not led with.
 - Spring cleanup pricing: Standard residential $375–$475 depending on size and complexity. Always do full site assessment before locking price.
 
@@ -43,12 +43,17 @@
 
 ## 3. 2026 SEASON — CLIENT PIPELINE
 
-### Confirmed / Near-Confirmed (5 prospects as of March 31)
+### Confirmed (2 clients as of April 1)
 
 | # | Lead | Package | Address | Status |
 |---|---|---|---|---|
 | 1 | **David Osborne** | Pro + Spring Cleanup (monthly) | 5171 Cecil Rowat Lane, Manotick K4M 0E2 | **SIGNED** — deposit $475 received Mar 30 |
-| 2 | Alex Metaxes | Essential $190 biweekly + Spring Cleanup | 21 Wiltshire Cir, Nepean | QT-0125 sent Mar 29 — pending signature |
+| 2 | **Alex Metaxes** | Essential $215/month + Spring Cleanup | 21 Wiltshire Cir, Nepean | **SIGNED** — deposit $375 received Apr 1 |
+
+### Pending (3 prospects)
+
+| # | Lead | Package | Address | Status |
+|---|---|---|---|---|
 | 3 | Nima (M2 Lead) | Managed | 9 Chancellor Ct, Nepean | Site visit April 10 |
 | 4 | David Dash (M1) | Managed + Spring Cleanup (commercial) | 30–34 Colonnade Sq N, Nepean | QT-0126 sent Mar 29 — awaiting board approval |
 | 5 | Joe Iaderosa | Essential $190 biweekly + Spring Cleanup | 1544 River Rd, Manotick K4M 1B4 | QT-0127 sent Mar 30 — pending signature |
@@ -68,16 +73,16 @@
 | Deposit Received | $475.00 | E-transfer received March 30, 2026 |
 | Property Notes | Large Manotick estate on Rideau River. Two structures. Multiple garden zones. Front Japanese Yew — structural damage from fallen tree, replacement to be discussed. | — |
 
-#### Alex Metaxes — QT-0125
+#### Alex Metaxes — QT-0125 ✓ SIGNED
 
 | Item | Amount | Notes |
 |---|---|---|
 | Spring Cleanup | $375.00 | Standard residential |
-| Essential Package | 14 × $190 = $2,660 | Biweekly, May–November |
-| **Option A** | $375 deposit → $380/month × 7 | **Total: $3,035.00** |
-| Option B | $2,731.50 paid in full within 14 days | Save $303.50 |
-| Quote Valid | April 12, 2026 | Source: website lead |
-| Contact | alex.p.metaxes@gmail.com \| (613) 617-4178 | — |
+| Essential Package | 7 × $215 = $1,505 | Monthly, May–November |
+| **Option A** | $375 deposit → $215/month × 7 | **Total: $1,880.00** |
+| Option B | $1,692.00 paid in full within 14 days | Save $188.00 |
+| Deposit Received | $375.00 | E-transfer received April 1, 2026 — Option A confirmed |
+| Contact | alex.p.metaxas@gmail.com \| (613) 617-4178 | — |
 
 #### Joe Iaderosa — QT-0127
 
@@ -118,9 +123,9 @@
 
 | Tier | Clients | Season Total |
 |---|---|---|
-| **Tier 1 — Signed** | Osborne | $2,155 |
-| **Tier 2 — Pending** | Alex, Joe, Dash, Nima | $17,680 |
-| **Tier 3 — Placeholder** | 2 buffer clients + misc cleanup | $8,665 |
+| **Tier 1 — Signed** | Osborne, Alex | $4,035 |
+| **Tier 2 — Pending** | Joe, Dash, Nima | $15,765 |
+| **Tier 3 — Placeholder** | 2 buffer clients + misc cleanup | $8,700 |
 | **PROJECTED GROSS** | | **$28,500** |
 
 ### HST Watch
@@ -128,10 +133,10 @@
 | Item | Amount | Notes |
 |---|---|---|
 | Osborne QT-0124 | $2,155 | Signed — deposit received Mar 30 |
+| Alex QT-0125 | $1,880 | Signed — deposit received Apr 1 |
 | Dash QT-0126 | $6,830 | Awaiting board approval |
-| Alex QT-0125 | $3,035 | Sent Mar 29 |
-| Joe QT-0127 | $2,935 | Sent Mar 30 |
-| **Total Quoted YTD** | **$14,955** | 2–3 more clients approaches $28,500 ceiling |
+| Joe QT-0127 | $2,935 | Sent Mar 30 — pending signature |
+| **Total Quoted YTD** | **$13,800** | 2–3 more clients approaches $28,500 ceiling |
 
 - HST threshold: $30,000 — small supplier, no registration required below this.
 - ProGrow self-imposed ceiling: **$28,500** — $1,500 buffer against CRA threshold.
@@ -163,13 +168,13 @@
 
 | Category | Detail | Notes |
 |---|---|---|
-| Vehicle | CX-3 (personal). CRA per-km method @ $0.72/km. | MileIQ tracking from Apr 1. Est. 4,536 business km = ~$3,266 deduction. |
-| Insurance | Wawanesa #49924430 — $801.42/yr | $67.00/mo auto-withdrawn from EQ Bank. 100% deductible. |
-| Tools | Shovel $75, hedge trimmer est. $425, backpack blower est. $500 | All under $1,500 — fully expensed in 2026. Update when purchased. |
+| Vehicle | CX-3 (personal). CRA per-km method @ $0.72/km. | MileIQ tracking live from Apr 1. Est. 4,536 business km = ~$3,266 deduction. |
+| Insurance | Wawanesa #49924430 — $801.42/yr | $67.00/mo auto-withdrawn from EQ Bank. Active Apr 1. 100% deductible. |
+| Tools | Shovel + hoe $68.91 (actual, Apr 1), hedge trimmer est. $425 | All under $1,500 — fully expensed in 2026. Update when trimmer purchased. |
 | Supplies | Yard waste bags, gloves, misc consumables | Est. $330/season. Bag-for-curbside process eliminates dump fees. |
 | Marketing | Kijiji ad $50 (one-time) | Domain/hosting already covered. Reassess ROI — focusing on commercial. |
 | Accountant | $400 placeholder | March 2027 for 2026 T1 + T2125 filing. |
-| **TOTAL PROJECTED** | **~$5,847** | CRA per-km covers fuel, maintenance, personal auto insurance — do not claim separately. |
+| **TOTAL PROJECTED** | **~$5,347** | CRA per-km covers fuel, maintenance, personal auto insurance — do not claim separately. |
 
 ---
 
@@ -185,17 +190,24 @@
 | 6 | David Osborne revised quote (monthly) — sent Mar 29 | **DONE Mar 29** | ✓ |
 | 7 | Burnout question: Malcolm to reflect — has he experienced it before, what does it look like | **OPEN** | |
 | 8 | Accountant: Confirm referral income HST treatment before accepting referral fees | **OPEN** | |
-| 9 | Mileage logbook: Set up by April 1 via MileIQ. Track all business km. | **ONGOING from Apr 1** | |
+| 9 | Mileage logbook: Set up by April 1 via MileIQ. Track all business km. | **LIVE from Apr 1** | ✓ |
 | 10 | Winter service: Decide on offering (snow clearing and/or holiday lighting) | **OPEN** | |
 | 11 | RRSPs: Start contributions once cash flow stabilizes post-mortgage | **OPEN** | |
 | 12 | Credit card: Scotiabank Value Visa — pay down to under 30% utilization, hold there for credit score. Not zeroing it out. | **ONGOING** | |
 | 13 | Rewrite Apps Script to be universal — reads Config sheet per client | **DONE Mar 29** | ✓ |
-| 14 | Liability insurance — policy starts April 1. Include in commercial quotes. | **DONE — starts Apr 1** | ✓ |
+| 14 | Liability insurance — policy starts April 1. Include in commercial quotes. | **DONE — active Apr 1** | ✓ |
 | 15 | Send QT-0127 to Joe Iaderosa — full stack | **DONE Mar 30** | ✓ |
 | 16 | SEO follow-up — request indexing for all 14 pages | **DONE Mar 30** | ✓ |
 | 17 | SEO content — /garden-maintenance, /shrub-tree-trimming, /lawn-restoration, /planting, /services updated | **DONE Mar 30** | ✓ |
 | 18 | Bookkeeping Excel — rebuilt P&L with 3-tier revenue model, fixed Outstanding formula, added Dash + Nima placeholders | **DONE Mar 31** | ✓ |
-| 19 | Tax holding strategy confirmed — 25% of gross to EQ holding account, quarterly sweeps (end of May, Aug, Nov). Large one-off deposits (e.g. client deposits) moved immediately. | **DONE Mar 31** | ✓ |
+| 19 | Tax holding strategy confirmed — 25% of gross to EQ holding account, quarterly sweeps (end of May, Aug, Nov). Large one-off deposits moved immediately. | **DONE Mar 31** | ✓ |
+| 20 | QT-0125 revised for Alex — monthly $215/visit, 7 visits. Quote + form verified send-ready. | **DONE Apr 1** | ✓ |
+| 21 | Alex Metaxes deposit $375 received Apr 1 — INV-2026-003 marked Paid. Option A confirmed. Tax holding: move $94 to EQ. | **DONE Apr 1** | ✓ |
+| 22 | Tools purchase — SiteOne Landscape Supply: Pro-Trade Round Point Shovel 48" + Pro-Trade Oscillating Hoe 6" 54". $68.91. Logged in Expense Log (RCPT-001). | **DONE Apr 1** | ✓ |
+| 23 | Bookkeeping updated Apr 1 — Alex row corrected (monthly, $1,505 package), deposit collected, SiteOne tools logged, INV-2026-003 marked Paid. | **DONE Apr 1** | ✓ |
+| 24 | Joe Iaderosa — follow up on QT-0127. Valid until Apr 13. | **OPEN** | |
+| 25 | David Dash — follow up on board approval. Quote valid Apr 12. | **OPEN** | |
+| 26 | Backpack blower removed from expense plan — not purchasing. Hedge trimmer (battery, est. $425) remains. Bookkeeping updated. | **DONE Apr 1** | ✓ |
 
 ---
 
@@ -281,18 +293,27 @@
 
 ---
 
-## 11. BOOKKEEPING — SESSION NOTES (Mar 31, 2026)
+## 11. BOOKKEEPING — SESSION NOTES
+
+### Mar 31, 2026
 
 Rebuilt `ProGrow_Bookkeeping_2026.xlsx` P&L sheet from scratch with the following changes:
 
 - **Invoices sheet:** Added Date Paid (Mar 30) to INV-2026-001 (Osborne deposit). Added INV-2026-007 (David Dash, $6,830, Pending) and INV-2026-008 (Nima, placeholder). Fixed Outstanding (Unpaid) formula — now live SUMIF from Invoices sheet.
 - **P&L Summary — three-tier revenue model:**
   - Tier 1 Signed: Osborne $2,155
-  - Tier 2 Pending: Alex $3,035 + Joe $2,935 + Dash $6,830 + Nima ~$4,880 = $17,680
-  - Tier 3 Placeholder: 2 buffer clients + misc cleanup = $8,665
+  - Tier 2 Pending: Alex $1,880 + Joe $2,935 + Dash $6,830 + Nima ~$4,880 = $16,525
+  - Tier 3 Placeholder: 2 buffer clients + misc cleanup = $8,700
   - **Grand total: $28,500** (self-imposed HST-safe ceiling, $1,500 under CRA threshold)
 - HST watch banner is formula-driven — flags automatically as revenue grows.
 - Expenses and Cash Position sections pull live from Expense Log and Invoices sheets.
+
+### Apr 1, 2026
+
+- **INV-2026-003 (Alex deposit):** Marked Paid — $375 e-transfer received Apr 1. Option A confirmed.
+- **Expense Log:** SiteOne Landscape Supply purchase logged — Pro-Trade Round Point Shovel 48" + Pro-Trade Oscillating Hoe 6" 54", $68.91, RCPT-001, Apr 1, 100% deductible.
+- **P&L Summary:** Alex row updated — Monthly (was Biweekly), package revenue corrected to $1,505 (7 × $215), Collected to Date updated to $375.
+- **Expense Projections:** Electric backpack blower ($500 est.) removed — not purchasing. Tools & Equipment revised to $500 (shovel $75 + hedge trimmer $425). Grand Total projected expenses down to $5,347.
 
 ---
 
@@ -308,7 +329,12 @@ Rebuilt `ProGrow_Bookkeeping_2026.xlsx` P&L sheet from scratch with the followin
 | End of August | Tally Jun–Aug receipts, move 25% to EQ holding |
 | End of November | Season close — tally Sep–Nov, move 25%, done for year |
 
-**Exception:** Large one-off payments (client deposits, Option B prepays) — move 25% immediately on receipt while it's top of mind. Osborne's $475 deposit → $119 to holding same day.
+**Exception:** Large one-off payments (client deposits, Option B prepays) — move 25% immediately on receipt while it's top of mind.
+
+| Payment | Amount | 25% to EQ |
+|---|---|---|
+| Osborne deposit — Mar 30 | $475 | $119 |
+| Alex deposit — Apr 1 | $375 | $94 |
 
 **Why 25%:** Covers estimated federal + Ontario tax on business net income stacked on top of employment T4, plus CPP self-employment contributions (~11.9% on net). Slightly overshoots — expect a small refund or buffer at filing.
 
@@ -316,32 +342,32 @@ Rebuilt `ProGrow_Bookkeeping_2026.xlsx` P&L sheet from scratch with the followin
 
 ---
 
-## 13. END-OF-YEAR PROJECTIONS (Mar 31, 2026)
+## 13. END-OF-YEAR PROJECTIONS (Updated Apr 1, 2026)
 
 ### Scenario Breakdown
 
 | Scenario | Gross Revenue | Expenses | Net Business Income |
 |---|---|---|---|
-| Confirmed only (Osborne) | $2,155 | $5,847 | ($3,692) loss |
-| Confirmed + all 4 pending | $19,835 | $5,847 | **$13,988** |
-| Full model — $28,500 target | $28,500 | $5,847 | **$22,653** |
+| Confirmed only (Osborne + Alex) | $4,035 | $5,347 | ($1,312) loss |
+| Confirmed + all 3 pending | $19,800 | $5,347 | **$14,453** |
+| Full model — $28,500 target | $28,500 | $5,347 | **$23,153** |
 
 ### Full Model Tax Estimate ($28,500 gross)
 
 | Item | Amount |
 |---|---|
 | Projected gross revenue | $28,500 |
-| Total deductible expenses | ($5,847) |
-| Net business income | $22,653 |
-| Est. federal + Ontario tax | ~$4,000–$5,000 |
-| CPP self-employment (~11.9%) | ~$2,695 |
-| **Total tax + CPP obligation** | **~$6,700–$7,700** |
+| Total deductible expenses | ($5,347) |
+| Net business income | $23,153 |
+| Est. federal + Ontario tax | ~$4,200–$5,200 |
+| CPP self-employment (~11.9%) | ~$2,755 |
+| **Total tax + CPP obligation** | **~$6,955–$7,955** |
 | EQ holding at 25% of gross | ~$7,125 |
-| **Estimated ProGrow take-home** | **~$15,500** |
+| **Estimated ProGrow take-home** | **~$15,700** |
 
 25% withholding on $28,500 gross = $7,125 in EQ — lands right in the middle of the obligation range. Strategy is working as designed.
 
-**Key driver for the season:** Getting Alex, Joe, and Dash signed in April locks in $12,800 of the $17,680 pending tier. That's the number that moves the needle most.
+**Key driver for the season:** Getting Joe and Dash signed in April, plus Nima after the Apr 10 site visit, locks in the pending tier. Joe and Dash quote expiries are Apr 13 and Apr 12 respectively — follow up this week.
 
 ---
 
