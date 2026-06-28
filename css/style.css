@@ -343,7 +343,8 @@ h6,
     transition: .3;
 }
 
-.service-item:hover .service-text h2 {
+.service-item:hover .service-text h2,
+.service-item:hover .service-text h3 {
     color: #FFFFFF;
 }
 
